@@ -1,2 +1,2 @@
 # psnorris
-automation
+automation package for LCLS

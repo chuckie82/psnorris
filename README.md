@@ -1,5 +1,5 @@
 # psnorris
-"Chuck Norris counted to infinity. Twice."
+"Chuck Norris can reconstruct from destroy-then-diffract experiments"
 
 automation package for LCLS
 

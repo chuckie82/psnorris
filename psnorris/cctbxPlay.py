@@ -36,6 +36,7 @@ class cctbxPlayMan:
     """
     q_cmd = 'mpirun cctbx.xfel.xtc_process input.experiment='+self.exp+' input.run_num='+str(self.runNo)
     q_cmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
+    q_cmd += ' dump_strong=True index=False'
     q_cmd += ' '+self.targetPhil
     cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout/log.out'), q_cmd]
     call(cmd)
@@ -50,8 +51,12 @@ class cctbxPlayMan:
     with open(os.path.join(self.playground,'stdout','log.out'), 'r') as f:
       from cctbxTools import tail
       qFlag = tail(f)[3].strip()
-      
-    print qFlag=='Successfully completed.'
+    #get no. of hits
+    import glob
+    return qFlag.find('Success') > -1 or qFlag.find('Exit') > -1, \
+        qFlag, len(glob.glob(os.path.join(self.playground,'out','hit*strong.pickle')))
+    
+    
       
       
     

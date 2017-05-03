@@ -1,9 +1,10 @@
-1) Test likelihood.py on many datasets
-2) Run cctbx spot finder without indexing
-3) Update README. environment instruction is broken
-4) Mock FSM that communicates with UI/Manager/Exe/Filesystem
+1) Test likelihood.py on many datasets #Zhen
+2) Run cctbx spot finder without indexing #Mona
+3) Update README. environment instruction is broken #Mona
+4) Mock FSM that communicates with UI/Manager/Exe/Filesystem #Chuck
 5) radial projection of images (maximum pixel) to get Bragg spot profiles/Fall off
 6) Write light-weight NERSC data transfer script
-7) Set up coot update
+7) Set up coot update electron density
 8) Auto download PDB from website
 9) Analyse datasets in the excel spreadsheet
+10) Manual FSM to process one run to electron density #Chuck

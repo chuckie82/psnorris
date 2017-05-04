@@ -34,27 +34,64 @@ class cctbxPlayMan:
     """
     Given all the parameters and playground created, run spotfinding using bsub.
     """
-    q_cmd = 'mpirun cctbx.xfel.xtc_process input.experiment='+self.exp+' input.run_num='+str(self.runNo)
-    q_cmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
-    q_cmd += ' dump_strong=True index=False'
-    q_cmd += ' '+self.targetPhil
-    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout/log.out'), q_cmd]
+    qCmd = 'mpirun cctbx.xfel.xtc_process input.experiment='+self.exp+' input.run_num='+str(self.runNo)
+    qCmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
+    qCmd += ' dump_strong=True index=False'
+    qCmd += ' '+self.targetPhil
+    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout/log.out'), qCmd]
     call(cmd)
     return 1
     
-  def isDone(self):
+  def isDone(self, playActivity='findSpots'):
     """
     From a stateless bsub job launched in any of the functions here, 
     look for log file and see if it's done.
     """
+    if not os.path.isfile(os.path.join(self.playground,'stdout','log.out')):
+      return False, 'Log output is not ready. Waiting...', 0
     qFlag = None
     with open(os.path.join(self.playground,'stdout','log.out'), 'r') as f:
       from cctbxTools import tail
-      qFlag = tail(f)[3].strip()
+      try:
+        qFlag = tail(f)[3].strip()
+      except IndexError as err:
+        print "Warning:", err
+        return False, 'Log output is not ready. Waiting...', 0
     #get no. of hits
     import glob
+    if playActivity=='findSpots':
+      glob_regex = 'hit*strong.pickle'
+    elif playActivity=='doIndex':
+      glob_regex = '*indexed.pickle'
+    elif playActivity=='doIntegrate':
+      glob_regex = '*integrated.pickle'
     return qFlag.find('Success') > -1 or qFlag.find('Exit') > -1, \
-        qFlag, len(glob.glob(os.path.join(self.playground,'out','hit*strong.pickle')))
+        qFlag, len(glob.glob(os.path.join(self.playground,'out',glob_regex)))
+        
+  def doIndex(self):
+    """
+    Given all the parameters and playground created, run spotfinding using bsub.
+    """
+    qCmd = 'mpirun cctbx.xfel.xtc_process input.experiment='+self.exp+' input.run_num='+str(self.runNo)
+    qCmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
+    qCmd += ' integrate=False'
+    qCmd += ' '+self.targetPhil
+    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout/log.out'), qCmd]
+    call(cmd)
+    return 1
+    
+  def doIntegrate(self):
+    """
+    Given all the parameters and playground created, run spotfinding using bsub.
+    """
+    qCmd = 'mpirun cctbx.xfel.xtc_process input.experiment='+self.exp+' input.run_num='+str(self.runNo)
+    qCmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
+    qCmd += ' '+self.targetPhil
+    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout/log.out'), qCmd]
+    call(cmd)
+    return 1
+    
+  
     
     
       

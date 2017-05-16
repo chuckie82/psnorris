@@ -14,9 +14,12 @@ if __name__ == '__main__':
   # Limit polling isDone in seconds
   limitSec = 300
   # Initialize cctbxPlayMan
-  cPMan = cctbxPlayMan(exp='cxid9114', runNo=96, trialNo=7, targetPhil='target.phil', outputDir='dials', nproc=12)
+  cPMan = cctbxPlayMan(exp='cxid9114', runNo=96, trialNo=6, targetPhil='target.phil', outputDir='dials', nproc=12)
   # Create folder structure
-  cPMan.buildPlayground(replaceDir=True)
+  cPMan.buildPlayground(replaceDir=False)
+  cPMan.doMerge()
+  timeout(time.time(), limitSec, cPMan, 'doMerge')
+  """
   # Find spots
   cPMan.findSpots()
   timeout(time.time(), limitSec, cPMan, 'findSpots')
@@ -26,4 +29,5 @@ if __name__ == '__main__':
   # Integrate
   cPMan.doIntegrate()
   timeout(time.time(), limitSec, cPMan, 'doIntegrate')
+  """
   

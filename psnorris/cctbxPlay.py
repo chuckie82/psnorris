@@ -38,7 +38,7 @@ class cctbxPlayMan:
     qCmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
     qCmd += ' dump_strong=True index=False'
     qCmd += ' '+self.targetPhil
-    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log.out'), qCmd]
+    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_findSpots.out'), qCmd]
     call(cmd)
     return 1
     
@@ -48,10 +48,10 @@ class cctbxPlayMan:
     look for log file and see if it's done.
     """
     counter = 0
-    if not os.path.isfile(os.path.join(self.playground,'stdout','log.out')):
+    if not os.path.isfile(os.path.join(self.playground,'stdout','log_'+playActivity+'.out')):
       return False, 'Log output is not ready. Waiting...', counter
     qFlag = None
-    with open(os.path.join(self.playground,'stdout','log.out'), 'r') as f:
+    with open(os.path.join(self.playground,'stdout','log_'+playActivity+'.out'), 'r') as f:
       #get qFlag
       from cctbxTools import tail
       try:
@@ -73,7 +73,7 @@ class cctbxPlayMan:
       counter = len(glob.glob(os.path.join(self.playground,'out',globRegEx)))
     else:
       #for merging, open stdout log.out and look for merge cycle no.
-      with open(os.path.join(self.playground,'stdout','log.out'), 'r') as f:
+      with open(os.path.join(self.playground,'stdout','log_'+playActivity+'.out'), 'r') as f:
         for line in f:
           if line.find('Summary for ') > -1: 
             if line.split('_')[-2].isdigit(): counter = int(line.split('_')[-2])
@@ -89,7 +89,7 @@ class cctbxPlayMan:
     qCmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
     qCmd += ' integrate=False'
     qCmd += ' '+self.targetPhil
-    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log.out'), qCmd]
+    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_doIndex.out'), qCmd]
     call(cmd)
     return 1
     
@@ -100,7 +100,7 @@ class cctbxPlayMan:
     qCmd = 'mpirun cctbx.xfel.xtc_process input.experiment='+self.exp+' input.run_num='+str(self.runNo)
     qCmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
     qCmd += ' '+self.targetPhil
-    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log.out'), qCmd]
+    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_doIntegrate.out'), qCmd]
     call(cmd)
     return 1
     
@@ -113,7 +113,7 @@ class cctbxPlayMan:
     if n_integrated > n_atleast_integrated:
       qCmd = 'prime.run prime.phil data='+os.path.join(self.playground,'out','*_integrated.pickle')
       qCmd += ' n_processors='+str(self.nproc)
-      cmd = ['bsub','-n', str(self.nproc),'-q', self.qName, '-o', os.path.join(self.playground, 'stdout','log.out'), qCmd]
+      cmd = ['bsub','-n', str(self.nproc),'-q', self.qName, '-o', os.path.join(self.playground, 'stdout','log_doMerge.out'), qCmd]
       call(cmd)
       return 1
     else:

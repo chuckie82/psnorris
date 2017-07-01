@@ -2,7 +2,8 @@ from subprocess import call
 import sys, os
 
 class cctbxPlayMan:
-  def __init__(self, exp=None, runNo=None, trialNo=None, targetPhil=None, outputDir=None, qName='psanaq', nproc=12):
+  def __init__(self, exp=None, runNo=None, trialNo=None, 
+    targetPhil=None, outputDir=None, qName='psanaq', nproc=12, *args):
     self.prog = "Cctbx.xfel wrapper for autosfx"
     self.exp = exp
     self.runNo = runNo
@@ -12,6 +13,7 @@ class cctbxPlayMan:
     self.qName = qName
     self.nproc = nproc
     self.playground = os.path.join(self.outputDir, 'r{:04d}'.format(self.runNo), '{:03d}'.format(self.trialNo))
+    self.args = args #additional arguments for Dials parameters
     if exp is None or runNo is None or trialNo is None or targetPhil is None:
       print "Please provide experiment name, run no., and target. Exit. Good Bye."
       return 0
@@ -38,6 +40,7 @@ class cctbxPlayMan:
     qCmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
     qCmd += ' dump_strong=True index=False'
     qCmd += ' '+self.targetPhil
+    qCmd += ' '+' '.join(self.args)
     cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_findSpots.out'), qCmd]
     call(cmd)
     return 1
@@ -89,6 +92,7 @@ class cctbxPlayMan:
     qCmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
     qCmd += ' integrate=False'
     qCmd += ' '+self.targetPhil
+    qCmd += ' '+' '.join(self.args)
     cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_doIndex.out'), qCmd]
     call(cmd)
     return 1
@@ -100,6 +104,7 @@ class cctbxPlayMan:
     qCmd = 'mpirun cctbx.xfel.xtc_process input.experiment='+self.exp+' input.run_num='+str(self.runNo)
     qCmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
     qCmd += ' '+self.targetPhil
+    qCmd += ' '+' '.join(self.args)
     cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_doIntegrate.out'), qCmd]
     call(cmd)
     return 1

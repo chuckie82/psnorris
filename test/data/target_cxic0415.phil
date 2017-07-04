@@ -1,0 +1,76 @@
+#Experiment settings 
+input {
+  address=CxiDs1.0:Cspad.0
+}
+format {
+  file_format=cbf
+  cbf {
+    detz_offset=589
+    #invalid_pixel_mask=mask.pickle
+    gain_mask_value=1.0
+    override_energy=12807
+    common_mode.algorithm=custom
+    common_mode.custom_parameterization=5,50
+  }
+}
+border_mask {
+  border=1
+}
+
+#Spotfinding
+spotfinder {
+  filter.min_spot_size=2
+  threshold.xds.gain=37.61
+  threshold.xds.global_threshold=100
+}
+
+#Indexing
+indexing{
+  known_symmetry {
+    space_group = P1211
+    unit_cell = 50.84,98.52,53.43,90.0,112.38,90.0
+  }
+  method=real_space_grid_search
+  refinement_protocol.d_min_start=1.9
+}
+
+#Refinement
+refinement {
+  parameterisation {
+    beam.fix=all
+    detector.fix_list=Dist,Tau1
+    auto_reduction {
+    action=fix
+    min_nref_per_parameter=1
+    }
+    crystal {
+      unit_cell {
+        restraints {
+          tie_to_target {
+          values=50.84,98.52,53.43,90.0,112.38,90.0
+          sigmas=1,1,1,0,1,0
+          #apply_to_all=True
+          }
+        }
+      }
+    }
+  }
+}
+
+#Integration
+integration {
+  integrator=stills
+  profile.fitting=False
+  background {
+    algorithm = simple
+    simple {
+    model.algorithm = linear2d
+    outlier.algorithm = nsigma
+    }
+  }
+}
+profile {
+  gaussian_rs {
+  min_spots.overall = 0
+  }
+}

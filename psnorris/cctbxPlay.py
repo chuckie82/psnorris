@@ -2,8 +2,8 @@ from subprocess import call
 import sys, os
 
 class cctbxPlayMan:
-  def __init__(self, exp=None, runNo=None, trialNo=None, 
-    targetPhil=None, outputDir=None, qName='psanaq', nproc=12, *args):
+  def __init__(self, exp, runNo, trialNo, 
+    targetPhil, outputDir, qName, nProc, *args):
     self.prog = "Cctbx.xfel wrapper for autosfx"
     self.exp = exp
     self.runNo = runNo
@@ -11,7 +11,7 @@ class cctbxPlayMan:
     self.targetPhil = targetPhil
     self.outputDir = outputDir
     self.qName = qName
-    self.nproc = nproc
+    self.nProc = nProc
     self.playground = os.path.join(self.outputDir, 'r{:04d}'.format(self.runNo), '{:03d}'.format(self.trialNo))
     self.args = args #additional arguments for Dials parameters
     if exp is None or runNo is None or trialNo is None or targetPhil is None:
@@ -41,7 +41,7 @@ class cctbxPlayMan:
     qCmd += ' dump_strong=True index=False'
     qCmd += ' '+self.targetPhil
     qCmd += ' '+' '.join(self.args)
-    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_findSpots.out'), qCmd]
+    cmd = ['bsub', '-n', str(self.nProc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_findSpots.out'), qCmd]
     call(cmd)
     return 1
     
@@ -93,7 +93,7 @@ class cctbxPlayMan:
     qCmd += ' integrate=False'
     qCmd += ' '+self.targetPhil
     qCmd += ' '+' '.join(self.args)
-    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_doIndex.out'), qCmd]
+    cmd = ['bsub', '-n', str(self.nProc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_doIndex.out'), qCmd]
     call(cmd)
     return 1
     
@@ -105,7 +105,7 @@ class cctbxPlayMan:
     qCmd += ' output.logging_dir='+os.path.join(self.playground,'stdout')+' output.output_dir='+os.path.join(self.playground,'out')
     qCmd += ' '+self.targetPhil
     qCmd += ' '+' '.join(self.args)
-    cmd = ['bsub', '-n', str(self.nproc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_doIntegrate.out'), qCmd]
+    cmd = ['bsub', '-n', str(self.nProc), '-q', self.qName, '-o', os.path.join(self.playground,'stdout','log_doIntegrate.out'), qCmd]
     call(cmd)
     return 1
     
@@ -117,8 +117,8 @@ class cctbxPlayMan:
     n_atleast_integrated = -1
     if n_integrated > n_atleast_integrated:
       qCmd = 'prime.run prime.phil data='+os.path.join(self.playground,'out','*_integrated.pickle')
-      qCmd += ' n_processors='+str(self.nproc)
-      cmd = ['bsub','-n', str(self.nproc),'-q', self.qName, '-o', os.path.join(self.playground, 'stdout','log_doMerge.out'), qCmd]
+      qCmd += ' n_processors='+str(self.nProc)
+      cmd = ['bsub','-n', str(self.nProc),'-q', self.qName, '-o', os.path.join(self.playground, 'stdout','log_doMerge.out'), qCmd]
       call(cmd)
       return 1
     else:

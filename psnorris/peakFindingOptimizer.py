@@ -1,16 +1,17 @@
-from cctbxPlan import cctbxPlaMan
+from cctbxPlay import cctbxPlayMan
 from psana import *
 from xfel.cxi.cspad_ana import cspad_tbx
 
 class peakFindingOptimizerMan:
-  def __init__(self, exp, runNo, eventList, beamXY, target='target.phil', mask='mask.pickle', nproc=16):
+  def __init__(self, exp, runNo, eventList, beamXY, target='target.phil', mask='mask.pickle', qName='psana', nProc=12):
     self.exp = exp
     self.runNo = runNo
     self.eventList = eventList
     self.beamXY = beamXY
     self.target = target
     self.mask = mask
-    self.nproc = nproc
+    self.qName = qName
+    self.nProc = nProc
     # since cctbx only understand timestamp for event filtering
     # converts eventList to tsList
     ds = DataSource('exp='+self.exp+':run='+str(self.runNo)+':idx')
@@ -21,15 +22,15 @@ class peakFindingOptimizerMan:
   def optimize(self, method='BruteForce', **kwargs):
     if method == 'BruteForce':
       #generate a line search
-      spotSizes = range(kwargs['min_spot_size'], kwargs['max_spot_size'])
-      for trialCount, spotSize in enumerate(spotSizes):
-        # from a given experiment-run-event_list, change spot size parameter
-        cPMan = cctbxPlayMan(exp=self.exp, runNo=self.runNo, trialNo=trialCount, 
-            targetPhil=self.target, outputDir='optims', nproc=self.nproc, 
-            'spotfinder.filter.min_spot_size='+str(spotSize), self.strTs)
+      windows = range(-int(kwargs['window_size']/2),int(kwargs['window_size']/2))
+      detz_offsets = map(lambda x: x*kwargs['step_size']+kwargs['detz_offset'], windows)
+      for trialCount, detz_offset in enumerate(detz_offsets):
+        # from a given experiment-run-event_list, 
+        cPMan = cctbxPlayMan(self.exp, self.runNo, trialCount, self.target, 'optims', self.qName, self.nProc, 
+            'format.cbf.invalid_pixel_mask='+self.mask, 'format.cbf.detz_offset='+str(detz_offset), 
+            'geometry.detector.slow_fast_beam_centre='+str(self.beamXY[0])+','+str(self.beamXY[1]), 
+            self.strTs)
         cPMan.buildPlayground(replaceDir=True)
         # Index
-        cPMan.doIndex()
-      
-      
-      
+        cPMan.doIntegrate()
+        

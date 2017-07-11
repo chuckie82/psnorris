@@ -3,11 +3,10 @@ from psana import *
 from xfel.cxi.cspad_ana import cspad_tbx
 
 class peakFindingOptimizerMan:
-  def __init__(self, exp, runNo, eventList, beamXY, target='target.phil', mask='mask.pickle', qName='psana', nProc=12):
+  def __init__(self, exp, runNo, eventList, target='target.phil', mask='mask.pickle', qName='psana', nProc=12):
     self.exp = exp
     self.runNo = runNo
     self.eventList = eventList
-    self.beamXY = beamXY
     self.target = target
     self.mask = mask
     self.qName = qName
@@ -27,8 +26,7 @@ class peakFindingOptimizerMan:
       for trialCount, detz_offset in enumerate(detz_offsets):
         # from a given experiment-run-event_list, 
         cPMan = cctbxPlayMan(self.exp, self.runNo, trialCount, self.target, 'optims', self.qName, self.nProc, 
-            'format.cbf.invalid_pixel_mask='+self.mask, 'format.cbf.detz_offset='+str(detz_offset), 
-            'geometry.detector.slow_fast_beam_centre='+str(self.beamXY[0])+','+str(self.beamXY[1]), 
+            'format.cbf.invalid_pixel_mask='+self.mask, 'format.cbf.detz_offset='+str(detz_offset),  
             self.strTs)
         cPMan.buildPlayground(replaceDir=True)
         # Index

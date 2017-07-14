@@ -30,4 +30,6 @@ if __name__ == '__main__':
   
   # Initialize 
   pFOMan = peakFindingOptimizerMan(exp, runNo, eventList, target=targetFile, mask=maskFile, qName=qName, nProc=nProc)
-  pFOMan.optimize(detz_offset=detz_offset, window_size=window_size, step_size=step_size)
+  results = pFOMan.optimize(detz_offset=detz_offset, window_size=window_size, step_size=step_size)
+  print "Results:"
+  for res in results: print res

@@ -16,12 +16,17 @@ class peakFindingOptimizerMan:
     self.qName = qName
     self.nProc = nProc
     self.resultFolder = 'optims'
+    self.strTs = None
     # since cctbx only understand timestamp for event filtering
     # converts eventList to tsList
-    ds = DataSource('exp='+self.exp+':run='+str(self.runNo)+':idx')
-    times = ds.runs().next().times()
-    tsList = [cspad_tbx.evt_timestamp((t.seconds(),t.nanoseconds()/1e6)) for i,t in enumerate(times) if i in eventList]
-    self.strTs = ' debug.event_timestamp='.join(['']+tsList)
+    if self.exp:
+      ds = DataSource('exp='+self.exp+':run='+str(self.runNo)+':idx')
+      times = ds.runs().next().times()
+      tsList = [cspad_tbx.evt_timestamp((t.seconds(),t.nanoseconds()/1e6)) for i,t in enumerate(times) if i in eventList]
+      self.strTs = ' debug.event_timestamp='.join(['']+tsList)
+    else:
+      print "Experiment not given"
+      print "Only creating an empty object"
   
   def optimize(self, method='BruteForce', **kwargs):
     if method == 'BruteForce':

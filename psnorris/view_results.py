@@ -10,16 +10,34 @@ def view_results(playActivity, **kwargs):
     cPManList = []
     for trialCount, detz_offset in enumerate(detz_offsets):
       # from a given experiment-run-event_list, 
-      cPMan = cctbxPlayMan("cxid9114", 0, trialCount, '', 'optims', '', 0)
+      cPMan = cctbxPlayMan("cxid9114", 100, trialCount, '', 'optims', '', 0)
       cPMan.buildPlayground(replaceDir=False)
+      print cPMan.playground
       cPManList.append(cPMan)
     # Initialize 
     pFOMan = peakFindingOptimizerMan(kwargs['exp'], kwargs['run_no'], [])
-    results = pFOMan.calcUCDistrSkew(cPManList)
+    skewList, indexCntList = pFOMan.calcUCDistrSkew(cPManList)
     print "Results:"
-    for res in results: print res
+    print "A       B       C       Alpha   Beta    Gamma"
+    for dist in skewList:
+      for param in dist:
+        param = str(param)
+        if param[0] == "-":
+          param = param[:7]
+        else:
+          param = param[:6]
+        diff = 7 - len(param)
+        for i in range(diff):
+          param = param + " "
+        print param,
+      print
+
+      
+    print indexCntList
     
+
+
 if __name__ == "__main__":
-  view_results(sys.argv[1], window_size=2, step_size=0.2, detz_offset=589, exp=None, run_no=0)
+  view_results(sys.argv[1], window_size=2, step_size=0.2, detz_offset=589, exp=None, run_no=100)
 
 

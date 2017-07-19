@@ -1,0 +1,637 @@
+kinit: KDC can't fulfill requested option while renewing credentials
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           psana1503
+  Local device:         mlx4_0
+  Local port:           2
+  CPCs attempted:       udcm
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+An MPI process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your MPI job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.  
+
+The process that invoked fork was:
+
+  Local host:          psana1503 (PID 13325)
+  MPI_COMM_WORLD rank: 22
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+[psana1501:04095] 63 more processes have sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+[psana1501:04095] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[psana1501:04095] 63 more processes have sent help message help-mpi-runtime.txt / mpi_init:warn-fork
+Rank: 8  process:  4516 / 5161
+Rank: 10  process:  5807 / 6452
+Rank: 4  process:  1935 / 2580
+Rank: 2  process:  645 / 1290
+Rank: 6  process:  3226 / 3871
+Rank: 9  process:  5161 / 5807
+Rank: 11  process:  6452 / 7097
+Rank: 12  process:  7097 / 7742
+Rank: 1  process:  0 / 645
+Rank: 5  process:  2580 / 3226
+Rank: 15  process:  9033 / 9678
+Rank: 7  process:  3871 / 4516
+Rank: 14  process:  8388 / 9033
+run Total number =  40650
+event Total number =  40650
+Rank: 3  process:  1290 / 1935
+Rank: 13  process:  7742 / 8388
+Rank: 39  process:  24519 / 25164
+Rank: 41  process:  25809 / 26454
+Rank: 42  process:  26454 / 27099
+Rank: 43  process:  27099 / 27745
+Rank: 44  process:  27745 / 28390
+Rank: 45  process:  28390 / 29035
+Rank: 47  process:  29680 / 30326
+Rank: 32  process:  20002 / 20647
+Rank: 34  process:  21292 / 21938
+Rank: 35  process:  21938 / 22583
+Rank: 36  process:  22583 / 23228
+Rank: 38  process:  23873 / 24519
+Rank: 37  process:  23228 / 23873
+Rank: 40  process:  25164 / 25809
+Rank: 33  process:  20647 / 21292
+Rank: 46  process:  29035 / 29680
+Rank: 29  process:  18066 / 18711
+Rank: 30  process:  18711 / 19357
+Rank: 18  process:  10969 / 11614
+Rank: 19  process:  11614 / 12259
+Rank: 20  process:  12259 / 12904
+Rank: 25  process:  15485 / 16130
+Rank: 28  process:  17421 / 18066
+Rank: 31  process:  19357 / 20002
+Rank: 16  process:  9678 / 10323
+Rank: 24  process:  14840 / 15485
+Rank: 26  process:  16130 / 16776
+Rank: 27  process:  16776 / 17421
+Rank: 23  process:  14195 / 14840
+Rank: 22  process:  13549 / 14195
+Rank: 17  process:  10323 / 10969
+Rank: 21  process:  12904 / 13549
+Rank: 49  process:  30971 / 31616
+Rank: 53  process:  33552 / 34197
+Rank: 58  process:  36778 / 37423
+Rank: 61  process:  38714 / 39359
+Rank: 62  process:  39359 / 40004
+Rank: 48  process:  30326 / 30971
+Rank: 63  process:  40004 / 40650
+Rank: 51  process:  32261 / 32907
+Rank: 55  process:  34842 / 35488
+Rank: 56  process:  35488 / 36133
+Rank: 57  process:  36133 / 36778
+Rank: 59  process:  37423 / 38069
+Rank: 60  process:  38069 / 38714
+Rank: 50  process:  31616 / 32261
+Rank: 54  process:  34197 / 34842
+Rank: 52  process:  32907 / 33552
+event  3226  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  8388  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  5807  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  1935  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  4516  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  645  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  7097  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  5161  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  3871  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  0  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  25809  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  9033  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  27099  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  1290  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  26454  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  23228  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  6452  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  20647  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  29035  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  21292  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  2580  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  23873  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  29680  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  22583  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  21938  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  25164  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  28390  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  20002  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  7742  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  27745  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  24519  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+####:  6 3226 433.905 141.276
+####:  14 8388 183.348 88.8296
+event  12904  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  10969  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  14840  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  9678  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  12259  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  16130  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  18066  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  14195  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  19357  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  11614  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  10323  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  16776  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  13549  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  15485  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  18711  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+####:  10 5807 234.697 102.676
+####:  4 1935 300.498 119.619
+####:  8 4516 464.343 146.863
+####:  2 645 337.795 123.584
+event  17421  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+####:  12 7097 227.808 99.6292
+####:  9 5161 372.817 129.226
+####:  7 3871 347.96 125.228
+comm_rank:  10   /event:  5807   /peaks:  331   /likeli:  0.0381854275047
+####:  1 0 386.51 137.016
+comm_rank:  4   /event:  1935   /peaks:  288   /likeli:  0.0235751017215
+comm_rank:  6   /event:  3226   /peaks:  198   /likeli:  0.0318889300125
+comm_rank:  14   /event:  8388   /peaks:  412   /likeli:  0.0349392941394
+comm_rank:  8   /event:  4516   /peaks:  184   /likeli:  0.0291586724177
+####:  10 5808 185.053 89.7569
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  4 1936 231.818 98.9332
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  6 3227 439.053 152.029
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  2   /event:  645   /peaks:  231   /likeli:  0.0242763892644
+####:  14 8389 80.0766 58.0659
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  8 4517 492.691 152.266
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  2 646 202.426 94.0545
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  3 1290 203.06 92.9416
+comm_rank:  12   /event:  7097   /peaks:  370   /likeli:  0.0234598954149
+####:  11 6452 338.816 123.282
+####:  15 9033 717.974 190.997
+####:  5 2580 299.203 115.205
+####:  13 7742 301.34 115.595
+####:  12 7098 165.517 83.602
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  9   /event:  5161   /peaks:  195   /likeli:  0.0263105130217
+comm_rank:  7   /event:  3871   /peaks:  277   /likeli:  0.0309550292162
+####:  9 5162 267.158 108.231
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  1   /event:  0   /peaks:  290   /likeli:  0.029430205871
+####:  1 1 385.725 133.242
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+####:  7 3872 327.622 121.706
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  11   /event:  6452   /peaks:  196   /likeli:  0.0241426722372
+comm_rank:  3   /event:  1290   /peaks:  390   /likeli:  0.0234396699678
+comm_rank:  5   /event:  2580   /peaks:  250   /likeli:  0.0197268629187
+comm_rank:  15   /event:  9033   /peaks:  134   /likeli:  0.021824600404
+comm_rank:  13   /event:  7742   /peaks:  236   /likeli:  0.0186092275962
+####:  11 6453 272.663 109.325
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  3 1291 157.313 81.5138
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  37 23228 194.314 91.472
+####:  15 9034 573.975 165.41
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  5 2581 345.386 253.973
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  13 7743 236.576 100.83
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  42 26454 350.577 124.989
+####:  46 29035 373.947 136.439
+####:  34 21292 26.2048 32.3392
+####:  38 23873 275.585 109.922
+####:  32 20002 6.77713 16.5134
+####:  47 29680 433.742 140.609
+####:  40 25164 234.513 100.478
+####:  33 20647 9.05651 19.1092
+####:  36 22583 20.462 28.9009
+####:  45 28390 337.261 123.359
+####:  41 25809 317.064 119.484
+####:  43 27099 106.78 66.5169
+####:  35 21938 49.3545 44.5392
+####:  44 27745 364.137 129.891
+####:  39 24519 294.273 113.961
+comm_rank:  34   /event:  21292   /peaks:  2906   /likeli:  0
+comm_rank:  36   /event:  22583   /peaks:  3743   /likeli:  0
+comm_rank:  35   /event:  21938   /peaks:  1627   /likeli:  0
+comm_rank:  32   /event:  20002   /peaks:  19321   /likeli:  0
+comm_rank:  33   /event:  20647   /peaks:  15230   /likeli:  0
+####:  36 22584 17.5108 26.8079
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+event  35488  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  31616  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+####:  34 21293 34.6491 37.5669
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+####:  35 21939 58.6661 48.7564
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+event  34842  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  34197  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  38069  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  36778  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  30326  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  37423  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  39359  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  30971  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+####:  32 20003 3.99947 12.8537
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+event  32261  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+####:  33 20648 9.84523 20.3017
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+event  33552  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  32907  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  40004  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+event  36133  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+####:  26 16130 534.904 160.09
+####:  24 14840 617.075 173.586
+####:  16 9678 503.396 155.112
+####:  20 12259 392.873 134.054
+####:  22 13549 389.569 175.298
+####:  18 10969 420.055 140.257
+event  38714  is initializing ... with threshold:  0.0 / 0.0 / 0.0
+####:  30 18711 491.642 152.197
+####:  21 12904 577.238 205.087
+####:  29 18066 246.82 136.153
+####:  17 10323 275.701 109.757
+####:  27 16776 402.49 136.475
+####:  19 11614 411.169 138.762
+####:  31 19357 4.4983 13.6093
+####:  23 14195 560.355 163.547
+####:  28 17421 616.555 172.926
+####:  25 15485 217.405 95.9024
+comm_rank:  31   /event:  19357   /peaks:  14951   /likeli:  0
+comm_rank:  42   /event:  26454   /peaks:  247   /likeli:  0.0306440582379
+####:  31 19358 3.61735 12.1298
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  37   /event:  23228   /peaks:  371   /likeli:  0.0354730895469
+comm_rank:  46   /event:  29035   /peaks:  204   /likeli:  0.0241617609001
+comm_rank:  47   /event:  29680   /peaks:  204   /likeli:  0.0246087667446
+####:  42 26455 379.895 134.749
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  45   /event:  28390   /peaks:  333   /likeli:  0.0232427895074
+comm_rank:  38   /event:  23873   /peaks:  359   /likeli:  0.0332420496347
+####:  37 23229 186.304 90.3933
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  46 29036 367.891 131.054
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  40   /event:  25164   /peaks:  383   /likeli:  0.024328552017
+comm_rank:  41   /event:  25809   /peaks:  294   /likeli:  0.0289621923583
+comm_rank:  39   /event:  24519   /peaks:  279   /likeli:  0.0257546465107
+comm_rank:  44   /event:  27745   /peaks:  262   /likeli:  0.0212505392162
+####:  38 23874 207.184 93.9892
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+####:  47 29681 483.207 150.46
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  43   /event:  27099   /peaks:  855   /likeli:  0.0308413290214
+####:  45 28391 364.106 128.691
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  39 24520 288.49 113.614
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  40 25165 331.179 233.739
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  44 27746 349.272 131.436
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  41 25810 393.08 133.993
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  43 27100 217.086 96.4395
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  16   /event:  9678   /peaks:  200   /likeli:  0.0336000123481
+comm_rank:  20   /event:  12259   /peaks:  209   /likeli:  0.0353744789679
+comm_rank:  22   /event:  13549   /peaks:  120   /likeli:  0.0206309037277
+####:  16 9679 203.737 93.3726
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  18   /event:  10969   /peaks:  213   /likeli:  0.0251548338143
+####:  20 12260 583.859 168.308
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  24   /event:  14840   /peaks:  168   /likeli:  0.0221690807527
+comm_rank:  26   /event:  16130   /peaks:  209   /likeli:  0.0304048467567
+comm_rank:  30   /event:  18711   /peaks:  232   /likeli:  0.0279236343055
+comm_rank:  28   /event:  17421   /peaks:  154   /likeli:  0.026477713842
+comm_rank:  21   /event:  12904   /peaks:  291   /likeli:  0.0689100354739
+comm_rank:  19   /event:  11614   /peaks:  304   /likeli:  0.0319146686689
+####:  22 13550 481.962 309.126
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  23   /event:  14195   /peaks:  151   /likeli:  0.0176124829046
+comm_rank:  17   /event:  10323   /peaks:  335   /likeli:  0.0219914256558
+comm_rank:  29   /event:  18066   /peaks:  162   /likeli:  0.051755330242
+comm_rank:  25   /event:  15485   /peaks:  384   /likeli:  0.0329869197194
+####:  18 10970 234.143 100.234
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  27   /event:  16776   /peaks:  271   /likeli:  0.0186505534827
+####:  30 18712 491.553 151.279
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  24 14841 609.143 170.864
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  23 14196 466.901 152.73
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  26 16131 502.31 153.552
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  28 17422 596.539 170.24
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  29 18067 303.36 116.591
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+####:  17 10324 283.802 111.677
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  21 12905 433.064 141.193
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  19 11615 501.97 169.417
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  25 15486 412.983 137.974
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  27 16777 412.726 138.597
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  55 34842 474.617 232.527
+####:  59 37423 469.859 151.153
+####:  49 30971 292.632 113.912
+####:  51 32261 331.166 122.49
+####:  53 33552 427.134 140.265
+####:  57 36133 323.166 121.248
+####:  63 40004 527.65 161.653
+####:  61 38714 446.485 144.53
+####:  62 39359 449.154 154.299
+####:  50 31616 308.521 118.175
+####:  60 38069 348.52 125.482
+####:  54 34197 537.671 159.401
+####:  56 35488 402.684 136.908
+####:  58 36778 536.139 159.37
+####:  48 30326 291.41 113.201
+####:  52 32907 261.132 108.366
+comm_rank:  59   /event:  37423   /peaks:  217   /likeli:  0.0299294494561
+comm_rank:  49   /event:  30971   /peaks:  248   /likeli:  0.0246065574098
+comm_rank:  55   /event:  34842   /peaks:  553   /likeli:  0.0394936142364
+####:  59 37424 429.371 139.921
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  55 34843 534.153 160.444
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  49 30972 303.083 115.916
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  51   /event:  32261   /peaks:  247   /likeli:  0.0187697495358
+####:  51 32262 386.096 132.294
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  53   /event:  33552   /peaks:  209   /likeli:  0.0239834301387
+####:  53 33553 244.88 104.02
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  63   /event:  40004   /peaks:  208   /likeli:  0.0369044193128
+comm_rank:  57   /event:  36133   /peaks:  220   /likeli:  0.0215893885547
+####:  57 36134 396.586 134.322
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  63 40005 576.716 167.456
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  54   /event:  34197   /peaks:  135   /likeli:  0.0223733827454
+comm_rank:  61   /event:  38714   /peaks:  235   /likeli:  0.0327310111272
+comm_rank:  50   /event:  31616   /peaks:  246   /likeli:  0.0236323365148
+comm_rank:  58   /event:  36778   /peaks:  180   /likeli:  0.0203818870803
+comm_rank:  56   /event:  35488   /peaks:  220   /likeli:  0.0197285907737
+comm_rank:  48   /event:  30326   /peaks:  256   /likeli:  0.0212068606826
+comm_rank:  60   /event:  38069   /peaks:  238   /likeli:  0.0329915699289
+comm_rank:  62   /event:  39359   /peaks:  509   /likeli:  0.0483616568283
+####:  56 35489 468.172 147.994
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  50 31617 315.258 118.617
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+comm_rank:  52   /event:  32907   /peaks:  374   /likeli:  0.0356040518346
+####:  60 38070 406.969 145.262
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  61 38715 553.423 162.553
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  54 34198 436.36 142.309
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  58 36779 458.286 146.635
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  48 30327 382.779 131.877
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  62 39360 424.033 149.068
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+####:  52 32908 197.948 92.1651
+Traceback (most recent call last):
+  File "ilikelihood.py", line 144, in <module>
+    dt.peakFinder.findPeaks(detarr, evt, thr_high=int(thresh+2*spread), thr_low=int(thresh+spread))
+AttributeError: 'NoneType' object has no attribute 'findPeaks'
+mpirun: Forwarding signal 18 to job
+mpirun: Forwarding signal 18 to job
+mpirun: Forwarding signal 18 to job
+
+------------------------------------------------------------
+Sender: LSF System <lsf@psana1501.pcdsn>
+Subject: Job 202941: <mpirun python ilikelihood.py> in cluster <slac> Exited
+
+Job <mpirun python ilikelihood.py> was submitted from host <psanaphi104.pcdsn> by user <yoon82> in cluster <slac> at Tue Jul 11 01:02:16 2017.
+Job was executed on host(s) <16*psana1501>, in queue <psnehq>, as user <yoon82> in cluster <slac> at Tue Jul 11 01:02:18 2017.
+                            <16*psana1503>
+                            <16*psana1504>
+                            <16*psana1505>
+</reg/neh/home/yoon82> was used as the home directory.
+</reg/d/psdm/cxi/cxitut13/res/autosfx/likelihood> was used as the working directory.
+Started at Tue Jul 11 01:02:18 2017.
+Terminated at Tue Jul 11 01:03:05 2017.
+Results reported at Tue Jul 11 01:03:05 2017.
+Cannot open your job file: /reg/neh/home/yoon82/.lsbatch/1499760136.202941
+TERM_OWNER: job killed by owner.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   1144.71 sec.
+    Max Memory :                                 10395 MB
+    Average Memory :                             5308.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              19
+    Max Threads :                                69
+    Run time :                                   61 sec.
+    Turnaround time :                            49 sec.
+
+The output (if any) is above this job summary.
+

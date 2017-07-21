@@ -47,17 +47,16 @@ def runmaster(args, nClients):
         
 	counter = counter + md.small.count
 	_nClients -= 1	
-
-    print counter
     std_img = final_square_img/float(counter) - (final_mean_img/float(counter))**2
 
-    savePowder(experimentName, runNumber, counter, det1, final_max_img, evt, final_mean_img, std_img)
+    savePowder(args, experimentName, runNumber, counter, det1, final_max_img, evt, final_mean_img, std_img)
 
-def savePowder(experimentName, runNumber, counter, det1, final_max_img, evt, final_mean_img, std_img):
-    np.save("/reg/d/psdm/cxi/cxic0415/res/autosfx/max_img_"+experimentName+"_"+runNumber+"_assem.npy", det1.image(evt, final_max_img))
-    np.save("/reg/d/psdm/cxi/cxic0415/res/autosfx/max_img_"+experimentName+"_"+runNumber+"_unassem.npy", final_max_img)
-    np.save("/reg/d/psdm/cxi/cxic0415/res/autosfx/mean_img_"+experimentName+"_"+runNumber+"_assem.npy", det1.image(evt, final_mean_img/counter))
-    np.save("/reg/d/psdm/cxi/cxic0415/res/autosfx/mean_img_"+experimentName+"_"+runNumber+"_unassem.npy", final_mean_img/counter)
-    np.save("/reg/d/psdm/cxi/cxic0415/res/autosfx/std_img_"+experimentName+"_"+runNumber+"_assem.npy", det1.image(evt, std_img))
-    np.save("/reg/d/psdm/cxi/cxic0415/res/autosfx/std_img_"+experimentName+"_"+runNumber+"_unassem.npy", std_img)
+def savePowder(args, experimentName, runNumber, counter, det1, final_max_img, evt, final_mean_img, std_img):
+    np.save(args.outDir+"/max_img_"+experimentName+"_"+runNumber+"_assem.npy", det1.image(evt, final_max_img))
+    np.save(args.outDir+"/max_img_"+experimentName+"_"+runNumber+"_unassem.npy", final_max_img)
+    np.save(args.outDir+"/mean_img_"+experimentName+"_"+runNumber+"_assem.npy", det1.image(evt, final_mean_img/counter))
+    np.save(args.outDir+"/mean_img_"+experimentName+"_"+runNumber+"_unassem.npy", final_mean_img/counter)
+    np.save(args.outDir+"/std_img_"+experimentName+"_"+runNumber+"_assem.npy", det1.image(evt, std_img))
+    np.save(args.outDir+"/std_img_"+experimentName+"_"+runNumber+"_unassem.npy", std_img)
+
 

@@ -35,8 +35,7 @@ def runclient(args):
                 mean_img = mean_img + img
 		square_img = square_img + img*img
         counter += 1
-       	#md.small.intensity = intensity
-        #if ((nevent)%2 == 0): # send mpi data object to master when desired
+	if counter%10: print "counter: ", nevent, counter
     	
     md=mpidata()
 
@@ -46,5 +45,4 @@ def runclient(args):
     md.small.count = counter
 
     md.send()
-    
-    #md.endrun()	
+    	

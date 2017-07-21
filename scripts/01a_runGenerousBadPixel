@@ -1,6 +1,0 @@
-#!/bin/bash
-python generousBadPixel.py exp=cxic0415:run=100 -n 10
-
-
-
-

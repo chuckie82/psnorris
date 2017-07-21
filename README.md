@@ -6,10 +6,11 @@ automation package for LCLS
 Setting up the environment:
 source ~monarin/cida
 
-** Update 2017-7-20 **
+Update 2017-7-20
+
 Test run cctbx automatic pipeline:
 1. Download resource files in test/data to your directory
-2. Update format.invalid_pixel_mask in target.phil to your saved mask.pickle
+2. Update detector and sample parameters in target.phil
 3. In the directory where the resource files are, run
    
    python replay_cctbx.py -e cxitut13 -r 10 --trial 0 --target target.phil --pdb 1XYZ.pdb
@@ -17,8 +18,7 @@ Test run cctbx automatic pipeline:
    Use -h to see help message.
 
 Test run cctbx geometry (x,y,z):
-1. Download resource test/data to your directory
-2. In the directory where the resource files are, run
+1. In the directory where the resource files are, run
    
    python optimize_peakfinding.py -e cxitut13 -r 10 --events selected_events.h5 --target target.phil -d 589 -w 10 -s 0.25. 
    

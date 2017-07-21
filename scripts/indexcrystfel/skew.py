@@ -7,7 +7,6 @@ import numpy as np
 import warnings
 from indexparameter import *
 import subprocess
-import matplotlib.pyplot as plt
 warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning)
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 
@@ -97,7 +96,7 @@ for ii in range(6):
     mean_uc = np.nanmean(lattice[1:,ii])
     print mean_uc
 f.close()
-exit() 
+exit()
 
 ##########################
 # Deploy best file

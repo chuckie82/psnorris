@@ -15,28 +15,41 @@ def stream2lattice(path_stream, path_write, detDistance):
     f = open(path_stream,'r')
     content = f.readlines()
     f.close()
+    (cry_a, cry_b, cry_c, cry_alpha, cry_beta, cry_gamma) = (0,0,0,0,0,0)
+    (latticeType, centering, uniqueAxis) = (0,0,0)
+    latticeTypeList = []
+    centeringList = []
+    uniqueAxisList = []
     for i, val in enumerate(content):
         if (val[:15] == 'Cell parameters'):
             temp = val.split(' ')
-            cry_a = float(temp[2])
-            cry_b = float(temp[3])
-            cry_c = float(temp[4])
+            cry_a = float(temp[2]) * 10.
+            cry_b = float(temp[3]) * 10.
+            cry_c = float(temp[4]) * 10.
             cry_alpha = float(temp[6])
             cry_beta = float(temp[7])
             cry_gamma = float(temp[8])
             icrystal.append([cry_a, cry_b, cry_c, cry_alpha, cry_beta, cry_gamma])
-            print cry_a, cry_b, cry_c, cry_alpha, cry_beta, cry_gamma
+	elif 'lattice_type' in val:
+            latticeTypeList.append(val.split('= ')[-1])
+	elif 'centering' in val:
+            centeringList.append(val.split('= ')[-1])
+	elif 'unique_axis' in val:
+	    uniqueAxisList.append(val.split('= ')[-1])
 
     icrystal = np.array(icrystal)
 
     print "####"
-    print icrystal
+    print path_write+'_latticeType.npy'
+    np.save(path_write+'_latticeType.npy', latticeTypeList)
+    np.save(path_write+'_centering.npy', centeringList)
+    np.save(path_write+'_uniqueAxis.npy', uniqueAxisList)
 
-    f = h5py.File(path_write, 'w')
+    f = h5py.File(path_write+'.h5', 'w')
     data_write = f.create_dataset('lattice', icrystal.shape)
     data_write[...] = icrystal
     f.close()
-    print "f: ", path_write
+    print "f: ", path_write+'.h5'
 
 para = experipara()
 para.pathcxi = os.path.join(para.path, 'r'+str(para.run).zfill(4) )
@@ -59,14 +72,14 @@ for idx in np.arange(istart, iend):
 	print '### new clen = ', newclen
 
 	path_stream = os.path.join(para.pathcxi, str(para.experimentName) + '_' + str(para.run).zfill(4)+ '_'+str(idx)+'.stream')
-	path_write = os.path.join(para.newgeom, str(para.experimentName) + '_' + str(para.run).zfill(4) + '_' + str(idx).zfill(2)+'.h5')
+	path_write = os.path.join(para.newgeom, str(para.experimentName) + '_' + str(para.run).zfill(4) + '_' + str(idx).zfill(2))
         print "path_stream: ", path_stream
         print "path_write: ", path_write
 
 	if not os.path.exists(path_stream): continue
 
 	detDistance = newclen + para.coffset
-	stream2lattice(path_stream, path_write, detDistance)	
+	stream2lattice(path_stream, path_write, detDistance)
 	#os.rename(path_stream, path_stream + '_' + str(idx).zfill(2) + '.finish')
 
 

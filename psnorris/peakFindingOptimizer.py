@@ -7,15 +7,14 @@ import cPickle as pickle
 import warnings
 
 class peakFindingOptimizerMan:
-  def __init__(self, exp, runNo, eventList, target='target.phil', mask='mask.pickle', qName='psana', nProc=12):
+  def __init__(self, exp, runNo, eventList, target, resultFolder, qName, nProc):
     self.exp = exp
     self.runNo = runNo
     self.eventList = eventList
     self.target = target
-    self.mask = mask
     self.qName = qName
     self.nProc = nProc
-    self.resultFolder = 'optims'
+    self.resultFolder = resultFolder
     self.strTs = None
     # since cctbx only understand timestamp for event filtering
     # converts eventList to tsList
@@ -28,36 +27,34 @@ class peakFindingOptimizerMan:
       print "Experiment not given"
       print "Only creating an empty object"
   
-  def optimize(self, method='BruteForce', **kwargs):
-    if method == 'BruteForce':
-      # generate a line search
-      windows = range(-int(kwargs['window_size']/2),int(kwargs['window_size']/2))
-      detz_offsets = map(lambda x: x*kwargs['step_size']+kwargs['detz_offset'], windows)
-      cPManList = []
-      for trialCount, detz_offset in enumerate(detz_offsets):
-        # from a given experiment-run-event_list, 
-        cPMan = cctbxPlayMan(self.exp, self.runNo, trialCount, self.target, self.resultFolder, self.qName, self.nProc, 
-            'format.cbf.invalid_pixel_mask='+self.mask, 'format.cbf.detz_offset='+str(detz_offset),  
-            self.strTs)
-        cPMan.buildPlayground(replaceDir=True)
-        # Index
-        cPMan.doIntegrate()
-        cPManList.append(cPMan)
-      # only Exit when all jobs are done
-      while True:
-        nTrialDone = 0
-        for trialCount, cPMan in enumerate(cPManList):
-          results = cPMan.isDone(playActivity="doIntegrate")
-          if results[0]: nTrialDone += 1
-        if nTrialDone == len(cPManList):
-          print "Done. #TrialDone=", nTrialDone
-          break 
-        else:
-          print "Waiting... #TrialDone=", nTrialDone
-          time.sleep(5)
-      # calculate skewness for unit-cell distributions
-      skewList, indexCnList = self.calcUCDistrSkew(cPManList)
-      return detz_offsets, skewList, indexCnList
+  def optimize(self, detz_offset, window_size, step_size, *args):
+    # generate a line search
+    windows = range(-int(window_size/2),int(window_size/2))
+    detz_offsets = map(lambda x: x*step_size+detz_offset, windows)
+    cPManList = []
+    for trialCount, detzo in enumerate(detz_offsets):
+      # from a given experiment-run-event_list, 
+      cPMan = cctbxPlayMan(self.exp, self.runNo, trialCount, self.target, self.resultFolder, self.qName, self.nProc, 
+          'format.cbf.detz_offset='+str(detzo), self.strTs, *args)
+      cPMan.buildPlayground(replaceDir=True)
+      # Index
+      cPMan.doIntegrate()
+      cPManList.append(cPMan)
+    # only Exit when all jobs are done
+    while True:
+      nTrialDone = 0
+      for trialCount, cPMan in enumerate(cPManList):
+        results = cPMan.isDone(playActivity="doIntegrate")
+        if results[0]: nTrialDone += 1
+      if nTrialDone == len(cPManList):
+        print "Done. #TrialDone=", nTrialDone
+        break 
+      else:
+        print "Waiting... #TrialDone=", nTrialDone
+        time.sleep(5)
+    # calculate skewness for unit-cell distributions
+    skewList, indexCnList = self.calcUCDistrSkew(cPManList)
+    return detz_offsets, skewList, indexCnList
   
   def calcUCDistrSkew(self, cPManList):
     skewList = []

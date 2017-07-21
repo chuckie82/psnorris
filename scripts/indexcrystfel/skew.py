@@ -114,11 +114,7 @@ out, err = process.communicate()
 print "out: ", out
 print "err: ", err
 
-
-
 # TODO: Generate unit cell
-
-
 path_h5 = os.path.join(para.newgeom, str(para.experimentName) + '_' + str(para.run).zfill(4) + '_' + str(index).zfill(2)+'.h5')
 f = h5py.File(path_h5, 'r')
 for ii in range(6):

@@ -1,6 +1,12 @@
 #!/bin/bash
+DIRECTORY=/reg/d/psdm/cxi/cxic0515/scratch/autosfx/cxic0415/r0100
+if [ ! -d "$DIRECTORY" ]; then
+  mkdir -p $DIRECTORY
+fi
+
 python generousBadPixel.py \
 exp=cxic0415:run=100 \
 -d DscCsPad \
 -n 10 \
--o /reg/d/psdm/cxi/cxic0515/scratch/autosfx
+-o $DIRECTORY
+

@@ -1,14 +1,15 @@
 import numpy as np
 import scipy.spatial.distance as sd
 from PSCalib.CalibFileFinder import deploy_calib_file
-
-# input:
-# powderImg: powder image in assembled format
-# cx, cy   : current detector centre
-# pixelSize: pixel size
-
-# output:
-# centreRow, centreCol: new detector centre
+import psana
+import argparse
+import matplotlib.pyplot as plt
+parser = argparse.ArgumentParser()
+parser.add_argument("exprun", help="psana experiment/run string (e.g. exp=xppd7114:run=43)")
+parser.add_argument("areaDetName", help="psana area detector name from 'print evt.keys()' (e.g. cspad)")
+parser.add_argument("-o", "--outDir", help="output directory", type=str)
+parser.add_argument("-v", "--verbose", help="verbose", default=0, type=int)
+args = parser.parse_args()
 
 def findDetectorCentre(I, guessRow=None, guessCol=None, range=0):
     """
@@ -33,16 +34,11 @@ def findDetectorCentre(I, guessRow=None, guessCol=None, range=0):
     for i, centreCol in enumerate(searchArray):
         A,B = getTwoHalves(I,centreCol,axis=0)
         scoreCol[i] = getCorr(A,B)
-        if centreCol == 880 or centreCol == 872:
-            plt.subplot(121)
-            plt.imshow(A,vmax=8,vmin=5)
-            plt.subplot(122)
-            plt.imshow(B,vmax=8,vmin=5)
-            plt.show()
     centreCol = searchArray[np.argmin(scoreCol)]
-    plt.plot(searchArray, scoreCol,'x-')
-    plt.title(str(centreCol))
-    plt.show()
+    if args.verbose >= 1:
+        plt.plot(searchArray, scoreCol,'x-')
+        plt.title(str(centreCol))
+        plt.show()
 
     # Search for optimum row centre
     if guessRow is None:
@@ -59,9 +55,10 @@ def findDetectorCentre(I, guessRow=None, guessCol=None, range=0):
         A,B = getTwoHalves(I,centreRow,axis=1)
         scoreRow[i] = getCorr(A,B)
     centreRow = searchArray[np.argmin(scoreRow)]
-    plt.plot(searchArray, scoreRow,'x-')
-    plt.title(str(centreRow))
-    plt.show()
+    if args.verbose >= 1:
+        plt.plot(searchArray, scoreRow,'x-')
+        plt.title(str(centreRow))
+        plt.show()
 
     return centreCol,centreRow
 
@@ -105,51 +102,12 @@ def getCorr(A,B):
     dist = 1 - np.corrcoef(A[ind].ravel(),B[ind].ravel())[0,1]
     return dist
 
-def deployPsanaGeom():
-# Calculate detector translation in x and y
-    dx = pixelSize * 1e6 * (cx - centreRow)  # microns
-    dy = pixelSize * 1e6 * (cy - centreCol)  # microns
-    geo = det.geometry(evt)
-    if 'cspad' in detInfo.lower() and 'cxi' in experimentName:
-        geo.move_geo('CSPAD:V1', 0, dx=dx, dy=dy, dz=0)
-    elif 'rayonix' in detInfo.lower() and 'mfx' in experimentName:
-        top = geo.get_top_geo()
-        children = top.get_list_of_children()[0]
-        geo.move_geo(children.oname, 0, dx=dx, dy=dy, dz=0)
-    elif 'rayonix' in detInfo.lower() and 'xpp' in experimentName:
-        top = geo.get_top_geo()
-        children = top.get_list_of_children()[0]
-        geo.move_geo(children.oname, 0, dx=dx, dy=dy, dz=0)
-    else:
-        print "autoDeploy not implemented"
-    fname = psocakeRunDir + "/" + str(runNumber) + '-end.data'
-    geo.save_pars_in_file(fname)
-    print "#################################################"
-    print "Deploying psana detector geometry: ", fname
-    print "#################################################"
-    cmts = {'exp': experimentName, 'app': 'psocake', 'comment': 'auto recentred geometry'}
-    calibDir = '/reg/d/psdm/' + experimentName[:3] + '/' + experimentName +  '/calib'
-    deploy_calib_file(cdir=calibDir, src=str(det.name), type='geometry', run_start=runNumber, run_end=None, ifname=fname, dcmts=cmts, pbits=0)
-
-###########################
-
-import argparse
-parser = argparse.ArgumentParser()
-parser.add_argument("exprun", help="psana experiment/run string (e.g. exp=xppd7114:run=43)")
-parser.add_argument("areaDetName", help="psana area detector name from 'print evt.keys()' (e.g. cspad)")
-args = parser.parse_args()
+############################
 
 experimentName = args.exprun.split(':')[0].split('=')[-1]
 runNumber = args.exprun.split('=')[-1]
 detInfo = args.areaDetName
 
-######
-import psana
-#psocakeRunDir = '/reg/d/psdm/cxi/cxitut13/scratch/yoon82/cxi10416/yoon82/psocake/r0027'
-#experimentName = 'cxi10416'
-#runNumber = 27
-#detInfo = 'DscCsPad'
-#evtNum = 0
 ds = psana.DataSource(args.exprun+':idx')
 run = ds.runs().next()
 det = psana.Detector(detInfo)
@@ -162,31 +120,43 @@ while evt is None:
 cx, cy   = det.point_indexes(evt, pxy_um=(0, 0))
 pixelSize = det.pixel_size(evt)
 print "cx,cy: ", cx, cy
-#powderHits = np.load(psocakeRunDir + '/' + experimentName + '_' + str(runNumber).zfill(4) + '_maxHits.npy')
-#powderMisses = np.load(psocakeRunDir + '/' + experimentName + '_' + str(runNumber).zfill(4) + '_maxMisses.npy')
-#powderImg = det.image(evt, np.maximum(powderHits,powderMisses))
-
-powderImg = np.load('/reg/d/psdm/cxi/cxic0415/res/autosfx/max_img_'+experimentName+'_'+runNumber+'_assem.npy')
-######
-
-import matplotlib.pyplot as plt
-plt.imshow(powderImg,vmax=1000,vmin=0)
-plt.show()
+powderImg = np.load(args.outDir+'/max_img_'+experimentName+'_'+runNumber+'_assem.npy')
 
 import time
 tic = time.time()
-#cx = 890
-#cy = 868
 centreRow, centreCol = findDetectorCentre(np.log(abs(powderImg)+1e-10), cx, cy, range=50)
 toc = time.time()
 print "time: ", toc-tic
 print("Current centre along row,centre along column: ", cx, cy)
 print("Optimum centre along row,centre along column: ", centreRow, centreCol)
-np.save('newCenter_'+experimentName+'_'+runNumber+'.npy',np.array([centreRow, centreCol]))
+np.save(args.outDir+'/newCenter_'+experimentName+'_'+runNumber+'.npy', np.array([centreRow, centreCol]))
 
-#deployPsanaGeom()
-
-
+# Calculate detector translation in x and y
+dx = pixelSize * 1e6 * (cx - centreRow)  # microns
+dy = pixelSize * 1e6 * (cy - centreCol)  # microns
+geo = det.geometry(evt)
+if 'cspad' in detInfo.lower() and 'cxi' in experimentName:
+    geo.move_geo('CSPAD:V1', 0, dx=dx, dy=dy, dz=0)
+elif 'rayonix' in detInfo.lower() and 'mfx' in experimentName:
+    top = geo.get_top_geo()
+    children = top.get_list_of_children()[0]
+    geo.move_geo(children.oname, 0, dx=dx, dy=dy, dz=0)
+elif 'rayonix' in detInfo.lower() and 'xpp' in experimentName:
+    top = geo.get_top_geo()
+    children = top.get_list_of_children()[0]
+    geo.move_geo(children.oname, 0, dx=dx, dy=dy, dz=0)
+else:
+    print "autoDeploy not implemented"
+fname = args.outDir + "/" + str(runNumber) + '-end.data'
+print "fname: ", fname
+geo.save_pars_in_file(fname)
+print "#################################################"
+print "Deploying psana detector geometry: ", fname
+print "#################################################"
+cmts = {'exp': experimentName, 'app': 'psocake', 'comment': 'auto recentred geometry'}
+calibDir = '/reg/d/psdm/' + experimentName[:3] + '/' + experimentName +  '/calib'
+print "calib: ", calibDir, str(det.name), runNumber, fname
+deploy_calib_file(cdir=calibDir, src=str(det.name), type='geometry', run_start=runNumber, run_end=None, ifname=fname, dcmts=cmts, pbits=0)
 
 
 

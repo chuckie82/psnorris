@@ -1,0 +1,4 @@
+export PATH=/reg/neh/home/yoon82/psocake/app:$PATH
+export PYTHONPATH=/reg/neh/home/yoon82/psocake:$PYTHONPATH
+
+python indexcrystfel/indexing.py

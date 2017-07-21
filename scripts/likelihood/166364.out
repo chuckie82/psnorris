@@ -1,0 +1,102 @@
+kinit: KDC can't fulfill requested option while renewing credentials
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           psana1510
+  Local device:         mlx4_0
+  Local port:           2
+  CPCs attempted:       udcm
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[35648,1],24] (PID 20040)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+[psana1501:27526] 29 more processes have sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+[psana1501:27526] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[psana1501:27526] 29 more processes have sent help message help-opal-runtime.txt / opal_init:warn-fork
+Rank: 25  process:  10195 / 10620
+Rank: 26  process:  10620 / 11045
+Rank: 24  process:  9771 / 10195
+Rank: 1  process:  0 / 424
+run Total number =  43920
+event Total number =  12320
+Rank: 2  process:  424 / 849
+event list =  [    0     1     2 ..., 12317 12318 12319]
+Rank: 9  process:  3398 / 3823
+Rank: 10  process:  3823 / 4248
+Rank: 11  process:  4248 / 4673
+Rank: 12  process:  4673 / 5097
+Rank: 14  process:  5522 / 5947
+Rank: 13  process:  5097 / 5522
+Rank: 15  process:  5947 / 6372
+Rank: 17  process:  6797 / 7222
+Rank: 16  process:  6372 / 6797
+Rank: 7  process:  2548 / 2973
+Rank: 6  process:  2124 / 2548
+Rank: 8  process:  2973 / 3398
+event  4248  is initializing ... with threshes:  469 / 765 / 1383
+event  3398  is initializing ... with threshes:  477 / 778 / 1406
+event  3823  is initializing ... with threshes:  28 / 97 / 161
+event  0  is initializing ... with threshes:  473 / 771 / 1393
+event  2548  is initializing ... with threshes:  360 / 619 / 1109
+event  10620  is initializing ... with threshes:  277 / 499 / 887
+event  2124  is initializing ... with threshes:  417 / 695 / 1252
+event  2973  is initializing ... with threshes:  363 / 622 / 1115
+event  424  is initializing ... with threshes:  344 / 594 / 1063
+mpirun: Forwarding signal 18 to job
+mpirun: Forwarding signal 18 to job
+mpirun: Forwarding signal 18 to job
+
+------------------------------------------------------------
+Sender: LSF System <lsf@psana1501.pcdsn>
+Subject: Job 166364: <mpirun python ilikelihood.py> in cluster <slac> Exited
+
+Job <mpirun python ilikelihood.py> was submitted from host <psanagpu105.pcdsn> by user <zhensu> in cluster <slac> at Wed Jul  5 14:49:07 2017.
+Job was executed on host(s) <3*psana1501>, in queue <psnehq>, as user <zhensu> in cluster <slac> at Wed Jul  5 14:49:09 2017.
+                            <3*psana1502>
+                            <3*psana1503>
+                            <3*psana1504>
+                            <3*psana1505>
+                            <3*psana1506>
+                            <3*psana1507>
+                            <3*psana1509>
+                            <3*psana1510>
+                            <3*psana1511>
+</reg/neh/home/zhensu> was used as the home directory.
+</reg/d/psdm/cxi/cxitut13/res/autosfx/likelihood> was used as the working directory.
+Started at Wed Jul  5 14:49:09 2017.
+Terminated at Wed Jul  5 14:49:27 2017.
+Results reported at Wed Jul  5 14:49:27 2017.
+Cannot open your job file: /reg/neh/home/zhensu/.lsbatch/1499291347.166364
+TERM_OWNER: job killed by owner.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   90.00 sec.
+    Max Memory :                                 1189 MB
+    Average Memory :                             2.00 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                17
+    Run time :                                   17 sec.
+    Turnaround time :                            20 sec.
+
+The output (if any) is above this job summary.
+

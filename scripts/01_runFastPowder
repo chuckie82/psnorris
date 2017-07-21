@@ -1,0 +1,2 @@
+bsub -q psnehq -n 16 -o /reg/d/psdm/cxi/cxic0415/res/autosfx/%J.out \
+mpirun python mpi_driver.py exp=cxic0415:run=100 DscCsPad -n 5000

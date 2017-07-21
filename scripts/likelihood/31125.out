@@ -1,0 +1,43 @@
+def cmdline(para):
+    cmd =   "bsub" + \
+	    " -q " + str(para.line) + \
+	    " -n " + str(para.numcores) + \
+	    " -o " + str(para.logfile) + \ #/reg/d/psdm/cxi/cxic0415/scratch/yoon82/psocake/r0100/.%J.log 
+	    " mpirun findPeaks" + \
+	    " -e " + str(para.exp) + \ 
+	    " -d " + str(para.det) + \
+	    " --outDir " + str(para.outDir) + \ # 
+	    " --algorithm " + str(para.algorithm) + \#1 
+	    " --alg_npix_min " + str(para.alg_npix_min) + \ #2.0 
+	    " --alg_npix_max " + str(para.alg_npix_max) + \ #20.0 
+	    " --alg_amax_thr " + str(para.alg_amax_thr) + \ #0.0 
+	    " --alg_atot_thr " + str(para.alg_atot_thr) + \#1000.0 
+	    " --alg_son_min " + str(para.alg_son_min) + \#7.0 
+	    " --alg1_thr_low " + str(para.alg1_thr_low) + \#250.0 
+	    " --alg1_thr_high " + str(para.alg1_thr_high) + \#600.0 
+	    " --alg1_rank " + str(para.rank) + \#2 
+	    " --alg1_radius " + str(para.radius) + \#2 
+	    " --alg1_dr " + str(para.dr) + \#1 
+	    " --psanaMask_on " + "True" + \ 
+	    " --psanaMask_calib " + "True" + \
+	    " --psanaMask_status " + "True" + \ 
+	    " --psanaMask_edges " + "True" + \
+	    " --psanaMask_central " + "True" + \ 
+	    " --psanaMask_unbond " + "True" + \ 
+	    " --psanaMask_unbondnrs " + "True" + \	
+	    " --mask " + str(para.mask) + \ # 
+	    " --noe " + str(para.noe) + \#2000 
+	    " --clen " + str(para.clen) + \#DscCsPad_z 
+	    " --coffset " + str(para.coffset) + \# 0.5886964 
+	    " --minPeaks " + str(para.minPeaks) + \# 15 
+	    " --maxPeaks " + str(para.maxPeaks) + \#2048 
+	    " --minRes " + str(para.minRes) + \ #-1 
+	    " --sample " + str(para.sample) + \ #sample 
+	    " --instrument " + str(para.instrument) + \ #CXI 
+	    " --pixelSize " + str(para.pixelsize) + \ #0.00011 
+	    " --auto " + str(para.auto) + \#True 
+	    " --detectorDistance " + str(para.detectorDistance) + \ # 0.138693 
+	    " -r " + str(para.run) + \# 100
+
+    cmd += " --run " + str(para.run)
+    return cmd

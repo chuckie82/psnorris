@@ -1,0 +1,61 @@
+aklog: Couldn't get slac.stanford.edu AFS tickets:
+aklog: unknown RPC error (-1765328352) while getting AFS tickets
+original clen =  -450.0034 mm
+new geom files created ... 
+new clen =  -0.5000034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_00.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+[psana1406:26075] *** Process received signal ***
+[psana1406:26075] Signal: Segmentation fault (11)
+[psana1406:26075] Signal code: Address not mapped (1)
+[psana1406:26075] Failing at address: 0x36eba90
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[42493,1],0] (PID 26071)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+mpirun: Forwarding signal 18 to job
+mpirun: Forwarding signal 18 to job
+Abort is in progress...hit ctrl-c again within 5 seconds to forcibly terminate
+
+
+------------------------------------------------------------
+Sender: LSF System <lsf@psana1406.pcdsn>
+Subject: Job 779936: <mpirun python indexing.py> in cluster <slac> Exited
+
+Job <mpirun python indexing.py> was submitted from host <psanaphi101.pcdsn> by user <zhensu> in cluster <slac> at Fri Jul 14 18:48:58 2017.
+Job was executed on host(s) <psana1406.pcdsn>, in queue <psanaq>, as user <zhensu> in cluster <slac> at Fri Jul 14 18:49:01 2017.
+</reg/neh/home/zhensu> was used as the home directory.
+</reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel> was used as the working directory.
+Started at Fri Jul 14 18:49:01 2017.
+Terminated at Fri Jul 14 18:52:30 2017.
+Results reported at Fri Jul 14 18:52:30 2017.
+Cannot open your job file: /reg/neh/home/zhensu/.lsbatch/1500083338.779936
+TERM_OWNER: job killed by owner.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   8.42 sec.
+    Max Memory :                                 82 MB
+    Average Memory :                             69.33 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                12
+    Run time :                                   208 sec.
+    Turnaround time :                            212 sec.
+
+The output (if any) is above this job summary.
+

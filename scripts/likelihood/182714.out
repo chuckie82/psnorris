@@ -1,0 +1,1442 @@
+kinit: KDC can't fulfill requested option while renewing credentials
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           psana1501
+  Local device:         mlx4_0
+  Local port:           2
+  CPCs attempted:       udcm
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[61314,1],25] (PID 28616)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+[psana1501:03908] 29 more processes have sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+[psana1501:03908] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[psana1501:03908] 29 more processes have sent help message help-opal-runtime.txt / opal_init:warn-fork
+Traceback (most recent call last):
+  File "ilikelihood.py", line 16, in <module>
+Traceback (most recent call last):
+  File "ilikelihood.py", line 16, in <module>
+    from ifunction import *
+ImportError: No module named ifunction
+    from ifunction import *
+ImportError: No module named ifunction
+Rank: 15  process:  10990 / 11776
+event  10990  is initializing ... with threshes:  146 / 298 / 521
+Rank: 24  process:  18056 / 18841
+Rank: 25  process:  18841 / 19626
+Rank: 26  process:  19626 / 20411
+Rank: 3  process:  1570 / 2355
+Rank: 4  process:  2355 / 3140
+Rank: 5  process:  3140 / 3925
+run Total number =  43920
+event Total number =  22767
+Rank: 2  process:  785 / 1570
+event list =  [    0     1     2 ..., 22764 22765 22766]
+Rank: 1  process:  0 / 785
+comm_rank:  15   /event:  10990   /peaks:  5925   /likeli:  0
+event  10991  is initializing ... with threshes:  259 / 519 / 891
+Rank: 10  process:  7065 / 7850
+Rank: 9  process:  6280 / 7065
+Rank: 11  process:  7850 / 8635
+Rank: 19  process:  14131 / 14916
+Rank: 20  process:  14916 / 15701
+Rank: 18  process:  13346 / 14131
+Rank: 8  process:  5495 / 6280
+Rank: 7  process:  4710 / 5495
+Rank: 6  process:  3925 / 4710
+Rank: 28  process:  21196 / 21981
+Rank: 29  process:  21981 / 22767
+Rank: 27  process:  20411 / 21196
+Rank: 22  process:  16486 / 17271
+Rank: 23  process:  17271 / 18056
+Rank: 21  process:  15701 / 16486
+Rank: 12  process:  8635 / 9420
+Rank: 13  process:  9420 / 10205
+Rank: 14  process:  10205 / 10990
+event  18841  is initializing ... with threshes:  536 / 1072 / 1779
+event  18056  is initializing ... with threshes:  541 / 1082 / 1771
+event  19626  is initializing ... with threshes:  373 / 747 / 1244
+comm_rank:  15   /event:  10991   /peaks:  1809   /likeli:  0
+event  10992  is initializing ... with threshes:  163 / 326 / 569
+event  785  is initializing ... with threshes:  424 / 848 / 1403
+event  2355  is initializing ... with threshes:  333 / 667 / 1117
+event  1570  is initializing ... with threshes:  422 / 845 / 1400
+event  3140  is initializing ... with threshes:  394 / 788 / 1309
+event  6280  is initializing ... with threshes:  576 / 1152 / 1884
+event  7850  is initializing ... with threshes:  467 / 935 / 1541
+event  0  is initializing ... with threshes:  469 / 938 / 1546
+event  14131  is initializing ... with threshes:  337 / 674 / 1132
+event  7065  is initializing ... with threshes:  384 / 768 / 1277
+event  4710  is initializing ... with threshes:  539 / 1078 / 1768
+event  13346  is initializing ... with threshes:  333 / 666 / 1116
+event  21196  is initializing ... with threshes:  431 / 863 / 1428
+event  14916  is initializing ... with threshes:  344 / 688 / 1152
+event  17271  is initializing ... with threshes:  386 / 772 / 1283
+event  3925  is initializing ... with threshes:  340 / 680 / 1138
+event  21981  is initializing ... with threshes:  501 / 1003 / 1648
+event  15701  is initializing ... with threshes:  258 / 517 / 878
+event  10205  is initializing ... with threshes:  408 / 817 / 1355
+event  8635  is initializing ... with threshes:  296 / 592 / 999
+event  9420  is initializing ... with threshes:  372 / 744 / 1240
+event  16486  is initializing ... with threshes:  3 / 7 / 12
+event  5495  is initializing ... with threshes:  513 / 1027 / 1688
+event  20411  is initializing ... with threshes:  282 / 564 / 952
+comm_rank:  15   /event:  10992   /peaks:  5078   /likeli:  0
+event  10993  is initializing ... with threshes:  180 / 360 / 625
+comm_rank:  24   /event:  18056   /peaks:  95   /likeli:  0.0198989010725
+comm_rank:  25   /event:  18841   /peaks:  234   /likeli:  0.0427069720174
+comm_rank:  26   /event:  19626   /peaks:  509   /likeli:  0.030166419407
+event  18057  is initializing ... with threshes:  462 / 925 / 1526
+event  18842  is initializing ... with threshes:  531 / 1063 / 1757
+event  19627  is initializing ... with threshes:  263 / 526 / 892
+comm_rank:  12   /event:  8635   /peaks:  1176   /likeli:  0
+event  8636  is initializing ... with threshes:  292 / 585 / 986
+comm_rank:  21   /event:  15701   /peaks:  1769   /likeli:  0
+event  15702  is initializing ... with threshes:  291 / 583 / 983
+comm_rank:  27   /event:  20411   /peaks:  1484   /likeli:  0
+event  20412  is initializing ... with threshes:  87 / 198 / 341
+comm_rank:  22   /event:  16486   /peaks:  1799   /likeli:  0
+event  16487  is initializing ... with threshes:  3 / 6 / 12
+comm_rank:  2   /event:  785   /peaks:  311   /likeli:  0.0311899965547
+event  786  is initializing ... with threshes:  424 / 848 / 1404
+comm_rank:  3   /event:  1570   /peaks:  336   /likeli:  0.0317878684365
+comm_rank:  1   /event:  0   /peaks:  134   /likeli:  0.0388316953832
+comm_rank:  20   /event:  14916   /peaks:  753   /likeli:  0.0269611883961
+event  1571  is initializing ... with threshes:  385 / 770 / 1280
+event  1  is initializing ... with threshes:  459 / 919 / 1518
+comm_rank:  5   /event:  3140   /peaks:  457   /likeli:  0.0352597300846
+comm_rank:  9   /event:  6280   /peaks:  127   /likeli:  0.0475009252717
+event  14917  is initializing ... with threshes:  457 / 915 / 1516
+event  3141  is initializing ... with threshes:  509 / 1019 / 1674
+comm_rank:  15   /event:  10993   /peaks:  4487   /likeli:  0
+comm_rank:  4   /event:  2355   /peaks:  761   /likeli:  0.0283065738605
+event  6281  is initializing ... with threshes:  494 / 989 / 1628
+event  10994  is initializing ... with threshes:  164 / 329 / 573
+comm_rank:  11   /event:  7850   /peaks:  204   /likeli:  0.033655731935
+event  2356  is initializing ... with threshes:  414 / 933 / 1607
+comm_rank:  19   /event:  14131   /peaks:  770   /likeli:  0.0271632887183
+comm_rank:  10   /event:  7065   /peaks:  430   /likeli:  0.0199384412364
+event  14132  is initializing ... with threshes:  410 / 821 / 1363
+event  7851  is initializing ... with threshes:  474 / 948 / 1563
+comm_rank:  18   /event:  13346   /peaks:  773   /likeli:  0.0350474903888
+event  7066  is initializing ... with threshes:  444 / 889 / 1468
+comm_rank:  7   /event:  4710   /peaks:  164   /likeli:  0.020593644211
+event  13347  is initializing ... with threshes:  353 / 706 / 1182
+comm_rank:  13   /event:  9420   /peaks:  531   /likeli:  0.0261239919292
+comm_rank:  29   /event:  21981   /peaks:  167   /likeli:  0.0323184220998
+comm_rank:  6   /event:  3925   /peaks:  831   /likeli:  0.0367908892109
+comm_rank:  25   /event:  18842   /peaks:  624   /likeli:  0.0307572971684
+comm_rank:  24   /event:  18057   /peaks:  223   /likeli:  0.0279569757308
+event  9421  is initializing ... with threshes:  432 / 865 / 1432
+comm_rank:  14   /event:  10205   /peaks:  367   /likeli:  0.0373099371957
+event  21982  is initializing ... with threshes:  562 / 1125 / 1839
+event  18843  is initializing ... with threshes:  410 / 820 / 1360
+comm_rank:  28   /event:  21196   /peaks:  282   /likeli:  0.0258527223785
+event  18058  is initializing ... with threshes:  412 / 824 / 1366
+comm_rank:  8   /event:  5495   /peaks:  238   /likeli:  0.041115190346
+event  3926  is initializing ... with threshes:  395 / 791 / 1322
+comm_rank:  26   /event:  19627   /peaks:  1806   /likeli:  0
+event  4711  is initializing ... with threshes:  440 / 881 / 1456
+event  10206  is initializing ... with threshes:  349 / 699 / 1170
+event  21197  is initializing ... with threshes:  442 / 885 / 1462
+comm_rank:  23   /event:  17271   /peaks:  501   /likeli:  0.0348976420336
+event  5496  is initializing ... with threshes:  577 / 1154 / 1885
+event  19628  is initializing ... with threshes:  231 / 462 / 789
+event  17272  is initializing ... with threshes:  453 / 906 / 1496
+comm_rank:  21   /event:  15702   /peaks:  1325   /likeli:  0
+comm_rank:  12   /event:  8636   /peaks:  1239   /likeli:  0
+event  15703  is initializing ... with threshes:  264 / 528 / 896
+event  8637  is initializing ... with threshes:  254 / 508 / 863
+comm_rank:  27   /event:  20412   /peaks:  8193   /likeli:  0
+event  20413  is initializing ... with threshes:  378 / 757 / 1261
+comm_rank:  22   /event:  16487   /peaks:  2053   /likeli:  0
+comm_rank:  2   /event:  786   /peaks:  337   /likeli:  0.0322104770824
+event  16488  is initializing ... with threshes:  3 / 6 / 12
+event  787  is initializing ... with threshes:  318 / 637 / 1069
+comm_rank:  20   /event:  14917   /peaks:  500   /likeli:  0.0359604179444
+comm_rank:  1   /event:  1   /peaks:  259   /likeli:  0.0297914287425
+event  2  is initializing ... with threshes:  531 / 1063 / 1757
+event  14918  is initializing ... with threshes:  385 / 770 / 1282
+comm_rank:  19   /event:  14132   /peaks:  365   /likeli:  0.0254971260193
+comm_rank:  3   /event:  1571   /peaks:  453   /likeli:  0.0332358787726
+event  1572  is initializing ... with threshes:  268 / 537 / 909
+event  14133  is initializing ... with threshes:  349 / 699 / 1168
+comm_rank:  13   /event:  9421   /peaks:  265   /likeli:  0.0297938699711
+comm_rank:  15   /event:  10994   /peaks:  5083   /likeli:  0
+comm_rank:  4   /event:  2356   /peaks:  429   /likeli:  0.0347582774102
+comm_rank:  5   /event:  3141   /peaks:  113   /likeli:  0.0164156881594
+event  9422  is initializing ... with threshes:  305 / 610 / 1026
+event  2357  is initializing ... with threshes:  376 / 752 / 1273
+event  10995  is initializing ... with threshes:  224 / 449 / 769
+event  3142  is initializing ... with threshes:  341 / 682 / 1143
+comm_rank:  10   /event:  7066   /peaks:  235   /likeli:  0.0272899275775
+comm_rank:  18   /event:  13347   /peaks:  744   /likeli:  0.0296355427558
+comm_rank:  11   /event:  7851   /peaks:  197   /likeli:  0.0227104414057
+comm_rank:  9   /event:  6281   /peaks:  193   /likeli:  0.0287150425415
+event  7067  is initializing ... with threshes:  404 / 809 / 1342
+event  13348  is initializing ... with threshes:  279 / 559 / 944
+event  7852  is initializing ... with threshes:  546 / 1092 / 1789
+event  6282  is initializing ... with threshes:  448 / 896 / 1481
+comm_rank:  14   /event:  10206   /peaks:  695   /likeli:  0.0332136223276
+comm_rank:  25   /event:  18843   /peaks:  346   /likeli:  0.0402369571274
+comm_rank:  29   /event:  21982   /peaks:  79   /likeli:  0.0297201413374
+comm_rank:  7   /event:  4711   /peaks:  289   /likeli:  0.0357357417631
+comm_rank:  28   /event:  21197   /peaks:  273   /likeli:  0.0271102763839
+event  10207  is initializing ... with threshes:  318 / 637 / 1070
+comm_rank:  24   /event:  18058   /peaks:  382   /likeli:  0.0264041788866
+event  18844  is initializing ... with threshes:  378 / 757 / 1259
+event  21983  is initializing ... with threshes:  42 / 111 / 188
+event  4712  is initializing ... with threshes:  521 / 1042 / 1711
+event  21198  is initializing ... with threshes:  248 / 497 / 845
+comm_rank:  26   /event:  19628   /peaks:  2631   /likeli:  0
+event  18059  is initializing ... with threshes:  418 / 837 / 1385
+comm_rank:  8   /event:  5496   /peaks:  68   /likeli:  0.0239632666035
+comm_rank:  23   /event:  17272   /peaks:  235   /likeli:  0.0319937286861
+event  19629  is initializing ... with threshes:  349 / 699 / 1167
+comm_rank:  6   /event:  3926   /peaks:  939   /likeli:  0.0326832439335
+event  5497  is initializing ... with threshes:  454 / 909 / 1502
+event  3927  is initializing ... with threshes:  424 / 848 / 1403
+comm_rank:  12   /event:  8637   /peaks:  1767   /likeli:  0
+event  17273  is initializing ... with threshes:  289 / 579 / 977
+event  8638  is initializing ... with threshes:  341 / 683 / 1143
+comm_rank:  21   /event:  15703   /peaks:  1625   /likeli:  0
+event  15704  is initializing ... with threshes:  314 / 628 / 1055
+comm_rank:  2   /event:  787   /peaks:  1045   /likeli:  0
+event  788  is initializing ... with threshes:  466 / 932 / 1536
+comm_rank:  19   /event:  14133   /peaks:  757   /likeli:  0.0327395007653
+comm_rank:  13   /event:  9422   /peaks:  1072   /likeli:  0
+comm_rank:  1   /event:  2   /peaks:  248   /likeli:  0.0247376890556
+event  14134  is initializing ... with threshes:  344 / 688 / 1150
+comm_rank:  22   /event:  16488   /peaks:  2063   /likeli:  0
+event  3  is initializing ... with threshes:  566 / 1133 / 1858
+comm_rank:  20   /event:  14918   /peaks:  458   /likeli:  0.0305455564703
+event  9423  is initializing ... with threshes:  334 / 668 / 1129
+event  16489  is initializing ... with threshes:  3 / 6 / 12
+comm_rank:  3   /event:  1572   /peaks:  1585   /likeli:  0
+event  14919  is initializing ... with threshes:  325 / 651 / 1092
+event  1573  is initializing ... with threshes:  456 / 913 / 1507
+comm_rank:  18   /event:  13348   /peaks:  1357   /likeli:  0
+comm_rank:  10   /event:  7067   /peaks:  339   /likeli:  0.0359557234338
+event  13349  is initializing ... with threshes:  303 / 606 / 1025
+event  7068  is initializing ... with threshes:  501 / 1003 / 1646
+comm_rank:  15   /event:  10995   /peaks:  2665   /likeli:  0
+comm_rank:  4   /event:  2357   /peaks:  788   /likeli:  0.044302659006
+event  10996  is initializing ... with threshes:  137 / 283 / 494
+event  2358  is initializing ... with threshes:  399 / 799 / 1326
+comm_rank:  5   /event:  3142   /peaks:  789   /likeli:  0.0310949496908
+comm_rank:  11   /event:  7852   /peaks:  82   /likeli:  0.00722353310887
+event  3143  is initializing ... with threshes:  451 / 903 / 1490
+comm_rank:  9   /event:  6282   /peaks:  290   /likeli:  0.0282240428839
+event  7853  is initializing ... with threshes:  447 / 895 / 1479
+event  6283  is initializing ... with threshes:  300 / 601 / 1011
+comm_rank:  25   /event:  18844   /peaks:  480   /likeli:  0.0339556923283
+comm_rank:  7   /event:  4712   /peaks:  220   /likeli:  0.0382572687014
+comm_rank:  27   /event:  20413   /peaks:  488   /likeli:  0.032526326328
+comm_rank:  28   /event:  21198   /peaks:  2090   /likeli:  0
+comm_rank:  14   /event:  10207   /peaks:  969   /likeli:  0.0300172827643
+event  18845  is initializing ... with threshes:  508 / 1017 / 1671
+event  4713  is initializing ... with threshes:  521 / 1043 / 1712
+event  20414  is initializing ... with threshes:  315 / 631 / 1061
+comm_rank:  29   /event:  21983   /peaks:  9415   /likeli:  0
+comm_rank:  24   /event:  18059   /peaks:  297   /likeli:  0.0223181125926
+event  10208  is initializing ... with threshes:  288 / 576 / 972
+event  21199  is initializing ... with threshes:  501 / 1002 / 1646
+event  21984  is initializing ... with threshes:  483 / 966 / 1590
+event  18060  is initializing ... with threshes:  431 / 862 / 1426
+comm_rank:  8   /event:  5497   /peaks:  224   /likeli:  0.0246844876657
+comm_rank:  6   /event:  3927   /peaks:  347   /likeli:  0.0296931597551
+event  5498  is initializing ... with threshes:  454 / 908 / 1498
+comm_rank:  26   /event:  19629   /peaks:  717   /likeli:  0.0291089874909
+event  3928  is initializing ... with threshes:  373 / 747 / 1246
+comm_rank:  23   /event:  17273   /peaks:  1368   /likeli:  0
+event  19630  is initializing ... with threshes:  366 / 733 / 1223
+event  17274  is initializing ... with threshes:  321 / 643 / 1079
+comm_rank:  21   /event:  15704   /peaks:  1021   /likeli:  0
+comm_rank:  2   /event:  788   /peaks:  174   /likeli:  0.0250334082026
+event  789  is initializing ... with threshes:  154 / 310 / 542
+event  15705  is initializing ... with threshes:  411 / 823 / 1365
+comm_rank:  19   /event:  14134   /peaks:  696   /likeli:  0.0337025703155
+event  14135  is initializing ... with threshes:  382 / 765 / 1273
+comm_rank:  13   /event:  9423   /peaks:  956   /likeli:  0.0358370513993
+comm_rank:  10   /event:  7068   /peaks:  130   /likeli:  0.0403945205773
+comm_rank:  1   /event:  3   /peaks:  247   /likeli:  0.0311051902898
+event  9424  is initializing ... with threshes:  336 / 672 / 1125
+event  7069  is initializing ... with threshes:  527 / 1054 / 1729
+event  4  is initializing ... with threshes:  534 / 1068 / 1749
+comm_rank:  20   /event:  14919   /peaks:  873   /likeli:  0.0298965482526
+event  14920  is initializing ... with threshes:  407 / 815 / 1352
+comm_rank:  22   /event:  16489   /peaks:  1941   /likeli:  0
+comm_rank:  3   /event:  1573   /peaks:  198   /likeli:  0.0186976993978
+comm_rank:  12   /event:  8638   /peaks:  716   /likeli:  0.0293815619224
+comm_rank:  18   /event:  13349   /peaks:  1347   /likeli:  0
+event  8639  is initializing ... with threshes:  348 / 696 / 1162
+event  16490  is initializing ... with threshes:  3 / 7 / 12
+event  1574  is initializing ... with threshes:  386 / 773 / 1286
+event  13350  is initializing ... with threshes:  303 / 606 / 1020
+comm_rank:  4   /event:  2358   /peaks:  448   /likeli:  0.0230171774513
+comm_rank:  15   /event:  10996   /peaks:  5958   /likeli:  0
+event  2359  is initializing ... with threshes:  369 / 739 / 1232
+event  10997  is initializing ... with threshes:  188 / 377 / 652
+comm_rank:  5   /event:  3143   /peaks:  214   /likeli:  0.0252477544646
+comm_rank:  11   /event:  7853   /peaks:  257   /likeli:  0.0323550862541
+event  3144  is initializing ... with threshes:  332 / 665 / 1112
+event  7854  is initializing ... with threshes:  272 / 545 / 922
+comm_rank:  14   /event:  10208   /peaks:  1274   /likeli:  0
+comm_rank:  9   /event:  6283   /peaks:  1170   /likeli:  0
+comm_rank:  25   /event:  18845   /peaks:  131   /likeli:  0.015657512393
+comm_rank:  7   /event:  4713   /peaks:  115   /likeli:  0.014099796742
+event  10209  is initializing ... with threshes:  323 / 646 / 1083
+event  6284  is initializing ... with threshes:  385 / 771 / 1281
+event  18846  is initializing ... with threshes:  409 / 819 / 1358
+event  4714  is initializing ... with threshes:  447 / 894 / 1477
+comm_rank:  28   /event:  21199   /peaks:  166   /likeli:  0.0185067082902
+comm_rank:  29   /event:  21984   /peaks:  194   /likeli:  0.0318146056222
+event  21200  is initializing ... with threshes:  486 / 972 / 1600
+event  21985  is initializing ... with threshes:  386 / 773 / 1286
+comm_rank:  24   /event:  18060   /peaks:  326   /likeli:  0.025054877156
+comm_rank:  27   /event:  20414   /peaks:  1067   /likeli:  0
+comm_rank:  6   /event:  3928   /peaks:  643   /likeli:  0.036996090632
+event  18061  is initializing ... with threshes:  394 / 788 / 1310
+comm_rank:  8   /event:  5498   /peaks:  262   /likeli:  0.0193985214922
+event  20415  is initializing ... with threshes:  367 / 734 / 1224
+event  3929  is initializing ... with threshes:  358 / 716 / 1195
+event  5499  is initializing ... with threshes:  488 / 977 / 1641
+comm_rank:  26   /event:  19630   /peaks:  614   /likeli:  0.0325468555616
+comm_rank:  19   /event:  14135   /peaks:  457   /likeli:  0.0227377734872
+event  19631  is initializing ... with threshes:  343 / 687 / 1148
+event  14136  is initializing ... with threshes:  397 / 795 / 1320
+comm_rank:  23   /event:  17274   /peaks:  938   /likeli:  0.0259265568298
+event  17275  is initializing ... with threshes:  428 / 856 / 1416
+comm_rank:  2   /event:  789   /peaks:  5687   /likeli:  0
+comm_rank:  10   /event:  7069   /peaks:  127   /likeli:  0.0195884075167
+event  790  is initializing ... with threshes:  502 / 1005 / 1656
+event  7070  is initializing ... with threshes:  372 / 744 / 1238
+comm_rank:  13   /event:  9424   /peaks:  755   /likeli:  0.0234732768795
+event  9425  is initializing ... with threshes:  408 / 816 / 1352
+comm_rank:  1   /event:  4   /peaks:  131   /likeli:  0.0323116061131
+event  5  is initializing ... with threshes:  231 / 462 / 790
+comm_rank:  20   /event:  14920   /peaks:  371   /likeli:  0.0270987864213
+comm_rank:  12   /event:  8639   /peaks:  674   /likeli:  0.034627340852
+event  14921  is initializing ... with threshes:  317 / 634 / 1064
+event  8640  is initializing ... with threshes:  315 / 631 / 1060
+comm_rank:  18   /event:  13350   /peaks:  1103   /likeli:  0
+event  13351  is initializing ... with threshes:  432 / 865 / 1455
+comm_rank:  22   /event:  16490   /peaks:  1738   /likeli:  0
+comm_rank:  15   /event:  10997   /peaks:  3947   /likeli:  0
+event  16491  is initializing ... with threshes:  25 / 77 / 128
+comm_rank:  3   /event:  1574   /peaks:  492   /likeli:  0.0342760425007
+event  10998  is initializing ... with threshes:  242 / 485 / 826
+comm_rank:  11   /event:  7854   /peaks:  1543   /likeli:  0
+comm_rank:  4   /event:  2359   /peaks:  602   /likeli:  0.0239299219665
+event  1575  is initializing ... with threshes:  455 / 911 / 1504
+event  2360  is initializing ... with threshes:  399 / 798 / 1326
+event  7855  is initializing ... with threshes:  461 / 922 / 1520
+comm_rank:  14   /event:  10209   /peaks:  838   /likeli:  0.0318762756127
+comm_rank:  7   /event:  4714   /peaks:  217   /likeli:  0.022582995047
+event  10210  is initializing ... with threshes:  287 / 574 / 969
+comm_rank:  28   /event:  21200   /peaks:  148   /likeli:  0.0231752867755
+comm_rank:  5   /event:  3144   /peaks:  865   /likeli:  0.0268770718951
+comm_rank:  25   /event:  18846   /peaks:  352   /likeli:  0.0273401881524
+event  21201  is initializing ... with threshes:  390 / 781 / 1299
+event  4715  is initializing ... with threshes:  288 / 576 / 975
+comm_rank:  9   /event:  6284   /peaks:  421   /likeli:  0.0335133131768
+event  18847  is initializing ... with threshes:  329 / 659 / 1105
+event  3145  is initializing ... with threshes:  479 / 959 / 1578
+event  6285  is initializing ... with threshes:  528 / 1056 / 1732
+comm_rank:  19   /event:  14136   /peaks:  441   /likeli:  0.0297981623461
+event  14137  is initializing ... with threshes:  541 / 1126 / 1960
+comm_rank:  29   /event:  21985   /peaks:  496   /likeli:  0.0308148160698
+comm_rank:  6   /event:  3929   /peaks:  646   /likeli:  0.0322029194123
+comm_rank:  24   /event:  18061   /peaks:  437   /likeli:  0.031540351748
+comm_rank:  27   /event:  20415   /peaks:  574   /likeli:  0.036258600262
+comm_rank:  21   /event:  15705   /peaks:  353   /likeli:  0.0281097585908
+comm_rank:  8   /event:  5499   /peaks:  433   /likeli:  0.0482979610114
+event  21986  is initializing ... with threshes:  334 / 668 / 1120
+event  15706  is initializing ... with threshes:  380 / 760 / 1264
+event  20416  is initializing ... with threshes:  328 / 656 / 1099
+event  18062  is initializing ... with threshes:  466 / 932 / 1549
+comm_rank:  23   /event:  17275   /peaks:  288   /likeli:  0.0251060805535
+event  5500  is initializing ... with threshes:  481 / 962 / 1584
+event  3930  is initializing ... with threshes:  367 / 735 / 1223
+event  17276  is initializing ... with threshes:  451 / 902 / 1489
+comm_rank:  2   /event:  790   /peaks:  346   /likeli:  0.0215356154527
+comm_rank:  13   /event:  9425   /peaks:  386   /likeli:  0.0204475023498
+comm_rank:  26   /event:  19631   /peaks:  721   /likeli:  0.0325386505633
+event  9426  is initializing ... with threshes:  332 / 665 / 1151
+event  791  is initializing ... with threshes:  340 / 680 / 1137
+comm_rank:  10   /event:  7070   /peaks:  503   /likeli:  0.0343388432539
+event  19632  is initializing ... with threshes:  335 / 671 / 1126
+event  7071  is initializing ... with threshes:  464 / 928 / 1532
+comm_rank:  1   /event:  5   /peaks:  2540   /likeli:  0
+event  6  is initializing ... with threshes:  491 / 982 / 1617
+comm_rank:  12   /event:  8640   /peaks:  983   /likeli:  0.0332152070894
+comm_rank:  18   /event:  13351   /peaks:  420   /likeli:  0.0438134601253
+comm_rank:  20   /event:  14921   /peaks:  987   /likeli:  0.0335859812867
+event  13352  is initializing ... with threshes:  290 / 580 / 978
+event  8641  is initializing ... with threshes:  281 / 563 / 952
+event  14922  is initializing ... with threshes:  297 / 595 / 1004
+comm_rank:  14   /event:  10210   /peaks:  1354   /likeli:  0
+comm_rank:  15   /event:  10998   /peaks:  2269   /likeli:  0
+event  10211  is initializing ... with threshes:  179 / 359 / 623
+comm_rank:  3   /event:  1575   /peaks:  235   /likeli:  0.0287575005283
+event  10999  is initializing ... with threshes:  166 / 355 / 615
+event  1576  is initializing ... with threshes:  445 / 890 / 1470
+comm_rank:  11   /event:  7855   /peaks:  185   /likeli:  0.0313711341252
+comm_rank:  22   /event:  16491   /peaks:  9927   /likeli:  0
+comm_rank:  4   /event:  2360   /peaks:  509   /likeli:  0.0378460267559
+event  7856  is initializing ... with threshes:  573 / 1146 / 1872
+event  16492  is initializing ... with threshes:  3 / 6 / 12
+event  2361  is initializing ... with threshes:  397 / 903 / 1553
+comm_rank:  19   /event:  14137   /peaks:  532   /likeli:  0.0580115832578
+comm_rank:  28   /event:  21201   /peaks:  445   /likeli:  0.0260205334116
+comm_rank:  5   /event:  3145   /peaks:  220   /likeli:  0.028894595462
+comm_rank:  7   /event:  4715   /peaks:  1376   /likeli:  0
+event  21202  is initializing ... with threshes:  531 / 1062 / 1740
+event  14138  is initializing ... with threshes:  408 / 816 / 1355
+event  3146  is initializing ... with threshes:  423 / 846 / 1401
+comm_rank:  9   /event:  6285   /peaks:  104   /likeli:  0.0174911178856
+event  4716  is initializing ... with threshes:  376 / 752 / 1252
+comm_rank:  25   /event:  18847   /peaks:  740   /likeli:  0.027417009752
+event  6286  is initializing ... with threshes:  495 / 990 / 1628
+event  18848  is initializing ... with threshes:  335 / 670 / 1122
+comm_rank:  13   /event:  9426   /peaks:  850   /likeli:  0.0305880842052
+comm_rank:  27   /event:  20416   /peaks:  887   /likeli:  0.029286837537
+comm_rank:  10   /event:  7071   /peaks:  246   /likeli:  0.0300975541663
+event  9427  is initializing ... with threshes:  376 / 752 / 1253
+comm_rank:  21   /event:  15706   /peaks:  488   /likeli:  0.027051315952
+event  20417  is initializing ... with threshes:  372 / 744 / 1240
+comm_rank:  6   /event:  3930   /peaks:  583   /likeli:  0.0403105778739
+event  7072  is initializing ... with threshes:  333 / 667 / 1116
+comm_rank:  24   /event:  18062   /peaks:  348   /likeli:  0.0344900013623
+comm_rank:  23   /event:  17276   /peaks:  231   /likeli:  0.0155193993756
+comm_rank:  8   /event:  5500   /peaks:  225   /likeli:  0.0299889722171
+event  15707  is initializing ... with threshes:  358 / 717 / 1196
+comm_rank:  29   /event:  21986   /peaks:  807   /likeli:  0.0306275961991
+event  18063  is initializing ... with threshes:  293 / 586 / 988
+event  17277  is initializing ... with threshes:  359 / 718 / 1204
+event  3931  is initializing ... with threshes:  415 / 831 / 1377
+event  21987  is initializing ... with threshes:  291 / 583 / 984
+event  5501  is initializing ... with threshes:  486 / 972 / 1598
+comm_rank:  2   /event:  791   /peaks:  798   /likeli:  0.0311535637427
+event  792  is initializing ... with threshes:  335 / 671 / 1123
+comm_rank:  1   /event:  6   /peaks:  171   /likeli:  0.0221537353637
+comm_rank:  26   /event:  19632   /peaks:  883   /likeli:  0.0298667039943
+event  7  is initializing ... with threshes:  663 / 1326 / 2153
+event  19633  is initializing ... with threshes:  358 / 717 / 1199
+comm_rank:  18   /event:  13352   /peaks:  1280   /likeli:  0
+comm_rank:  12   /event:  8641   /peaks:  1511   /likeli:  0
+comm_rank:  20   /event:  14922   /peaks:  1133   /likeli:  0
+event  13353  is initializing ... with threshes:  359 / 719 / 1204
+event  8642  is initializing ... with threshes:  262 / 525 / 891
+event  14923  is initializing ... with threshes:  247 / 495 / 841
+comm_rank:  11   /event:  7856   /peaks:  57   /likeli:  0.0184616740003
+comm_rank:  14   /event:  10211   /peaks:  4424   /likeli:  0
+event  7857  is initializing ... with threshes:  561 / 1123 / 1836
+event  10212  is initializing ... with threshes:  220 / 440 / 754
+comm_rank:  15   /event:  10999   /peaks:  3464   /likeli:  0
+comm_rank:  19   /event:  14138   /peaks:  414   /likeli:  0.0344603529019
+event  14139  is initializing ... with threshes:  98 / 218 / 377
+event  11000  is initializing ... with threshes:  191 / 382 / 660
+comm_rank:  3   /event:  1576   /peaks:  253   /likeli:  0.0306488781786
+comm_rank:  28   /event:  21202   /peaks:  102   /likeli:  0.0385601990188
+comm_rank:  4   /event:  2361   /peaks:  411   /likeli:  0.0903009152933
+event  1577  is initializing ... with threshes:  475 / 951 / 1597
+event  21203  is initializing ... with threshes:  510 / 1020 / 1676
+event  2362  is initializing ... with threshes:  436 / 873 / 1443
+comm_rank:  22   /event:  16492   /peaks:  2083   /likeli:  0
+comm_rank:  9   /event:  6286   /peaks:  150   /likeli:  0.0258328853316
+comm_rank:  13   /event:  9427   /peaks:  537   /likeli:  0.0263035527277
+event  6287  is initializing ... with threshes:  600 / 1201 / 1959
+comm_rank:  5   /event:  3146   /peaks:  371   /likeli:  0.0239776805588
+comm_rank:  7   /event:  4716   /peaks:  508   /likeli:  0.0245220868125
+comm_rank:  10   /event:  7072   /peaks:  801   /likeli:  0.0333167870261
+event  9428  is initializing ... with threshes:  391 / 782 / 1301
+event  16493  is initializing ... with threshes:  3 / 6 / 12
+event  4717  is initializing ... with threshes:  431 / 863 / 1426
+event  7073  is initializing ... with threshes:  404 / 809 / 1341
+event  3147  is initializing ... with threshes:  377 / 755 / 1256
+comm_rank:  25   /event:  18848   /peaks:  813   /likeli:  0.029957618058
+event  18849  is initializing ... with threshes:  312 / 624 / 1050
+comm_rank:  27   /event:  20417   /peaks:  570   /likeli:  0.0266973377839
+event  20418  is initializing ... with threshes:  403 / 806 / 1337
+comm_rank:  21   /event:  15707   /peaks:  616   /likeli:  0.0283981412083
+comm_rank:  24   /event:  18063   /peaks:  1162   /likeli:  0
+comm_rank:  29   /event:  21987   /peaks:  1451   /likeli:  0
+comm_rank:  6   /event:  3931   /peaks:  381   /likeli:  0.0320441016407
+event  15708  is initializing ... with threshes:  348 / 697 / 1166
+event  18064  is initializing ... with threshes:  308 / 617 / 1040
+event  21988  is initializing ... with threshes:  149 / 302 / 527
+event  3932  is initializing ... with threshes:  423 / 846 / 1404
+comm_rank:  8   /event:  5501   /peaks:  160   /likeli:  0.0222217697052
+comm_rank:  23   /event:  17277   /peaks:  721   /likeli:  0.0361917122651
+event  5502  is initializing ... with threshes:  512 / 1024 / 1682
+comm_rank:  1   /event:  7   /peaks:  52   /likeli:  0.0330282083542
+comm_rank:  12   /event:  8642   /peaks:  1730   /likeli:  0
+event  17278  is initializing ... with threshes:  381 / 762 / 1268
+comm_rank:  2   /event:  792   /peaks:  859   /likeli:  0.0338151741769
+event  8  is initializing ... with threshes:  421 / 843 / 1398
+event  8643  is initializing ... with threshes:  309 / 619 / 1040
+comm_rank:  20   /event:  14923   /peaks:  1953   /likeli:  0
+event  793  is initializing ... with threshes:  566 / 1132 / 1858
+comm_rank:  18   /event:  13353   /peaks:  681   /likeli:  0.0350006757912
+event  13354  is initializing ... with threshes:  340 / 681 / 1140
+event  14924  is initializing ... with threshes:  455 / 910 / 1503
+comm_rank:  26   /event:  19633   /peaks:  694   /likeli:  0.0343883945908
+event  19634  is initializing ... with threshes:  312 / 625 / 1049
+comm_rank:  19   /event:  14139   /peaks:  7014   /likeli:  0
+comm_rank:  11   /event:  7857   /peaks:  107   /likeli:  0.0315248742109
+event  14140  is initializing ... with threshes:  368 / 737 / 1228
+event  7858  is initializing ... with threshes:  460 / 920 / 1516
+comm_rank:  14   /event:  10212   /peaks:  2698   /likeli:  0
+event  10213  is initializing ... with threshes:  301 / 603 / 1021
+comm_rank:  13   /event:  9428   /peaks:  481   /likeli:  0.0278294510601
+event  9429  is initializing ... with threshes:  347 / 695 / 1177
+comm_rank:  28   /event:  21203   /peaks:  131   /likeli:  0.0257621057483
+comm_rank:  9   /event:  6287   /peaks:  103   /likeli:  0.0199316656802
+comm_rank:  4   /event:  2362   /peaks:  350   /likeli:  0.0227812664088
+comm_rank:  15   /event:  11000   /peaks:  3892   /likeli:  0
+event  21204  is initializing ... with threshes:  448 / 897 / 1480
+comm_rank:  3   /event:  1577   /peaks:  491   /likeli:  0.0598002804232
+event  6288  is initializing ... with threshes:  571 / 1143 / 1871
+event  11001  is initializing ... with threshes:  72 / 169 / 290
+event  2363  is initializing ... with threshes:  403 / 806 / 1341
+event  1578  is initializing ... with threshes:  409 / 819 / 1359
+comm_rank:  7   /event:  4717   /peaks:  262   /likeli:  0.0277291254241
+comm_rank:  10   /event:  7073   /peaks:  412   /likeli:  0.04163389855
+event  4718  is initializing ... with threshes:  518 / 1037 / 1701
+event  7074  is initializing ... with threshes:  391 / 783 / 1302
+comm_rank:  5   /event:  3147   /peaks:  516   /likeli:  0.030106735798
+comm_rank:  25   /event:  18849   /peaks:  1031   /likeli:  0
+event  3148  is initializing ... with threshes:  318 / 637 / 1070
+event  18850  is initializing ... with threshes:  223 / 447 / 764
+comm_rank:  27   /event:  20418   /peaks:  392   /likeli:  0.0353558917669
+comm_rank:  12   /event:  8643   /peaks:  1032   /likeli:  0
+comm_rank:  22   /event:  16493   /peaks:  2189   /likeli:  0
+comm_rank:  6   /event:  3932   /peaks:  327   /likeli:  0.031008804652
+event  20419  is initializing ... with threshes:  330 / 660 / 1105
+event  8644  is initializing ... with threshes:  258 / 516 / 877
+event  3933  is initializing ... with threshes:  413 / 827 / 1371
+event  16494  is initializing ... with threshes:  3 / 6 / 12
+comm_rank:  21   /event:  15708   /peaks:  722   /likeli:  0.0295395374165
+comm_rank:  24   /event:  18064   /peaks:  1142   /likeli:  0
+comm_rank:  29   /event:  21988   /peaks:  5856   /likeli:  0
+comm_rank:  1   /event:  8   /peaks:  335   /likeli:  0.0286342227234
+event  21989  is initializing ... with threshes:  539 / 1079 / 1768
+comm_rank:  2   /event:  793   /peaks:  73   /likeli:  0.0290602594588
+event  18065  is initializing ... with threshes:  339 / 678 / 1134
+comm_rank:  8   /event:  5502   /peaks:  106   /likeli:  0.00957583763327
+event  15709  is initializing ... with threshes:  361 / 723 / 1229
+event  9  is initializing ... with threshes:  173 / 346 / 602
+event  794  is initializing ... with threshes:  471 / 943 / 1557
+event  5503  is initializing ... with threshes:  455 / 910 / 1501
+comm_rank:  18   /event:  13354   /peaks:  735   /likeli:  0.0314844749584
+comm_rank:  23   /event:  17278   /peaks:  447   /likeli:  0.0328733727293
+event  13355  is initializing ... with threshes:  238 / 476 / 812
+comm_rank:  20   /event:  14924   /peaks:  270   /likeli:  0.0248274322085
+event  17279  is initializing ... with threshes:  293 / 586 / 988
+event  14925  is initializing ... with threshes:  340 / 681 / 1141
+comm_rank:  19   /event:  14140   /peaks:  573   /likeli:  0.0261581841224
+event  14141  is initializing ... with threshes:  318 / 636 / 1069
+comm_rank:  26   /event:  19634   /peaks:  1117   /likeli:  0
+event  19635  is initializing ... with threshes:  299 / 598 / 1007
+comm_rank:  11   /event:  7858   /peaks:  233   /likeli:  0.0332745837866
+comm_rank:  13   /event:  9429   /peaks:  784   /likeli:  0.0322424582201
+event  7859  is initializing ... with threshes:  380 / 761 / 1266
+comm_rank:  14   /event:  10213   /peaks:  1176   /likeli:  0
+event  9430  is initializing ... with threshes:  343 / 686 / 1150
+event  10214  is initializing ... with threshes:  322 / 645 / 1082
+comm_rank:  9   /event:  6288   /peaks:  111   /likeli:  0.0228644627224
+comm_rank:  28   /event:  21204   /peaks:  250   /likeli:  0.0276888870881
+event  6289  is initializing ... with threshes:  473 / 947 / 1565
+event  21205  is initializing ... with threshes:  479 / 959 / 1578
+comm_rank:  10   /event:  7074   /peaks:  439   /likeli:  0.0272788864007
+comm_rank:  4   /event:  2363   /peaks:  539   /likeli:  0.0409551555576
+comm_rank:  15   /event:  11001   /peaks:  8939   /likeli:  0
+comm_rank:  3   /event:  1578   /peaks:  362   /likeli:  0.0233648876265
+comm_rank:  7   /event:  4718   /peaks:  102   /likeli:  0.016779561854
+event  2364  is initializing ... with threshes:  407 / 815 / 1351
+event  7075  is initializing ... with threshes:  399 / 799 / 1337
+event  11002  is initializing ... with threshes:  167 / 334 / 582
+event  1579  is initializing ... with threshes:  438 / 876 / 1465
+event  4719  is initializing ... with threshes:  510 / 1020 / 1675
+comm_rank:  12   /event:  8644   /peaks:  1886   /likeli:  0
+event  8645  is initializing ... with threshes:  251 / 503 / 854
+comm_rank:  25   /event:  18850   /peaks:  2724   /likeli:  0
+event  18851  is initializing ... with threshes:  406 / 812 / 1346
+comm_rank:  6   /event:  3933   /peaks:  402   /likeli:  0.0216232765501
+event  3934  is initializing ... with threshes:  385 / 770 / 1280
+comm_rank:  5   /event:  3148   /peaks:  948   /likeli:  0.0312872325454
+comm_rank:  27   /event:  20419   /peaks:  873   /likeli:  0.0302722662277
+event  3149  is initializing ... with threshes:  386 / 773 / 1286
+comm_rank:  29   /event:  21989   /peaks:  95   /likeli:  0.0329906446886
+event  20420  is initializing ... with threshes:  397 / 795 / 1319
+comm_rank:  2   /event:  794   /peaks:  200   /likeli:  0.0140346153656
+event  21990  is initializing ... with threshes:  573 / 1147 / 1873
+comm_rank:  1   /event:  9   /peaks:  4971   /likeli:  0
+comm_rank:  22   /event:  16494   /peaks:  2073   /likeli:  0
+event  795  is initializing ... with threshes:  518 / 1036 / 1703
+comm_rank:  19   /event:  14141   /peaks:  1016   /likeli:  0
+comm_rank:  8   /event:  5503   /peaks:  280   /likeli:  0.033269431175
+event  10  is initializing ... with threshes:  492 / 984 / 1619
+event  14142  is initializing ... with threshes:  295 / 591 / 995
+comm_rank:  18   /event:  13355   /peaks:  2411   /likeli:  0
+event  16495  is initializing ... with threshes:  3 / 6 / 12
+comm_rank:  21   /event:  15709   /peaks:  582   /likeli:  0.0277865217468
+event  5504  is initializing ... with threshes:  485 / 970 / 1596
+comm_rank:  24   /event:  18065   /peaks:  770   /likeli:  0.0298882115908
+event  13356  is initializing ... with threshes:  351 / 702 / 1172
+event  18066  is initializing ... with threshes:  390 / 781 / 1303
+comm_rank:  20   /event:  14925   /peaks:  771   /likeli:  0.0302480273537
+comm_rank:  23   /event:  17279   /peaks:  1201   /likeli:  0
+event  15710  is initializing ... with threshes:  337 / 675 / 1131
+event  17280  is initializing ... with threshes:  466 / 932 / 1537
+event  14926  is initializing ... with threshes:  364 / 728 / 1216
+comm_rank:  26   /event:  19635   /peaks:  1216   /likeli:  0
+comm_rank:  13   /event:  9430   /peaks:  664   /likeli:  0.0328389452552
+event  19636  is initializing ... with threshes:  360 / 721 / 1202
+event  9431  is initializing ... with threshes:  356 / 712 / 1188
+comm_rank:  11   /event:  7859   /peaks:  768   /likeli:  0.030120689139
+comm_rank:  14   /event:  10214   /peaks:  871   /likeli:  0.0333958276852
+event  7860  is initializing ... with threshes:  243 / 486 / 828
+event  10215  is initializing ... with threshes:  379 / 840 / 1451
+comm_rank:  28   /event:  21205   /peaks:  183   /likeli:  0.0222314166737
+comm_rank:  9   /event:  6289   /peaks:  319   /likeli:  0.0315725414518
+event  21206  is initializing ... with threshes:  396 / 792 / 1322
+comm_rank:  10   /event:  7075   /peaks:  517   /likeli:  0.0298433131428
+comm_rank:  7   /event:  4719   /peaks:  114   /likeli:  0.0155658474344
+comm_rank:  4   /event:  2364   /peaks:  408   /likeli:  0.0320749373946
+event  6290  is initializing ... with threshes:  318 / 637 / 1070
+comm_rank:  3   /event:  1579   /peaks:  443   /likeli:  0.0391682562386
+event  7076  is initializing ... with threshes:  377 / 754 / 1256
+event  4720  is initializing ... with threshes:  595 / 1191 / 2063
+event  2365  is initializing ... with threshes:  386 / 772 / 1285
+event  1580  is initializing ... with threshes:  494 / 988 / 1624
+comm_rank:  15   /event:  11002   /peaks:  5099   /likeli:  0
+event  11003  is initializing ... with threshes:  35 / 97 / 164
+comm_rank:  5   /event:  3149   /peaks:  446   /likeli:  0.0316345426097
+comm_rank:  12   /event:  8645   /peaks:  1938   /likeli:  0
+comm_rank:  19   /event:  14142   /peaks:  1171   /likeli:  0
+comm_rank:  25   /event:  18851   /peaks:  349   /likeli:  0.0292383835175
+event  3150  is initializing ... with threshes:  174 / 349 / 607
+event  8646  is initializing ... with threshes:  267 / 534 / 906
+event  14143  is initializing ... with threshes:  367 / 735 / 1228
+event  18852  is initializing ... with threshes:  466 / 932 / 1537
+comm_rank:  2   /event:  795   /peaks:  262   /likeli:  0.0476201011233
+comm_rank:  6   /event:  3934   /peaks:  567   /likeli:  0.0348646250763
+event  796  is initializing ... with threshes:  467 / 935 / 1545
+comm_rank:  27   /event:  20420   /peaks:  397   /likeli:  0.021941894771
+comm_rank:  1   /event:  10   /peaks:  159   /likeli:  0.0429381036879
+comm_rank:  29   /event:  21990   /peaks:  60   /likeli:  0.025542682171
+event  20421  is initializing ... with threshes:  349 / 699 / 1168
+event  3935  is initializing ... with threshes:  408 / 817 / 1353
+event  11  is initializing ... with threshes:  505 / 1011 / 1661
+event  21991  is initializing ... with threshes:  560 / 1121 / 1832
+comm_rank:  8   /event:  5504   /peaks:  171   /likeli:  0.0180791911006
+comm_rank:  18   /event:  13356   /peaks:  641   /likeli:  0.0314202624403
+event  5505  is initializing ... with threshes:  492 / 985 / 1644
+event  13357  is initializing ... with threshes:  283 / 567 / 957
+comm_rank:  22   /event:  16495   /peaks:  2022   /likeli:  0
+comm_rank:  24   /event:  18066   /peaks:  475   /likeli:  0.0342549906742
+comm_rank:  13   /event:  9431   /peaks:  577   /likeli:  0.0293607110264
+event  18067  is initializing ... with threshes:  446 / 893 / 1476
+comm_rank:  23   /event:  17280   /peaks:  199   /likeli:  0.0189830392469
+event  9432  is initializing ... with threshes:  382 / 764 / 1272
+event  16496  is initializing ... with threshes:  3 / 7 / 12
+event  17281  is initializing ... with threshes:  350 / 700 / 1169
+comm_rank:  20   /event:  14926   /peaks:  666   /likeli:  0.0284174412909
+comm_rank:  21   /event:  15710   /peaks:  851   /likeli:  0.0335261543196
+event  14927  is initializing ... with threshes:  383 / 767 / 1276
+event  15711  is initializing ... with threshes:  276 / 552 / 950
+comm_rank:  14   /event:  10215   /peaks:  476   /likeli:  0.0712856658496
+event  10216  is initializing ... with threshes:  207 / 415 / 713
+comm_rank:  26   /event:  19636   /peaks:  632   /likeli:  0.0227844724395
+comm_rank:  11   /event:  7860   /peaks:  2091   /likeli:  0
+event  19637  is initializing ... with threshes:  367 / 734 / 1223
+event  7861  is initializing ... with threshes:  543 / 1086 / 1779
+comm_rank:  28   /event:  21206   /peaks:  464   /likeli:  0.0280076667986
+event  21207  is initializing ... with threshes:  449 / 899 / 1485
+comm_rank:  7   /event:  4720   /peaks:  143   /likeli:  0.0318806689891
+comm_rank:  4   /event:  2365   /peaks:  455   /likeli:  0.0297431386291
+comm_rank:  9   /event:  6290   /peaks:  1011   /likeli:  0
+event  4721  is initializing ... with threshes:  370 / 740 / 1232
+event  2366  is initializing ... with threshes:  377 / 755 / 1257
+event  6291  is initializing ... with threshes:  509 / 1019 / 1674
+comm_rank:  19   /event:  14143   /peaks:  601   /likeli:  0.0349133358979
+comm_rank:  3   /event:  1580   /peaks:  145   /likeli:  0.0156742066076
+comm_rank:  10   /event:  7076   /peaks:  541   /likeli:  0.0316395101794
+event  14144  is initializing ... with threshes:  368 / 736 / 1225
+event  7077  is initializing ... with threshes:  394 / 788 / 1308
+event  1581  is initializing ... with threshes:  441 / 883 / 1466
+comm_rank:  15   /event:  11003   /peaks:  8095   /likeli:  0
+event  11004  is initializing ... with threshes:  145 / 296 / 517
+comm_rank:  12   /event:  8646   /peaks:  1634   /likeli:  0
+comm_rank:  2   /event:  796   /peaks:  339   /likeli:  0.0245601844895
+comm_rank:  25   /event:  18852   /peaks:  192   /likeli:  0.0223548352095
+comm_rank:  1   /event:  11   /peaks:  125   /likeli:  0.0258457039443
+event  797  is initializing ... with threshes:  308 / 617 / 1038
+event  8647  is initializing ... with threshes:  285 / 570 / 964
+comm_rank:  5   /event:  3150   /peaks:  4866   /likeli:  0
+event  18853  is initializing ... with threshes:  255 / 511 / 867
+event  12  is initializing ... with threshes:  534 / 1068 / 1751
+event  3151  is initializing ... with threshes:  526 / 1052 / 1723
+comm_rank:  18   /event:  13357   /peaks:  1383   /likeli:  0
+event  13358  is initializing ... with threshes:  171 / 342 / 596
+comm_rank:  13   /event:  9432   /peaks:  521   /likeli:  0.0236988957397
+comm_rank:  29   /event:  21991   /peaks:  79   /likeli:  0.0106875165047
+event  9433  is initializing ... with threshes:  333 / 808 / 1379
+comm_rank:  6   /event:  3935   /peaks:  333   /likeli:  0.0327887879773
+event  21992  is initializing ... with threshes:  487 / 975 / 1628
+comm_rank:  27   /event:  20421   /peaks:  742   /likeli:  0.0305485610627
+event  3936  is initializing ... with threshes:  368 / 737 / 1246
+comm_rank:  8   /event:  5505   /peaks:  467   /likeli:  0.0538847054491
+event  20422  is initializing ... with threshes:  199 / 398 / 686
+event  5506  is initializing ... with threshes:  369 / 739 / 1272
+comm_rank:  20   /event:  14927   /peaks:  419   /likeli:  0.0281565361167
+comm_rank:  24   /event:  18067   /peaks:  275   /likeli:  0.0229447803623
+event  14928  is initializing ... with threshes:  512 / 1024 / 1681
+event  18068  is initializing ... with threshes:  471 / 943 / 1555
+comm_rank:  22   /event:  16496   /peaks:  1771   /likeli:  0
+comm_rank:  23   /event:  17281   /peaks:  653   /likeli:  0.0296250605031
+event  16497  is initializing ... with threshes:  3 / 7 / 12
+comm_rank:  14   /event:  10216   /peaks:  3028   /likeli:  0
+event  17282  is initializing ... with threshes:  300 / 601 / 1012
+event  10217  is initializing ... with threshes:  164 / 329 / 575
+comm_rank:  21   /event:  15711   /peaks:  1568   /likeli:  0
+event  15712  is initializing ... with threshes:  165 / 331 / 578
+comm_rank:  11   /event:  7861   /peaks:  86   /likeli:  0.0237350943896
+event  7862  is initializing ... with threshes:  605 / 1211 / 2008
+comm_rank:  26   /event:  19637   /peaks:  805   /likeli:  0.0354556573899
+event  19638  is initializing ... with threshes:  386 / 772 / 1285
+comm_rank:  28   /event:  21207   /peaks:  248   /likeli:  0.0415288205195
+comm_rank:  19   /event:  14144   /peaks:  518   /likeli:  0.0276898715207
+event  21208  is initializing ... with threshes:  472 / 945 / 1556
+event  14145  is initializing ... with threshes:  435 / 870 / 1440
+comm_rank:  9   /event:  6291   /peaks:  251   /likeli:  0.036240079509
+comm_rank:  4   /event:  2366   /peaks:  553   /likeli:  0.0273463247681
+event  6292  is initializing ... with threshes:  463 / 926 / 1527
+comm_rank:  7   /event:  4721   /peaks:  607   /likeli:  0.0319697359461
+event  2367  is initializing ... with threshes:  425 / 850 / 1409
+event  4722  is initializing ... with threshes:  391 / 783 / 1301
+comm_rank:  10   /event:  7077   /peaks:  430   /likeli:  0.0277593117785
+event  7078  is initializing ... with threshes:  409 / 818 / 1355
+comm_rank:  12   /event:  8647   /peaks:  1477   /likeli:  0
+event  8648  is initializing ... with threshes:  273 / 546 / 924
+comm_rank:  3   /event:  1581   /peaks:  552   /likeli:  0.0339724384337
+comm_rank:  13   /event:  9433   /peaks:  305   /likeli:  0.0901765150988
+comm_rank:  15   /event:  11004   /peaks:  5646   /likeli:  0
+event  9434  is initializing ... with threshes:  321 / 642 / 1076
+event  1582  is initializing ... with threshes:  343 / 686 / 1148
+comm_rank:  2   /event:  797   /peaks:  1071   /likeli:  0
+event  11005  is initializing ... with threshes:  137 / 282 / 492
+event  798  is initializing ... with threshes:  319 / 638 / 1102
+comm_rank:  1   /event:  12   /peaks:  96   /likeli:  0.0198847070735
+comm_rank:  25   /event:  18853   /peaks:  1884   /likeli:  0
+event  13  is initializing ... with threshes:  595 / 1191 / 1944
+event  18854  is initializing ... with threshes:  511 / 1023 / 1678
+comm_rank:  18   /event:  13358   /peaks:  4903   /likeli:  0
+comm_rank:  5   /event:  3151   /peaks:  105   /likeli:  0.00285637969259
+event  13359  is initializing ... with threshes:  346 / 693 / 1157
+event  3152  is initializing ... with threshes:  445 / 891 / 1471
+comm_rank:  20   /event:  14928   /peaks:  110   /likeli:  0.0363397750314
+comm_rank:  29   /event:  21992   /peaks:  270   /likeli:  0.0289553204923
+comm_rank:  27   /event:  20422   /peaks:  3586   /likeli:  0
+comm_rank:  6   /event:  3936   /peaks:  755   /likeli:  0.0409397886645
+event  20423  is initializing ... with threshes:  313 / 627 / 1055
+event  21993  is initializing ... with threshes:  488 / 977 / 1704
+comm_rank:  8   /event:  5506   /peaks:  616   /likeli:  0.0285016560051
+event  14929  is initializing ... with threshes:  389 / 778 / 1295
+event  3937  is initializing ... with threshes:  274 / 548 / 927
+event  5507  is initializing ... with threshes:  426 / 853 / 1414
+comm_rank:  24   /event:  18068   /peaks:  210   /likeli:  0.0331275552204
+comm_rank:  14   /event:  10217   /peaks:  5247   /likeli:  0
+event  18069  is initializing ... with threshes:  372 / 744 / 1262
+comm_rank:  23   /event:  17282   /peaks:  1146   /likeli:  0
+event  10218  is initializing ... with threshes:  300 / 600 / 1034
+comm_rank:  22   /event:  16497   /peaks:  1755   /likeli:  0
+event  17283  is initializing ... with threshes:  234 / 468 / 798
+event  16498  is initializing ... with threshes:  3 / 7 / 12
+comm_rank:  19   /event:  14145   /peaks:  302   /likeli:  0.0259463638305
+comm_rank:  21   /event:  15712   /peaks:  4982   /likeli:  0
+event  14146  is initializing ... with threshes:  332 / 665 / 1122
+comm_rank:  11   /event:  7862   /peaks:  171   /likeli:  0.0722055054613
+event  15713  is initializing ... with threshes:  213 / 427 / 734
+event  7863  is initializing ... with threshes:  602 / 1204 / 1962
+comm_rank:  28   /event:  21208   /peaks:  156   /likeli:  0.0309567924444
+comm_rank:  26   /event:  19638   /peaks:  515   /likeli:  0.0247565008603
+comm_rank:  9   /event:  6292   /peaks:  180   /likeli:  0.0365431041359
+event  21209  is initializing ... with threshes:  439 / 879 / 1452
+event  19639  is initializing ... with threshes:  287 / 575 / 971
+event  6293  is initializing ... with threshes:  486 / 972 / 1598
+comm_rank:  7   /event:  4722   /peaks:  451   /likeli:  0.0324152774399
+comm_rank:  4   /event:  2367   /peaks:  334   /likeli:  0.0322934946425
+comm_rank:  12   /event:  8648   /peaks:  1583   /likeli:  0
+event  4723  is initializing ... with threshes:  154 / 309 / 541
+comm_rank:  10   /event:  7078   /peaks:  346   /likeli:  0.0260090067448
+event  2368  is initializing ... with threshes:  457 / 915 / 1511
+event  8649  is initializing ... with threshes:  302 / 604 / 1017
+event  7079  is initializing ... with threshes:  468 / 937 / 1561
+comm_rank:  13   /event:  9434   /peaks:  928   /likeli:  0.0376865356078
+event  9435  is initializing ... with threshes:  368 / 1209 / 1998
+comm_rank:  1   /event:  13   /peaks:  56   /likeli:  0.0180931722011
+comm_rank:  15   /event:  11005   /peaks:  6220   /likeli:  0
+event  14  is initializing ... with threshes:  398 / 797 / 1365
+comm_rank:  2   /event:  798   /peaks:  906   /likeli:  0.0327883253606
+comm_rank:  3   /event:  1582   /peaks:  702   /likeli:  0.0299861110452
+event  799  is initializing ... with threshes:  492 / 985 / 1620
+comm_rank:  18   /event:  13359   /peaks:  697   /likeli:  0.0274222252698
+event  11006  is initializing ... with threshes:  203 / 406 / 699
+event  1583  is initializing ... with threshes:  498 / 996 / 1637
+event  13360  is initializing ... with threshes:  318 / 637 / 1069
+comm_rank:  25   /event:  18854   /peaks:  120   /likeli:  0.0221104349625
+event  18855  is initializing ... with threshes:  579 / 1158 / 1892
+comm_rank:  5   /event:  3152   /peaks:  277   /likeli:  0.0220546570695
+comm_rank:  6   /event:  3937   /peaks:  1447   /likeli:  0
+comm_rank:  20   /event:  14929   /peaks:  424   /likeli:  0.0275373793472
+comm_rank:  27   /event:  20423   /peaks:  1115   /likeli:  0
+event  3153  is initializing ... with threshes:  486 / 972 / 1673
+event  3938  is initializing ... with threshes:  386 / 772 / 1284
+event  14930  is initializing ... with threshes:  366 / 732 / 1222
+event  20424  is initializing ... with threshes:  233 / 467 / 798
+comm_rank:  29   /event:  21993   /peaks:  352   /likeli:  0.0341709438587
+event  21994  is initializing ... with threshes:  467 / 935 / 1542
+comm_rank:  8   /event:  5507   /peaks:  565   /likeli:  0.0307380861325
+event  5508  is initializing ... with threshes:  449 / 898 / 1484
+comm_rank:  14   /event:  10218   /peaks:  1462   /likeli:  0
+event  10219  is initializing ... with threshes:  247 / 494 / 842
+comm_rank:  19   /event:  14146   /peaks:  886   /likeli:  0.0280609069128
+event  14147  is initializing ... with threshes:  473 / 947 / 1559
+comm_rank:  23   /event:  17283   /peaks:  2358   /likeli:  0
+comm_rank:  24   /event:  18069   /peaks:  942   /likeli:  0.0396622338723
+event  17284  is initializing ... with threshes:  389 / 778 / 1293
+comm_rank:  21   /event:  15713   /peaks:  3093   /likeli:  0
+event  18070  is initializing ... with threshes:  476 / 952 / 1576
+comm_rank:  22   /event:  16498   /peaks:  1762   /likeli:  0
+comm_rank:  11   /event:  7863   /peaks:  61   /likeli:  0.0121698639363
+event  16499  is initializing ... with threshes:  3 / 7 / 12
+comm_rank:  9   /event:  6293   /peaks:  185   /likeli:  0.0252231907334
+event  15714  is initializing ... with threshes:  336 / 672 / 1127
+event  7864  is initializing ... with threshes:  488 / 977 / 1609
+event  6294  is initializing ... with threshes:  503 / 1007 / 1654
+comm_rank:  12   /event:  8649   /peaks:  1190   /likeli:  0
+comm_rank:  28   /event:  21209   /peaks:  322   /likeli:  0.0256824524755
+comm_rank:  13   /event:  9435   /peaks:  297   /likeli:  0.0464196231911
+event  8650  is initializing ... with threshes:  308 / 617 / 1037
+event  21210  is initializing ... with threshes:  455 / 911 / 1502
+comm_rank:  26   /event:  19639   /peaks:  1365   /likeli:  0
+event  9436  is initializing ... with threshes:  337 / 674 / 1135
+comm_rank:  4   /event:  2368   /peaks:  223   /likeli:  0.018730803162
+event  19640  is initializing ... with threshes:  343 / 686 / 1148
+comm_rank:  10   /event:  7079   /peaks:  244   /likeli:  0.032153370603
+comm_rank:  7   /event:  4723   /peaks:  5721   /likeli:  0
+event  2369  is initializing ... with threshes:  441 / 883 / 1461
+event  4724  is initializing ... with threshes:  500 / 1000 / 1643
+event  7080  is initializing ... with threshes:  475 / 950 / 1566
+comm_rank:  2   /event:  799   /peaks:  151   /likeli:  0.0317447902294
+comm_rank:  1   /event:  14   /peaks:  461   /likeli:  0.0318315627256
+comm_rank:  18   /event:  13360   /peaks:  902   /likeli:  0.0317302040765
+comm_rank:  3   /event:  1583   /peaks:  142   /likeli:  0.0313763096874
+event  800  is initializing ... with threshes:  507 / 1015 / 1666
+event  15  is initializing ... with threshes:  483 / 967 / 1590
+event  1584  is initializing ... with threshes:  392 / 784 / 1302
+event  13361  is initializing ... with threshes:  309 / 618 / 1040
+comm_rank:  5   /event:  3153   /peaks:  576   /likeli:  0.0494068944924
+comm_rank:  15   /event:  11006   /peaks:  3345   /likeli:  0
+comm_rank:  25   /event:  18855   /peaks:  91   /likeli:  0.0228132531383
+event  3154  is initializing ... with threshes:  410 / 821 / 1362
+comm_rank:  20   /event:  14930   /peaks:  687   /likeli:  0.045082641488
+event  18856  is initializing ... with threshes:  267 / 535 / 907
+comm_rank:  29   /event:  21994   /peaks:  201   /likeli:  0.0235201531611
+event  11007  is initializing ... with threshes:  134 / 279 / 487
+event  14931  is initializing ... with threshes:  269 / 538 / 911
+comm_rank:  27   /event:  20424   /peaks:  2468   /likeli:  0
+event  21995  is initializing ... with threshes:  503 / 1007 / 1655
+comm_rank:  6   /event:  3938   /peaks:  420   /likeli:  0.0247841145347
+event  20425  is initializing ... with threshes:  298 / 597 / 1006
+event  3939  is initializing ... with threshes:  339 / 678 / 1142
+comm_rank:  14   /event:  10219   /peaks:  1977   /likeli:  0
+comm_rank:  19   /event:  14147   /peaks:  210   /likeli:  0.0314512605035
+comm_rank:  8   /event:  5508   /peaks:  233   /likeli:  0.0285439971178
+event  10220  is initializing ... with threshes:  237 / 474 / 809
+event  5509  is initializing ... with threshes:  418 / 837 / 1387
+event  14148  is initializing ... with threshes:  374 / 748 / 1246
+comm_rank:  23   /event:  17284   /peaks:  455   /likeli:  0.024848356961
+comm_rank:  13   /event:  9436   /peaks:  1051   /likeli:  0
+event  17285  is initializing ... with threshes:  180 / 360 / 625
+comm_rank:  24   /event:  18070   /peaks:  242   /likeli:  0.031156707975
+comm_rank:  9   /event:  6294   /peaks:  131   /likeli:  0.0257263945052
+event  9437  is initializing ... with threshes:  248 / 496 / 844
+comm_rank:  21   /event:  15714   /peaks:  822   /likeli:  0.0301579799791
+comm_rank:  11   /event:  7864   /peaks:  150   /likeli:  0.029831170096
+event  18071  is initializing ... with threshes:  508 / 1016 / 1667
+comm_rank:  22   /event:  16499   /peaks:  1755   /likeli:  0
+event  15715  is initializing ... with threshes:  347 / 694 / 1160
+event  16500  is initializing ... with threshes:  3 / 7 / 12
+event  6295  is initializing ... with threshes:  503 / 1006 / 1652
+comm_rank:  12   /event:  8650   /peaks:  989   /likeli:  0.0364446000627
+event  7865  is initializing ... with threshes:  523 / 1046 / 1714
+comm_rank:  28   /event:  21210   /peaks:  213   /likeli:  0.0309244073686
+event  21211  is initializing ... with threshes:  279 / 558 / 944
+event  8651  is initializing ... with threshes:  282 / 711 / 1208
+comm_rank:  7   /event:  4724   /peaks:  148   /likeli:  0.0247431319299
+comm_rank:  4   /event:  2369   /peaks:  357   /likeli:  0.0315923437072
+event  2370  is initializing ... with threshes:  324 / 649 / 1090
+event  4725  is initializing ... with threshes:  540 / 1081 / 1771
+comm_rank:  26   /event:  19640   /peaks:  708   /likeli:  0.0308951225495
+comm_rank:  10   /event:  7080   /peaks:  163   /likeli:  0.0232739730446
+event  19641  is initializing ... with threshes:  360 / 720 / 1202
+event  7081  is initializing ... with threshes:  506 / 1012 / 1662
+comm_rank:  18   /event:  13361   /peaks:  1095   /likeli:  0
+event  13362  is initializing ... with threshes:  437 / 875 / 1457
+comm_rank:  2   /event:  800   /peaks:  143   /likeli:  0.0210551454532
+event  801  is initializing ... with threshes:  409 / 819 / 1358
+comm_rank:  1   /event:  15   /peaks:  157   /likeli:  0.0310437510155
+comm_rank:  20   /event:  14931   /peaks:  1666   /likeli:  0
+comm_rank:  3   /event:  1584   /peaks:  391   /likeli:  0.0338784067987
+event  16  is initializing ... with threshes:  581 / 1163 / 1899
+event  14932  is initializing ... with threshes:  370 / 741 / 1233
+event  1585  is initializing ... with threshes:  418 / 837 / 1388
+comm_rank:  14   /event:  10220   /peaks:  2312   /likeli:  0
+comm_rank:  29   /event:  21995   /peaks:  143   /likeli:  0.0207751531255
+comm_rank:  19   /event:  14148   /peaks:  493   /likeli:  0.0337982955153
+event  10221  is initializing ... with threshes:  316 / 633 / 1063
+comm_rank:  15   /event:  11007   /peaks:  6084   /likeli:  0
+comm_rank:  25   /event:  18856   /peaks:  1743   /likeli:  0
+event  21996  is initializing ... with threshes:  463 / 926 / 1543
+event  14149  is initializing ... with threshes:  20 / 65 / 108
+comm_rank:  5   /event:  3154   /peaks:  426   /likeli:  0.0272596360813
+event  11008  is initializing ... with threshes:  141 / 290 / 506
+event  18857  is initializing ... with threshes:  451 / 903 / 1491
+comm_rank:  6   /event:  3939   /peaks:  1156   /likeli:  0
+comm_rank:  27   /event:  20425   /peaks:  1328   /likeli:  0
+comm_rank:  8   /event:  5509   /peaks:  399   /likeli:  0.0308242505692
+event  5510  is initializing ... with threshes:  407 / 814 / 1350
+event  20426  is initializing ... with threshes:  279 / 559 / 943
+event  3155  is initializing ... with threshes:  528 / 1056 / 1732
+event  3940  is initializing ... with threshes:  414 / 829 / 1374
+comm_rank:  13   /event:  9437   /peaks:  1994   /likeli:  0
+event  9438  is initializing ... with threshes:  394 / 789 / 1309
+comm_rank:  12   /event:  8651   /peaks:  282   /likeli:  0.0371542739033
+comm_rank:  24   /event:  18071   /peaks:  122   /likeli:  0.0210262657392
+event  18072  is initializing ... with threshes:  390 / 781 / 1350
+event  8652  is initializing ... with threshes:  237 / 475 / 810
+comm_rank:  23   /event:  17285   /peaks:  4271   /likeli:  0
+event  17286  is initializing ... with threshes:  351 / 703 / 1175
+comm_rank:  28   /event:  21211   /peaks:  1502   /likeli:  0
+comm_rank:  21   /event:  15715   /peaks:  727   /likeli:  0.0285785749156
+comm_rank:  22   /event:  16500   /peaks:  1788   /likeli:  0
+comm_rank:  9   /event:  6295   /peaks:  140   /likeli:  0.0228944172321
+event  15716  is initializing ... with threshes:  368 / 736 / 1226
+event  21212  is initializing ... with threshes:  486 / 972 / 1600
+comm_rank:  11   /event:  7865   /peaks:  154   /likeli:  0.0211637899329
+event  6296  is initializing ... with threshes:  537 / 1075 / 1759
+event  16501  is initializing ... with threshes:  3 / 7 / 12
+event  7866  is initializing ... with threshes:  556 / 1112 / 1819
+comm_rank:  7   /event:  4725   /peaks:  88   /likeli:  0.0207860740605
+event  4726  is initializing ... with threshes:  251 / 503 / 854
+comm_rank:  10   /event:  7081   /peaks:  158   /likeli:  0.0277974359174
+comm_rank:  4   /event:  2370   /peaks:  900   /likeli:  0.028217655834
+comm_rank:  18   /event:  13362   /peaks:  571   /likeli:  0.0540071383906
+event  2371  is initializing ... with threshes:  372 / 745 / 1240
+event  7082  is initializing ... with threshes:  472 / 1053 / 1816
+event  13363  is initializing ... with threshes:  386 / 772 / 1308
+comm_rank:  2   /event:  801   /peaks:  400   /likeli:  0.0301123692814
+comm_rank:  26   /event:  19641   /peaks:  627   /likeli:  0.0336102678796
+event  802  is initializing ... with threshes:  359 / 718 / 1198
+comm_rank:  19   /event:  14149   /peaks:  6079   /likeli:  0
+event  19642  is initializing ... with threshes:  368 / 737 / 1229
+comm_rank:  1   /event:  16   /peaks:  89   /likeli:  0.0230301701273
+event  14150  is initializing ... with threshes:  251 / 508 / 888
+comm_rank:  3   /event:  1585   /peaks:  491   /likeli:  0.029483166981
+comm_rank:  20   /event:  14932   /peaks:  549   /likeli:  0.0350291599359
+event  17  is initializing ... with threshes:  486 / 972 / 1600
+event  1586  is initializing ... with threshes:  313 / 627 / 1053
+comm_rank:  14   /event:  10221   /peaks:  947   /likeli:  0.0337022831183
+event  14933  is initializing ... with threshes:  118 / 252 / 437
+event  10222  is initializing ... with threshes:  354 / 709 / 1183
+comm_rank:  29   /event:  21996   /peaks:  348   /likeli:  0.0358797547619
+comm_rank:  15   /event:  11008   /peaks:  5887   /likeli:  0
+comm_rank:  5   /event:  3155   /peaks:  141   /likeli:  0.0494789707016
+event  21997  is initializing ... with threshes:  352 / 705 / 1178
+comm_rank:  25   /event:  18857   /peaks:  244   /likeli:  0.0203211554103
+event  11009  is initializing ... with threshes:  113 / 243 / 422
+comm_rank:  8   /event:  5510   /peaks:  361   /likeli:  0.0305716914021
+event  3156  is initializing ... with threshes:  473 / 946 / 1559
+event  18858  is initializing ... with threshes:  341 / 682 / 1140
+event  5511  is initializing ... with threshes:  523 / 1046 / 1717
+comm_rank:  27   /event:  20426   /peaks:  1473   /likeli:  0
+event  20427  is initializing ... with threshes:  266 / 533 / 902
+comm_rank:  6   /event:  3940   /peaks:  330   /likeli:  0.0271188529514
+comm_rank:  13   /event:  9438   /peaks:  419   /likeli:  0.028261728413
+event  9439  is initializing ... with threshes:  382 / 764 / 1276
+event  3941  is initializing ... with threshes:  316 / 632 / 1061
+comm_rank:  12   /event:  8652   /peaks:  2381   /likeli:  0
+event  8653  is initializing ... with threshes:  302 / 605 / 1023
+comm_rank:  24   /event:  18072   /peaks:  569   /likeli:  0.0339798656135
+comm_rank:  28   /event:  21212   /peaks:  170   /likeli:  0.0156065018476
+event  18073  is initializing ... with threshes:  433 / 866 / 1448
+event  21213  is initializing ... with threshes:  344 / 689 / 1154
+comm_rank:  11   /event:  7866   /peaks:  83   /likeli:  0.0167200076953
+comm_rank:  9   /event:  6296   /peaks:  80   /likeli:  0.0113193978482
+comm_rank:  7   /event:  4726   /peaks:  1950   /likeli:  0
+comm_rank:  18   /event:  13363   /peaks:  487   /likeli:  0.0203362283712
+event  7867  is initializing ... with threshes:  484 / 969 / 1594
+comm_rank:  21   /event:  15716   /peaks:  529   /likeli:  0.028239547298
+event  6297  is initializing ... with threshes:  611 / 1222 / 1991
+event  4727  is initializing ... with threshes:  461 / 923 / 1521
+event  13364  is initializing ... with threshes:  371 / 743 / 1237
+comm_rank:  23   /event:  17286   /peaks:  660   /likeli:  0.0320463975065
+comm_rank:  19   /event:  14150   /peaks:  1845   /likeli:  0
+event  15717  is initializing ... with threshes:  261 / 523 / 886
+comm_rank:  22   /event:  16501   /peaks:  1702   /likeli:  0
+event  17287  is initializing ... with threshes:  354 / 708 / 1181
+event  14151  is initializing ... with threshes:  102 / 225 / 388
+comm_rank:  10   /event:  7082   /peaks:  384   /likeli:  0.0887924648437
+event  16502  is initializing ... with threshes:  3 / 6 / 12
+comm_rank:  4   /event:  2371   /peaks:  563   /likeli:  0.0297491035393
+event  7083  is initializing ... with threshes:  451 / 903 / 1490
+comm_rank:  2   /event:  802   /peaks:  606   /likeli:  0.0272001887161
+event  2372  is initializing ... with threshes:  241 / 483 / 823
+event  803  is initializing ... with threshes:  430 / 861 / 1425
+comm_rank:  14   /event:  10222   /peaks:  649   /likeli:  0.0271772237061
+comm_rank:  1   /event:  17   /peaks:  174   /likeli:  0.0121496424563
+event  10223  is initializing ... with threshes:  169 / 338 / 589
+event  18  is initializing ... with threshes:  555 / 1110 / 1815
+comm_rank:  26   /event:  19642   /peaks:  616   /likeli:  0.0322690163741
+comm_rank:  3   /event:  1586   /peaks:  979   /likeli:  0.0318607479083
+comm_rank:  20   /event:  14933   /peaks:  6632   /likeli:  0
+event  1587  is initializing ... with threshes:  431 / 863 / 1429
+event  19643  is initializing ... with threshes:  320 / 641 / 1075
+comm_rank:  5   /event:  3156   /peaks:  191   /likeli:  0.0231479736845
+comm_rank:  13   /event:  9439   /peaks:  666   /likeli:  0.0321113567156
+comm_rank:  15   /event:  11009   /peaks:  6815   /likeli:  0
+event  9440  is initializing ... with threshes:  377 / 755 / 1257
+event  3157  is initializing ... with threshes:  508 / 1017 / 1670
+event  11010  is initializing ... with threshes:  162 / 324 / 567
+comm_rank:  29   /event:  21997   /peaks:  690   /likeli:  0.0331471376276
+comm_rank:  8   /event:  5511   /peaks:  131   /likeli:  0.0218996580065
+event  21998  is initializing ... with threshes:  354 / 709 / 1182
+event  14934  is initializing ... with threshes:  384 / 769 / 1278
+event  5512  is initializing ... with threshes:  418 / 836 / 1385
+comm_rank:  27   /event:  20427   /peaks:  1700   /likeli:  0
+comm_rank:  25   /event:  18858   /peaks:  773   /likeli:  0.0338430360169
+event  20428  is initializing ... with threshes:  365 / 730 / 1224
+comm_rank:  12   /event:  8653   /peaks:  1237   /likeli:  0
+event  18859  is initializing ... with threshes:  463 / 927 / 1530
+event  8654  is initializing ... with threshes:  362 / 724 / 1209
+comm_rank:  6   /event:  3941   /peaks:  984   /likeli:  0.0279862717904
+event  3942  is initializing ... with threshes:  438 / 876 / 1449
+comm_rank:  18   /event:  13364   /peaks:  521   /likeli:  0.030268478132
+comm_rank:  19   /event:  14151   /peaks:  6788   /likeli:  0
+event  13365  is initializing ... with threshes:  271 / 543 / 922
+event  14152  is initializing ... with threshes:  414 / 828 / 1377
+comm_rank:  11   /event:  7867   /peaks:  175   /likeli:  0.0193495694126
+comm_rank:  24   /event:  18073   /peaks:  548   /likeli:  0.0277934124225
+comm_rank:  9   /event:  6297   /peaks:  51   /likeli:  0.0233714571436
+comm_rank:  7   /event:  4727   /peaks:  236   /likeli:  0.0219921738892
+comm_rank:  28   /event:  21213   /peaks:  939   /likeli:  0.0321161400335
+event  7868  is initializing ... with threshes:  592 / 1315 / 2268
+event  6298  is initializing ... with threshes:  581 / 1162 / 1897
+event  4728  is initializing ... with threshes:  566 / 1419 / 2412
+event  18074  is initializing ... with threshes:  5 / 22 / 36
+comm_rank:  21   /event:  15717   /peaks:  1707   /likeli:  0
+event  21214  is initializing ... with threshes:  475 / 951 / 1567
+event  15718  is initializing ... with threshes:  296 / 593 / 997
+comm_rank:  10   /event:  7083   /peaks:  262   /likeli:  0.0276573449089
+comm_rank:  14   /event:  10223   /peaks:  4865   /likeli:  0
+event  7084  is initializing ... with threshes:  433 / 866 / 1432
+comm_rank:  4   /event:  2372   /peaks:  2238   /likeli:  0
+event  10224  is initializing ... with threshes:  403 / 806 / 1339
+comm_rank:  23   /event:  17287   /peaks:  619   /likeli:  0.0318026366333
+comm_rank:  2   /event:  803   /peaks:  308   /likeli:  0.0324801884202
+event  2373  is initializing ... with threshes:  372 / 744 / 1237
+event  804  is initializing ... with threshes:  211 / 423 / 727
+comm_rank:  1   /event:  18   /peaks:  114   /likeli:  0.0100170183875
+event  17288  is initializing ... with threshes:  276 / 553 / 936
+event  19  is initializing ... with threshes:  563 / 1126 / 1842
+comm_rank:  22   /event:  16502   /peaks:  2078   /likeli:  0
+comm_rank:  13   /event:  9440   /peaks:  468   /likeli:  0.0311355380011
+event  9441  is initializing ... with threshes:  375 / 751 / 1250
+comm_rank:  3   /event:  1587   /peaks:  269   /likeli:  0.0237733252038
+event  1588  is initializing ... with threshes:  391 / 783 / 1302
+event  16503  is initializing ... with threshes:  5 / 24 / 39
+comm_rank:  5   /event:  3157   /peaks:  118   /likeli:  0.0178719307616
+comm_rank:  26   /event:  19643   /peaks:  1009   /likeli:  0
+comm_rank:  20   /event:  14934   /peaks:  481   /likeli:  0.0257146998545
+comm_rank:  15   /event:  11010   /peaks:  5404   /likeli:  0
+event  3158  is initializing ... with threshes:  384 / 769 / 1279
+comm_rank:  8   /event:  5512   /peaks:  337   /likeli:  0.0340948803316
+event  19644  is initializing ... with threshes:  319 / 639 / 1073
+event  14935  is initializing ... with threshes:  361 / 723 / 1207
+event  11011  is initializing ... with threshes:  108 / 235 / 407
+comm_rank:  12   /event:  8654   /peaks:  607   /likeli:  0.028566609689
+event  5513  is initializing ... with threshes:  470 / 940 / 1548
+event  8655  is initializing ... with threshes:  316 / 632 / 1061
+comm_rank:  27   /event:  20428   /peaks:  725   /likeli:  0.0364792705485
+comm_rank:  29   /event:  21998   /peaks:  665   /likeli:  0.0346917681817
+event  20429  is initializing ... with threshes:  317 / 635 / 1073
+event  21999  is initializing ... with threshes:  541 / 1083 / 1775
+comm_rank:  25   /event:  18859   /peaks:  418   /likeli:  0.0367154506273
+comm_rank:  6   /event:  3942   /peaks:  311   /likeli:  0.0298745047218
+event  3943  is initializing ... with threshes:  396 / 793 / 1317
+event  18860  is initializing ... with threshes:  293 / 587 / 989
+comm_rank:  18   /event:  13365   /peaks:  1641   /likeli:  0
+comm_rank:  19   /event:  14152   /peaks:  358   /likeli:  0.0260455416695
+event  13366  is initializing ... with threshes:  287 / 575 / 982
+event  14153  is initializing ... with threshes:  339 / 678 / 1135
+comm_rank:  7   /event:  4728   /peaks:  328   /likeli:  0.0587510234764
+comm_rank:  14   /event:  10224   /peaks:  404   /likeli:  0.0298789275953
+comm_rank:  9   /event:  6298   /peaks:  59   /likeli:  0.00457173467395
+comm_rank:  11   /event:  7868   /peaks:  172   /likeli:  0.0495656335959
+event  10225  is initializing ... with threshes:  381 / 762 / 1269
+comm_rank:  28   /event:  21214   /peaks:  240   /likeli:  0.0381950262882
+event  6299  is initializing ... with threshes:  599 / 1198 / 1955
+event  4729  is initializing ... with threshes:  240 / 480 / 819
+event  7869  is initializing ... with threshes:  423 / 847 / 1402
+event  21215  is initializing ... with threshes:  473 / 947 / 1562
+comm_rank:  21   /event:  15718   /peaks:  1331   /likeli:  0
+comm_rank:  13   /event:  9441   /peaks:  498   /likeli:  0.0280873829939
+comm_rank:  10   /event:  7084   /peaks:  268   /likeli:  0.0302398112187
+comm_rank:  24   /event:  18074   /peaks:  8806   /likeli:  0
+event  9442  is initializing ... with threshes:  378 / 806 / 1399
+comm_rank:  2   /event:  804   /peaks:  3080   /likeli:  0
+event  7085  is initializing ... with threshes:  405 / 811 / 1346
+event  18075  is initializing ... with threshes:  460 / 920 / 1517
+event  805  is initializing ... with threshes:  458 / 917 / 1520
+event  15719  is initializing ... with threshes:  309 / 619 / 1041
+comm_rank:  1   /event:  19   /peaks:  100   /likeli:  0.0182134105818
+comm_rank:  4   /event:  2373   /peaks:  493   /likeli:  0.0339645457779
+comm_rank:  23   /event:  17288   /peaks:  1490   /likeli:  0
+event  20  is initializing ... with threshes:  571 / 1143 / 1867
+event  2374  is initializing ... with threshes:  460 / 921 / 1522
+event  17289  is initializing ... with threshes:  162 / 325 / 568
+comm_rank:  20   /event:  14935   /peaks:  599   /likeli:  0.0295033749322
+event  14936  is initializing ... with threshes:  402 / 805 / 1336
+comm_rank:  3   /event:  1588   /peaks:  477   /likeli:  0.0274542103409
+comm_rank:  12   /event:  8655   /peaks:  907   /likeli:  0.0345239585879
+comm_rank:  8   /event:  5513   /peaks:  232   /likeli:  0.0321446798388
+comm_rank:  22   /event:  16503   /peaks:  9507   /likeli:  0
+comm_rank:  15   /event:  11011   /peaks:  7024   /likeli:  0
+event  1589  is initializing ... with threshes:  467 / 934 / 1540
+comm_rank:  5   /event:  3158   /peaks:  561   /likeli:  0.0263604751782
+event  8656  is initializing ... with threshes:  224 / 449 / 768
+event  11012  is initializing ... with threshes:  180 / 361 / 626
+comm_rank:  29   /event:  21999   /peaks:  136   /likeli:  0.0136248104971
+event  16504  is initializing ... with threshes:  3 / 7 / 12
+event  5514  is initializing ... with threshes:  500 / 1001 / 1644
+event  3159  is initializing ... with threshes:  461 / 922 / 1542
+comm_rank:  27   /event:  20429   /peaks:  1117   /likeli:  0
+event  22000  is initializing ... with threshes:  479 / 958 / 1576
+event  20430  is initializing ... with threshes:  346 / 693 / 1159
+comm_rank:  6   /event:  3943   /peaks:  414   /likeli:  0.0281206777521
+comm_rank:  26   /event:  19644   /peaks:  982   /likeli:  0.0293369086009
+event  3944  is initializing ... with threshes:  261 / 523 / 887
+comm_rank:  25   /event:  18860   /peaks:  1253   /likeli:  0
+event  19645  is initializing ... with threshes:  338 / 676 / 1132
+event  18861  is initializing ... with threshes:  138 / 283 / 494
+comm_rank:  18   /event:  13366   /peaks:  1510   /likeli:  0
+event  13367  is initializing ... with threshes:  389 / 779 / 1295
+comm_rank:  19   /event:  14153   /peaks:  799   /likeli:  0.0329799152436
+event  14154  is initializing ... with threshes:  263 / 527 / 894
+comm_rank:  14   /event:  10225   /peaks:  570   /likeli:  0.0295186416139
+event  10226  is initializing ... with threshes:  348 / 697 / 1166
+comm_rank:  13   /event:  9442   /peaks:  467   /likeli:  0.0633847409675
+event  9443  is initializing ... with threshes:  252 / 505 / 857
+comm_rank:  28   /event:  21215   /peaks:  176   /likeli:  0.0286126247359
+comm_rank:  10   /event:  7085   /peaks:  488   /likeli:  0.023792086597
+comm_rank:  7   /event:  4729   /peaks:  2294   /likeli:  0
+event  21216  is initializing ... with threshes:  440 / 881 / 1457
+comm_rank:  9   /event:  6299   /peaks:  92   /likeli:  0.0318195245906
+event  7086  is initializing ... with threshes:  317 / 635 / 1066
+comm_rank:  2   /event:  805   /peaks:  356   /likeli:  0.0549022266441
+event  6300  is initializing ... with threshes:  525 / 1051 / 1723
+event  4730  is initializing ... with threshes:  592 / 1184 / 1932
+event  806  is initializing ... with threshes:  526 / 1053 / 1726
+comm_rank:  1   /event:  20   /peaks:  146   /likeli:  0.0301883532228
+comm_rank:  11   /event:  7869   /peaks:  285   /likeli:  0.0296313268165
+event  21  is initializing ... with threshes:  616 / 1233 / 2008
+comm_rank:  24   /event:  18075   /peaks:  213   /likeli:  0.0328695132125
+event  7870  is initializing ... with threshes:  449 / 899 / 1486
+comm_rank:  4   /event:  2374   /peaks:  330   /likeli:  0.0235540222308
+comm_rank:  21   /event:  15719   /peaks:  1075   /likeli:  0
+event  18076  is initializing ... with threshes:  341 / 683 / 1144
+comm_rank:  20   /event:  14936   /peaks:  518   /likeli:  0.0319407770674
+event  2375  is initializing ... with threshes:  365 / 730 / 1216
+event  15720  is initializing ... with threshes:  340 / 681 / 1139
+event  14937  is initializing ... with threshes:  414 / 828 / 1374
+comm_rank:  23   /event:  17289   /peaks:  5315   /likeli:  0
+event  17290  is initializing ... with threshes:  354 / 709 / 1184
+comm_rank:  12   /event:  8656   /peaks:  2635   /likeli:  0
+event  8657  is initializing ... with threshes:  286 / 573 / 966
+comm_rank:  3   /event:  1589   /peaks:  255   /likeli:  0.0251279451192
+comm_rank:  15   /event:  11012   /peaks:  4336   /likeli:  0
+comm_rank:  8   /event:  5514   /peaks:  132   /likeli:  0.0221049974777
+event  5515  is initializing ... with threshes:  423 / 847 / 1402
+comm_rank:  5   /event:  3159   /peaks:  268   /likeli:  0.0277771622408
+event  1590  is initializing ... with threshes:  497 / 995 / 1635
+comm_rank:  29   /event:  22000   /peaks:  208   /likeli:  0.0202459610504
+comm_rank:  22   /event:  16504   /peaks:  1658   /likeli:  0
+event  3160  is initializing ... with threshes:  408 / 817 / 1355
+event  11013  is initializing ... with threshes:  124 / 261 / 454
+event  22001  is initializing ... with threshes:  360 / 721 / 1203
+comm_rank:  18   /event:  13367   /peaks:  458   /likeli:  0.0290851157392
+comm_rank:  19   /event:  14154   /peaks:  1730   /likeli:  0
+comm_rank:  6   /event:  3944   /peaks:  1824   /likeli:  0
+event  16505  is initializing ... with threshes:  3 / 6 / 12
+event  13368  is initializing ... with threshes:  201 / 403 / 696
+event  14155  is initializing ... with threshes:  293 / 587 / 988
+event  3945  is initializing ... with threshes:  322 / 644 / 1081
+comm_rank:  27   /event:  20430   /peaks:  774   /likeli:  0.0328798284809
+event  20431  is initializing ... with threshes:  260 / 520 / 884
+comm_rank:  25   /event:  18861   /peaks:  6027   /likeli:  0
+comm_rank:  26   /event:  19645   /peaks:  724   /likeli:  0.036327259054
+event  18862  is initializing ... with threshes:  523 / 1047 / 1716
+event  19646  is initializing ... with threshes:  376 / 753 / 1252
+comm_rank:  13   /event:  9443   /peaks:  1966   /likeli:  0
+event  9444  is initializing ... with threshes:  332 / 719 / 1245
+comm_rank:  14   /event:  10226   /peaks:  787   /likeli:  0.0378277283044
+event  10227  is initializing ... with threshes:  326 / 652 / 1094
+comm_rank:  10   /event:  7086   /peaks:  1049   /likeli:  0
+event  7087  is initializing ... with threshes:  359 / 718 / 1198
+comm_rank:  28   /event:  21216   /peaks:  297   /likeli:  0.0209932740189
+event  21217  is initializing ... with threshes:  184 / 368 / 638
+comm_rank:  2   /event:  806   /peaks:  127   /likeli:  0.0184651151089
+comm_rank:  9   /event:  6300   /peaks:  117   /likeli:  0.0167757476721
+comm_rank:  11   /event:  7870   /peaks:  236   /likeli:  0.0300528709645
+event  807  is initializing ... with threshes:  482 / 965 / 1589
+comm_rank:  20   /event:  14937   /peaks:  451   /likeli:  0.0286430870231
+event  6301  is initializing ... with threshes:  469 / 938 / 1544
+comm_rank:  7   /event:  4730   /peaks:  79   /likeli:  0.0286462167274
+comm_rank:  1   /event:  21   /peaks:  42   /likeli:  0.00991120190468
+event  7871  is initializing ... with threshes:  564 / 1128 / 1874
+event  14938  is initializing ... with threshes:  310 / 621 / 1045
+event  4731  is initializing ... with threshes:  356 / 712 / 1188
+event  22  is initializing ... with threshes:  492 / 985 / 1621
+comm_rank:  4   /event:  2375   /peaks:  581   /likeli:  0.0255297173531
+comm_rank:  12   /event:  8657   /peaks:  1382   /likeli:  0
+event  2376  is initializing ... with threshes:  390 / 1055 / 1778
+comm_rank:  24   /event:  18076   /peaks:  709   /likeli:  0.0256806162129
+event  8658  is initializing ... with threshes:  324 / 648 / 1086
+event  18077  is initializing ... with threshes:  517 / 1034 / 1697
+comm_rank:  21   /event:  15720   /peaks:  848   /likeli:  0.0322996266638
+event  15721  is initializing ... with threshes:  334 / 668 / 1126
+comm_rank:  23   /event:  17290   /peaks:  646   /likeli:  0.0252867055188
+comm_rank:  19   /event:  14155   /peaks:  1233   /likeli:  0
+event  17291  is initializing ... with threshes:  247 / 494 / 840
+comm_rank:  18   /event:  13368   /peaks:  3358   /likeli:  0
+event  14156  is initializing ... with threshes:  398 / 797 / 1323
+comm_rank:  3   /event:  1590   /peaks:  120   /likeli:  0.0229877939257
+event  13369  is initializing ... with threshes:  298 / 596 / 1004
+comm_rank:  8   /event:  5515   /peaks:  346   /likeli:  0.0217578551441
+event  1591  is initializing ... with threshes:  433 / 867 / 1437
+event  5516  is initializing ... with threshes:  450 / 901 / 1502
+comm_rank:  5   /event:  3160   /peaks:  399   /likeli:  0.0226688784352
+event  3161  is initializing ... with threshes:  392 / 785 / 1304
+comm_rank:  29   /event:  22001   /peaks:  660   /likeli:  0.027086231506
+comm_rank:  15   /event:  11013   /peaks:  6823   /likeli:  0
+comm_rank:  6   /event:  3945   /peaks:  916   /likeli:  0.0290155682407
+event  22002  is initializing ... with threshes:  415 / 830 / 1376
+event  11014  is initializing ... with threshes:  166 / 333 / 581
+event  3946  is initializing ... with threshes:  405 / 811 / 1346
+comm_rank:  27   /event:  20431   /peaks:  1925   /likeli:  0
+comm_rank:  13   /event:  9444   /peaks:  492   /likeli:  0.0565430914484
+event  20432  is initializing ... with threshes:  257 / 514 / 873
+event  9445  is initializing ... with threshes:  322 / 645 / 1081
+comm_rank:  22   /event:  16505   /peaks:  2107   /likeli:  0
+event  16506  is initializing ... with threshes:  3 / 6 / 12
+comm_rank:  25   /event:  18862   /peaks:  107   /likeli:  0.0287143933197
+event  18863  is initializing ... with threshes:  395 / 790 / 1312
+comm_rank:  26   /event:  19646   /peaks:  495   /likeli:  0.0260340653617
+event  19647  is initializing ... with threshes:  227 / 455 / 778
+comm_rank:  14   /event:  10227   /peaks:  806   /likeli:  0.0347116770388
+event  10228  is initializing ... with threshes:  215 / 430 / 738
+comm_rank:  20   /event:  14938   /peaks:  1002   /likeli:  0
+comm_rank:  28   /event:  21217   /peaks:  4415   /likeli:  0
+event  14939  is initializing ... with threshes:  207 / 414 / 713
+comm_rank:  9   /event:  6301   /peaks:  200   /likeli:  0.0224791750145
+comm_rank:  10   /event:  7087   /peaks:  575   /likeli:  0.0282654307167
+comm_rank:  2   /event:  807   /peaks:  176   /likeli:  0.020091966716
+event  21218  is initializing ... with threshes:  590 / 1180 / 1924
+event  6302  is initializing ... with threshes:  522 / 1045 / 1714
+event  7088  is initializing ... with threshes:  505 / 1011 / 1663
+event  808  is initializing ... with threshes:  446 / 892 / 1474
+comm_rank:  11   /event:  7871   /peaks:  233   /likeli:  0.0487632069837
+comm_rank:  1   /event:  22   /peaks:  249   /likeli:  0.0243374051028
+event  7872  is initializing ... with threshes:  564 / 1129 / 1846
+event  23  is initializing ... with threshes:  625 / 1251 / 2037
+comm_rank:  7   /event:  4731   /peaks:  638   /likeli:  0.0335661306258
+event  4732  is initializing ... with threshes:  549 / 1099 / 1800
+comm_rank:  12   /event:  8658   /peaks:  920   /likeli:  0.0326338737752
+comm_rank:  4   /event:  2376   /peaks:  346   /likeli:  0.0562952597828
+event  2377  is initializing ... with threshes:  388 / 776 / 1290
+event  8659  is initializing ... with threshes:  183 / 366 / 635
+comm_rank:  19   /event:  14156   /peaks:  388   /likeli:  0.0250293267513
+comm_rank:  18   /event:  13369   /peaks:  1163   /likeli:  0
+comm_rank:  24   /event:  18077   /peaks:  114   /likeli:  0.0251839184438
+event  13370  is initializing ... with threshes:  215 / 430 / 737
+event  14157  is initializing ... with threshes:  374 / 909 / 1551
+event  18078  is initializing ... with threshes:  349 / 698 / 1169
+comm_rank:  23   /event:  17291   /peaks:  2093   /likeli:  0
+event  17292  is initializing ... with threshes:  330 / 661 / 1107
+comm_rank:  5   /event:  3161   /peaks:  451   /likeli:  0.0328909358494
+comm_rank:  21   /event:  15721   /peaks:  783   /likeli:  0.0268637597059
+event  3162  is initializing ... with threshes:  472 / 945 / 1557
+event  15722  is initializing ... with threshes:  381 / 762 / 1268
+comm_rank:  6   /event:  3946   /peaks:  411   /likeli:  0.027010470355
+comm_rank:  8   /event:  5516   /peaks:  408   /likeli:  0.039472744222
+comm_rank:  3   /event:  1591   /peaks:  297   /likeli:  0.0216748534179
+event  3947  is initializing ... with threshes:  358 / 717 / 1197
+event  5517  is initializing ... with threshes:  459 / 919 / 1517
+comm_rank:  13   /event:  9445   /peaks:  903   /likeli:  0.0342839825858
+event  1592  is initializing ... with threshes:  374 / 749 / 1249
+comm_rank:  15   /event:  11014   /peaks:  5123   /likeli:  0
+event  9446  is initializing ... with threshes:  338 / 676 / 1132
+event  11015  is initializing ... with threshes:  89 / 213 / 364
+comm_rank:  29   /event:  22002   /peaks:  385   /likeli:  0.0322215185802
+event  22003  is initializing ... with threshes:  214 / 428 / 734
+comm_rank:  27   /event:  20432   /peaks:  2005   /likeli:  0
+event  20433  is initializing ... with threshes:  323 / 646 / 1083
+comm_rank:  14   /event:  10228   /peaks:  3034   /likeli:  0
+event  10229  is initializing ... with threshes:  224 / 449 / 769
+comm_rank:  25   /event:  18863   /peaks:  380   /likeli:  0.0235644904937
+comm_rank:  20   /event:  14939   /peaks:  3242   /likeli:  0
+event  18864  is initializing ... with threshes:  467 / 1140 / 1944
+comm_rank:  22   /event:  16506   /peaks:  2115   /likeli:  0
+event  14940  is initializing ... with threshes:  515 / 1030 / 1691
+event  16507  is initializing ... with threshes:  3 / 6 / 12
+comm_rank:  26   /event:  19647   /peaks:  2648   /likeli:  0
+event  19648  is initializing ... with threshes:  287 / 575 / 970
+comm_rank:  28   /event:  21218   /peaks:  53   /likeli:  0.0406119002982
+comm_rank:  9   /event:  6302   /peaks:  155   /likeli:  0.0285372469225
+event  6303  is initializing ... with threshes:  378 / 756 / 1257
+comm_rank:  2   /event:  808   /peaks:  280   /likeli:  0.0285219159286
+event  21219  is initializing ... with threshes:  568 / 1136 / 1930
+comm_rank:  10   /event:  7088   /peaks:  340   /likeli:  0.0449416189657
+event  809  is initializing ... with threshes:  329 / 659 / 1105
+comm_rank:  1   /event:  23   /peaks:  33   /likeli:  0.0110999835121
+event  7089  is initializing ... with threshes:  507 / 1014 / 1666
+comm_rank:  11   /event:  7872   /peaks:  137   /likeli:  0.0377336132081
+event  24  is initializing ... with threshes:  7 / 32 / 52
+comm_rank:  12   /event:  8659   /peaks:  4228   /likeli:  0
+event  7873  is initializing ... with threshes:  447 / 895 / 1476
+comm_rank:  7   /event:  4732   /peaks:  156   /likeli:  0.034062601961
+event  8660  is initializing ... with threshes:  235 / 471 / 804
+event  4733  is initializing ... with threshes:  582 / 1165 / 1904
+comm_rank:  19   /event:  14157   /peaks:  687   /likeli:  0.102196064272
+comm_rank:  18   /event:  13370   /peaks:  2855   /likeli:  0
+comm_rank:  4   /event:  2377   /peaks:  436   /likeli:  0.0252425857887
+event  14158  is initializing ... with threshes:  357 / 715 / 1194
+event  13371  is initializing ... with threshes:  141 / 288 / 502
+event  2378  is initializing ... with threshes:  389 / 778 / 1293
+comm_rank:  21   /event:  15722   /peaks:  510   /likeli:  0.0295829795529
+event  15723  is initializing ... with threshes:  247 / 495 / 842
+comm_rank:  5   /event:  3162   /peaks:  187   /likeli:  0.0194522894282
+comm_rank:  24   /event:  18078   /peaks:  773   /likeli:  0.0321650815631
+event  3163  is initializing ... with threshes:  388 / 777 / 1291
+event  18079  is initializing ... with threshes:  145 / 295 / 516
+comm_rank:  23   /event:  17292   /peaks:  832   /likeli:  0.0280575087098
+comm_rank:  13   /event:  9446   /peaks:  760   /likeli:  0.0306678693234
+event  17293  is initializing ... with threshes:  393 / 787 / 1324
+comm_rank:  8   /event:  5517   /peaks:  331   /likeli:  0.0255963074435
+comm_rank:  15   /event:  11015   /peaks:  5865   /likeli:  0
+comm_rank:  6   /event:  3947   /peaks:  634   /likeli:  0.0322907750537
+event  9447  is initializing ... with threshes:  389 / 778 / 1294
+event  5518  is initializing ... with threshes:  302 / 605 / 1019
+event  11016  is initializing ... with threshes:  120 / 255 / 444
+event  3948  is initializing ... with threshes:  380 / 761 / 1266
+comm_rank:  3   /event:  1592   /peaks:  636   /likeli:  0.0338749152075
+comm_rank:  14   /event:  10229   /peaks:  2594   /likeli:  0
+event  1593  is initializing ... with threshes:  376 / 753 / 1267
+event  10230  is initializing ... with threshes:  263 / 527 / 895
+comm_rank:  27   /event:  20433   /peaks:  1052   /likeli:  0
+comm_rank:  29   /event:  22003   /peaks:  2967   /likeli:  0
+event  20434  is initializing ... with threshes:  218 / 436 / 748
+event  22004  is initializing ... with threshes:  324 / 648 / 1085
+comm_rank:  20   /event:  14940   /peaks:  107   /likeli:  0.00898418052646
+event  14941  is initializing ... with threshes:  374 / 749 / 1247
+comm_rank:  25   /event:  18864   /peaks:  110   /likeli:  0.0391061099984
+event  18865  is initializing ... with threshes:  448 / 896 / 1479
+comm_rank:  28   /event:  21219   /peaks:  269   /likeli:  0.0413733830475
+comm_rank:  26   /event:  19648   /peaks:  1409   /likeli:  0
+comm_rank:  22   /event:  16507   /peaks:  2113   /likeli:  0
+event  21220  is initializing ... with threshes:  451 / 903 / 1491
+event  19649  is initializing ... with threshes:  419 / 839 / 1406
+comm_rank:  12   /event:  8660   /peaks:  2415   /likeli:  0
+event  16508  is initializing ... with threshes:  3 / 7 / 12
+comm_rank:  10   /event:  7089   /peaks:  131   /likeli:  0.0320840819983
+comm_rank:  9   /event:  6303   /peaks:  503   /likeli:  0.0313228721818
+comm_rank:  2   /event:  809   /peaks:  896   /likeli:  0.0326258862772
+event  6304  is initializing ... with threshes:  475 / 951 / 1566
+comm_rank:  19   /event:  14158   /peaks:  616   /likeli:  0.0285100639824
+event  8661  is initializing ... with threshes:  173 / 347 / 604
+event  7090  is initializing ... with threshes:  460 / 921 / 1521
+comm_rank:  18   /event:  13371   /peaks:  5804   /likeli:  0
+event  810  is initializing ... with threshes:  470 / 941 / 1550
+event  14159  is initializing ... with threshes:  201 / 403 / 695
+comm_rank:  1   /event:  24   /peaks:  5517   /likeli:  0
+comm_rank:  11   /event:  7873   /peaks:  230   /likeli:  0.029269081673
+event  13372  is initializing ... with threshes:  455 / 911 / 1503
+comm_rank:  7   /event:  4733   /peaks:  168   /likeli:  0.039137779539
+event  25  is initializing ... with threshes:  641 / 1282 / 2084
+event  4734  is initializing ... with threshes:  386 / 773 / 1315
+event  7874  is initializing ... with threshes:  508 / 1016 / 1697
+mpirun: Forwarding signal 18 to job
+mpirun: Forwarding signal 18 to job
+comm_rank:  4   /event:  2378   /peaks:  440   /likeli:  0.0293048790729
+event  2379  is initializing ... with threshes:  379 / 759 / 1263
+mpirun: Forwarding signal 18 to job
+
+------------------------------------------------------------
+Sender: LSF System <lsf@psana1501.pcdsn>
+Subject: Job 182714: <mpirun python ilikelihood.py> in cluster <slac> Exited
+
+Job <mpirun python ilikelihood.py> was submitted from host <psanagpu105.pcdsn> by user <zhensu> in cluster <slac> at Wed Jul  5 15:53:46 2017.
+Job was executed on host(s) <3*psana1501>, in queue <psnehq>, as user <zhensu> in cluster <slac> at Wed Jul  5 15:53:47 2017.
+                            <3*psana1502>
+                            <3*psana1503>
+                            <3*psana1504>
+                            <3*psana1505>
+                            <3*psana1506>
+                            <3*psana1507>
+                            <3*psana1509>
+                            <3*psana1510>
+                            <3*psana1511>
+</reg/neh/home/zhensu> was used as the home directory.
+</reg/d/psdm/cxi/cxitut13/res/autosfx/likelihood> was used as the working directory.
+Started at Wed Jul  5 15:53:47 2017.
+Terminated at Wed Jul  5 16:26:46 2017.
+Results reported at Wed Jul  5 16:26:46 2017.
+Cannot open your job file: /reg/neh/home/zhensu/.lsbatch/1499295226.182714
+TERM_OWNER: job killed by owner.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   895.00 sec.
+    Max Memory :                                 61539 MB
+    Average Memory :                             2980.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              42
+    Max Threads :                                134
+    Run time :                                   1978 sec.
+    Turnaround time :                            1980 sec.
+
+The output (if any) is above this job summary.
+

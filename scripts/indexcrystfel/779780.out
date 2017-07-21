@@ -1,0 +1,67 @@
+aklog: Couldn't get slac.stanford.edu AFS tickets:
+aklog: unknown RPC error (-1765328352) while getting AFS tickets
+original clen =  -450.0034 mm
+new geom files created ... 
+new clen =  -0.5000034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_00.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+sleeping time:  1952.60367203
+new clen =  -0.4900034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_01.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+sleeping time:  1953.48615909
+new clen =  -0.4800034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_02.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+sleeping time:  1954.223948
+new clen =  -0.4700034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_03.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+sleeping time:  1954.98791289
+new clen =  -0.4600034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_04.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+sleeping time:  1955.71448898
+new clen =  -0.4500034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_05.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+sleeping time:  1956.39826989
+new clen =  -0.4400034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_06.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+sleeping time:  1957.13741207
+new clen =  -0.4300034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_07.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+sleeping time:  1957.86131597
+new clen =  -0.4200034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_08.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+sleeping time:  1958.64558792
+new clen =  -0.4100034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_09.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+sleeping time:  1959.37210011
+new clen =  -0.4000034
+Launch indexing job:  indexCrystals -e cxic0415 -d DscCsPad --geom /reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel/info/clen_10.geom --peakMethod cxi --integrationRadius 2,3,4 --indexingMethod mosflm-noretry,dirax --minPeaks 15 --maxPeaks 2048 --minRes -1 --tolerance 5,5,5,1.5 --outDir /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake --sample crystal --queue psanaq --chunkSize 500 --noe -1 --instrument CXI --pixelSize 0.00011 --coffset 0.588696 --clenEpics DscCsPad_z --logger False --hitParam_threshold 15 --keepData True -v 0 --pdb /reg/d/psdm/cxi/cxic0415/scratch/zhensu/psocake/strep_more.cell --run 100
+sleeping time:  1960.05958009
+
+------------------------------------------------------------
+Sender: LSF System <lsf@psana1406.pcdsn>
+Subject: Job 779780: <mpirun python indexing.py> in cluster <slac> Done
+
+Job <mpirun python indexing.py> was submitted from host <psanaphi101.pcdsn> by user <zhensu> in cluster <slac> at Fri Jul 14 18:48:06 2017.
+Job was executed on host(s) <psana1406.pcdsn>, in queue <psanaq>, as user <zhensu> in cluster <slac> at Fri Jul 14 18:48:10 2017.
+</reg/neh/home/zhensu> was used as the home directory.
+</reg/d/psdm/cxi/cxitut13/res/autosfx/indexcrystfel> was used as the working directory.
+Started at Fri Jul 14 18:48:10 2017.
+Terminated at Fri Jul 14 18:48:24 2017.
+Results reported at Fri Jul 14 18:48:24 2017.
+Cannot open your job file: /reg/neh/home/zhensu/.lsbatch/1500083286.779780
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   9.19 sec.
+    Max Memory :                                 28 MB
+    Average Memory :                             28.00 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                9
+    Run time :                                   32 sec.
+    Turnaround time :                            18 sec.
+
+The output (if any) is above this job summary.
+

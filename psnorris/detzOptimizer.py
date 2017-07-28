@@ -6,7 +6,7 @@ import numpy as np
 import cPickle as pickle
 import warnings
 
-class peakFindingOptimizerMan:
+class detzOptimizerMan:
   def __init__(self, exp, runNo, eventList, target, resultFolder, qName, nProc):
     self.exp = exp
     self.runNo = runNo

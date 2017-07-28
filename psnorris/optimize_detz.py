@@ -1,12 +1,12 @@
 #driver for cctbx peakFinding optimizer
-from peakFindingOptimizer import peakFindingOptimizerMan
+from detzOptimizer import detzOptimizerMan
 import h5py, sys, argparse
 import numpy as np
 
 if __name__ == '__main__':
   # Input arguments
   parser = argparse.ArgumentParser(
-    description='Run cctbx detector distance optimizer. E.g. python optimize_peakfinding.py -e cxitut13 -r 10 --events selected_events.h5 --target target.phil'
+    description='Run cctbx detector distance optimizer. E.g. python optimize_detz.py -e cxitut13 -r 10 --events selected_events.h5 --target target.phil'
   )
   parser.add_argument('-e', '--exp', help='Experiment ID e.g. cxitut13', required=True)
   parser.add_argument('-r', '--run', type=int, help='Run Number', required=True)
@@ -34,8 +34,8 @@ if __name__ == '__main__':
   print 'Found %d events'%(len(eventList))
   
   # Initialize 
-  pFOMan = peakFindingOptimizerMan(args.exp, args.run, eventList, args.target, args.output,
+  dOMan = detzOptimizerMan(args.exp, args.run, eventList, args.target, args.output,
       args.queue, args.ncpus)
-  results = pFOMan.optimize(args.detz_offset, args.window_size, args.step_size, *args.custom)
+  results = dOMan.optimize(args.detz_offset, args.window_size, args.step_size, *args.custom)
   print "Results:"
   for res in results: print res

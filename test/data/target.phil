@@ -5,12 +5,13 @@ input {
 format {
   file_format=cbf
   cbf {
+    cspad {
+      gain_mask_value=6.85
+      common_mode.algorithm=custom
+      common_mode.custom_parameterization=5,50
+    }
     detz_offset=572
-    invalid_pixel_mask=/reg/d/psdm/cxi/cxid9114/scratch/mona/l2/calib/mask.pickle
-    gain_mask_value=6.85
     override_energy=8950
-    common_mode.algorithm=custom
-    common_mode.custom_parameterization=5,50
   }
 }
 border_mask {
@@ -30,7 +31,6 @@ indexing{
     space_group = P43212
     unit_cell = 78.9,78.9,38.1,90,90,90
   }
-  method=real_space_grid_search
   refinement_protocol.d_min_start=1.7
 }
 
@@ -38,10 +38,10 @@ indexing{
 refinement {
   parameterisation {
     beam.fix=all
-    detector.fix_list=Dist,Tau1
+    detector.fix=all
     auto_reduction {
-    action=fix
-    min_nref_per_parameter=1
+      action=fix
+      min_nref_per_parameter=1
     }
     crystal {
       unit_cell {
@@ -49,7 +49,6 @@ refinement {
           tie_to_target {
           values=78.9,78.9,38.1,90,90,90
           sigmas=1,1,1,0,0,0
-          #apply_to_all=True
           }
         }
       }
@@ -64,13 +63,13 @@ integration {
   background {
     algorithm = simple
     simple {
-    model.algorithm = linear2d
-    outlier.algorithm = nsigma
+      outlier.algorithm = plane
+      model.algorithm = linear2d
     }
   }
 }
 profile {
   gaussian_rs {
-  min_spots.overall = 0
+    min_spots.overall = 0
   }
 }

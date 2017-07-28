@@ -10,11 +10,12 @@ import subprocess
 warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning)
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 
-def stream2lattice(path_stream, path_write, detDistance):
-    icrystal = [[detDistance]*6 ]
+def stream2lattice(path_stream, path_write, iclen, icoffset):
+    icrystal = [] #[[detDistance]*6 ]
     f = open(path_stream,'r')
     content = f.readlines()
     f.close()
+    idetDistance = iclen + icoffset
     (cry_a, cry_b, cry_c, cry_alpha, cry_beta, cry_gamma) = (0,0,0,0,0,0)
     (latticeType, centering, uniqueAxis) = (0,0,0)
     latticeTypeList = []
@@ -38,6 +39,8 @@ def stream2lattice(path_stream, path_write, detDistance):
 	    uniqueAxisList.append(val.split('= ')[-1])
 
     icrystal = np.array(icrystal)
+    if icrystal.shape[0] == 0:
+	icrystal.shape = (0,6)
 
     print "####"
     print path_write+'_latticeType.npy'
@@ -48,19 +51,25 @@ def stream2lattice(path_stream, path_write, detDistance):
     f = h5py.File(path_write+'.h5', 'w')
     data_write = f.create_dataset('lattice', icrystal.shape)
     data_write[...] = icrystal
+    data_write = f.create_dataset('clen', (1,))
+    data_write[...] = iclen
+    data_write = f.create_dataset('coffset', (1,))
+    data_write[...] = icoffset
+    data_write = f.create_dataset('detDistance', (1,))
+    data_write[...] = idetDistance
     f.close()
     print "f: ", path_write+'.h5'
 
 para = experipara()
-para.pathcxi = os.path.join(para.path, 'r'+str(para.run).zfill(4) )
+para.pathcxi = os.path.join(para.outDir, 'r'+str(para.run).zfill(4) )
 fcxi = os.path.join(para.pathcxi, str(para.experimentName) +'_' +str(para.run).zfill(4)+ '.cxi')
 
 print "cxi: ", fcxi
 
 f = h5py.File(fcxi, 'r')
-clen = np.array(f['LCLS']['detector_1']['EncoderValue'])[0]
+clen = np.array(f['LCLS']['detector_1']['EncoderValue'])[0]/1000.
 f.close()
-print 'original clen = ', clen, 'mm'
+print 'clen = ', clen, 'm'
 
 stepSize = 2 # mm
 istart = -int((para.numDeltaZ-1)/2)
@@ -68,18 +77,19 @@ iend = -istart + 1
 print 'from ', istart, ' to ', iend
 
 for idx in np.arange(istart, iend):
-	newclen = (clen+stepSize*idx)/1000.
-	print '### new clen = ', newclen
+	newcoffset = (para.coffset + stepSize*idx/1000.)
+	print '### new coffset = ', newcoffset
 
-	path_stream = os.path.join(para.pathcxi, str(para.experimentName) + '_' + str(para.run).zfill(4)+ '_'+str(idx)+'.stream')
-	path_write = os.path.join(para.newgeom, str(para.experimentName) + '_' + str(para.run).zfill(4) + '_' + str(idx).zfill(2))
+	path_stream = os.path.join(para.pathcxi, str(para.experimentName) + '_' + str(para.run).zfill(4)+ '_'+str(idx).zfill(2)+'.stream')
+	path_write = os.path.join(para.pathcxi, str(para.experimentName) + '_' + str(para.run).zfill(4) + '_' + str(idx).zfill(2))
         print "path_stream: ", path_stream
         print "path_write: ", path_write
 
-	if not os.path.exists(path_stream): continue
+	if not os.path.exists(path_stream): 
+		print '### stream file not exist ... '
+		continue
 
-	detDistance = newclen + para.coffset
-	stream2lattice(path_stream, path_write, detDistance)
+	stream2lattice(path_stream, path_write, clen, newcoffset)
 	#os.rename(path_stream, path_stream + '_' + str(idx).zfill(2) + '.finish')
 
 

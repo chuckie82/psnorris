@@ -2,4 +2,3 @@ export PATH=/reg/neh/home/yoon82/psocake/app:$PATH
 export PYTHONPATH=/reg/neh/home/yoon82/psocake:$PYTHONPATH
 
 python like.py
-#bsub -q psnehq -n 16 -o %J.out mpirun python likelihood/ilikelihood.py

@@ -10,8 +10,8 @@ def cmdline(para):
 	    " -n " + str(para.numcores) + \
 	    " -o " + str(para.logfile) + \
 	    " mpirun findPeaks" + \
-	    " -e " + str(para.exp) + \
-	    " -d " + str(para.det) + \
+	    " -e " + str(para.experimentName) + \
+	    " -d " + str(para.detInfo) + \
 	    " --outDir " + str(para.outDir) + \
 	    " --algorithm " + str(para.algorithm) + \
 	    " --alg_npix_min " + str(para.alg_npix_min) + \
@@ -32,13 +32,13 @@ def cmdline(para):
 	    " --psanaMask_unbond " + "True" + \
 	    " --psanaMask_unbondnrs " + "True" + \
 	    " --mask " + str(para.mask) + \
-	    " --noe " + str(para.noe) + \
+	    " --noe " + str(para.peaknoe) + \
 	    " --clen " + str(para.clen) + \
 	    " --coffset " + str(para.coffset) + \
 	    " --minPeaks " + str(para.minPeaks) + \
 	    " --maxPeaks " + str(para.maxPeaks) + \
 	    " --minRes " + str(para.minRes) + \
-	    " --sample " + str(para.sample) + \
+	    " --sample " + str(para.peaksample) + \
 	    " --instrument " + str(para.instrument) + \
 	    " --pixelSize " + str(para.pixsize) + \
 	    " --auto " + str(para.auto) + \
@@ -46,7 +46,6 @@ def cmdline(para):
 	    " -r " + str(para.run)
 
     return cmd
-
 
 cmd = cmdline(para)
 

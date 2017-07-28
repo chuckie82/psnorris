@@ -12,7 +12,7 @@ from psana import *
 
 def runmaster(args, nClients):
     experimentName = args.exprun.split(':')[0].split('=')[-1]
-    runNumber = args.exprun.split('=')[-1]
+    runNumber = int(args.exprun.split('=')[-1])
 
     ds = DataSource(args.exprun+':idx')
     run = ds.runs().next()
@@ -52,11 +52,11 @@ def runmaster(args, nClients):
     savePowder(args, experimentName, runNumber, counter, det1, final_max_img, evt, final_mean_img, std_img)
 
 def savePowder(args, experimentName, runNumber, counter, det1, final_max_img, evt, final_mean_img, std_img):
-    np.save(args.outDir+"/max_img_"+experimentName+"_"+runNumber+"_assem.npy", det1.image(evt, final_max_img))
-    np.save(args.outDir+"/max_img_"+experimentName+"_"+runNumber+"_unassem.npy", final_max_img)
-    np.save(args.outDir+"/mean_img_"+experimentName+"_"+runNumber+"_assem.npy", det1.image(evt, final_mean_img/counter))
-    np.save(args.outDir+"/mean_img_"+experimentName+"_"+runNumber+"_unassem.npy", final_mean_img/counter)
-    np.save(args.outDir+"/std_img_"+experimentName+"_"+runNumber+"_assem.npy", det1.image(evt, std_img))
-    np.save(args.outDir+"/std_img_"+experimentName+"_"+runNumber+"_unassem.npy", std_img)
+    np.save(args.outDir+"/"+experimentName+"_"+str(runNumber).zfill(4)+"_"+str(args.areaDetName)+"_max_assem.npy", det1.image(evt, final_max_img))
+    np.save(args.outDir+"/"+experimentName+"_"+str(runNumber).zfill(4)+"_"+str(args.areaDetName)+"_max.npy", final_max_img)
+    np.save(args.outDir+"/"+experimentName+"_"+str(runNumber).zfill(4)+"_"+str(args.areaDetName)+"_mean_assem.npy", det1.image(evt, final_mean_img/counter))
+    np.save(args.outDir+"/"+experimentName+"_"+str(runNumber).zfill(4)+"_"+str(args.areaDetName)+"_mean.npy", final_mean_img/counter)
+    np.save(args.outDir+"/"+experimentName+"_"+str(runNumber).zfill(4)+"_"+str(args.areaDetName)+"_std_assem.npy", det1.image(evt, std_img))
+    np.save(args.outDir+"/"+experimentName+"_"+str(runNumber).zfill(4)+"_"+str(args.areaDetName)+"_std.npy", std_img)
 
 

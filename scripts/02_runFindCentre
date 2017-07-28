@@ -1,4 +1,5 @@
 python findCentre.py \
 exp=cxic0415:run=100 \
 DscCsPad \
--o /reg/d/psdm/cxi/cxic0515/scratch/autosfx/cxic0415/r0100
+-o /reg/d/psdm/cxi/cxic0515/scratch/autosfx/cxic0415/r0100 \
+-v 1

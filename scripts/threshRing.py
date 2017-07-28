@@ -9,14 +9,16 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("exprun", help="psana experiment/run string (e.g. exp=xppd7114:run=43)")
 parser.add_argument("areaDetName", help="psana area detector name from 'print evt.keys()' (e.g. cspad)")
+parser.add_argument("-o", "--outDir", help="output directory", type=str)
+parser.add_argument("-v", "--verbose", help="verbose", default=0, type=int)
 args = parser.parse_args()
 
 experimentName = args.exprun.split(':')[0].split('=')[-1]
-runNumber = args.exprun.split('=')[-1]
+runNumber = int(args.exprun.split('=')[-1])
 detInfo = args.areaDetName
 evtNum = 0
 
-ds = psana.DataSource('exp='+experimentName+':run='+runNumber+':idx')
+ds = psana.DataSource('exp='+experimentName+':run='+str(runNumber)+':idx')
 run = ds.runs().next()
 det = psana.Detector(detInfo)
 times = run.times()
@@ -41,7 +43,7 @@ for evtNum in range(eventTotal):
         meanCalib += calib
 meanCalib = meanCalib/eventTotal
 """
-meanCalib = np.load('mean_img_'+experimentName+'_'+runNumber+'_unassem.npy')
+meanCalib = np.load(args.outDir+'/'+experimentName+'_'+str(runNumber).zfill(4)+'_'+str(args.areaDetName)+'_mean.npy')
 meanCalib1D = meanCalib.ravel()
 
 plt.imshow(det.image(evt,meanCalib),vmax=500,vmin=0)
@@ -53,8 +55,8 @@ ipx, ipy   = det.point_indexes(evt, pxy_um=(0,0))
 #print ipx, ipy
 r = np.sqrt((cx-ipx)**2 + (cy-ipy)**2).ravel().astype(int)
 
-plt.imshow(det.image(evt,np.sqrt((cx-ipx)**2 + (cy-ipy)**2)))
-plt.show()
+#plt.imshow(det.image(evt,np.sqrt((cx-ipx)**2 + (cy-ipy)**2)))
+#plt.show()
 
 startR = 0
 endR = np.max(r)
@@ -80,17 +82,14 @@ indHi = np.where(r<=myThreshInd+thickness/2.)[0].astype(int)
 ind = np.intersect1d(indLo, indHi)
 #ind = np.where(r==myThreshInd)[0].astype(int)
 
-np.save("/reg/d/psdm/cxi/cxic0415/res/autosfx/threshRing_"+experimentName+"_"+runNumber+".npy", ind)
+np.save(args.outDir+"/threshRing_"+experimentName+"_"+str(runNumber).zfill(4)+".npy", ind)
 
-
-
-folder = os.getcwd()
-pathwr = os.path.join(folder, 'thrlist.h5')
+pathwr = os.path.join(args.outDir, 'thrlist.h5')
 f = h5py.File(pathwr,'w')
 datawr = f.create_dataset('thrlist', (eventTotal, 4), dtype='i8')
 datawr[...] = -np.ones((eventTotal, 4)).astype('i8')
 f.close()
-for evtNum in range(eventTotal):
+for evtNum in range(3):
     evt = run.event(times[evtNum])
     if evt is None: continue
     tic = time.time()
@@ -100,9 +99,6 @@ for evtNum in range(eventTotal):
     toc = time.time()
     print "time: ", toc-tic
     print 'event:', evtNum, ' --- ', thresh, spread
-    #f = h5py.File(pathwr, 'r+')
-    #f[f.keys()[0]][evtNum, 0:4] = [evtNum, thresh, thresh+spread*2, 2*thresh+3*spread]
-    #f.close()
     plt.imshow(det.image(evt),vmax=thresh,vmin=0)
     plt.title('threshold: '+str(thresh)+' '+str(spread))
     plt.show()

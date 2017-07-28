@@ -34,11 +34,11 @@ def stream2lattice(path_stream, path_write, detDistance):
     f.close()
 
 
-def cmdline(para):
+def cmdline(para, fgeom_new):
     cmd =   "indexCrystals" + \
             " -e " + para.experimentName + \
             " -d " + para.detInfo + \
-            " --geom " + str(para.geom) + \
+            " --geom " + str(fgeom_new) + \
             " --peakMethod " + para.peakMethod + \
             " --integrationRadius " + para.intRadius + \
             " --indexingMethod " + para.indexingMethod + \
@@ -47,12 +47,12 @@ def cmdline(para):
             " --minRes " + str(para.minRes) + \
             " --tolerance " + str(para.tolerance) + \
             " --outDir " + str(para.outDir) + \
-            " --sample " + para.sample + \
+            " --sample " + para.indexsample + \
             " --queue " + para.queue + \
             " --chunkSize " + str(para.chunkSize) + \
-            " --noe " + str(para.noe) + \
+            " --noe " + str(para.indexnoe) + \
             " --instrument " + para.instrument + \
-            " --pixelSize " + str(para.pixelSize) + \
+            " --pixelSize " + str(para.pixelsize) + \
             " --coffset " + str(para.coffset) + \
             " --clenEpics " + para.clenEpics + \
             " --logger " + str(para.logger) + \
@@ -63,9 +63,9 @@ def cmdline(para):
     if para.pdb: cmd += " --pdb " + para.pdb
     cmd += " --run " + str(para.run)
     return cmd
-
+##
 para = experipara()
-para.pathcxi = os.path.join(para.path, 'r'+str(para.run).zfill(4) )
+para.pathcxi = os.path.join(para.outDir, 'r'+str(para.run).zfill(4) )
 fgeom = os.path.join(para.pathcxi, '.temp.geom')
 fcxi = os.path.join(para.pathcxi, str(para.experimentName) +'_' +str(para.run).zfill(4)+ '.cxi')
 
@@ -86,24 +86,23 @@ start = -1 * int(np.floor(para.numDeltaZ - para.numDeltaZ/2.))
 end = int(np.ceil(para.numDeltaZ - para.numDeltaZ/2.))
 
 for idx in np.arange(start, end):
-    fgeom_new = os.path.join(para.newgeom, 'clen_'+str(idx).zfill(2)+'.geom')
+    fgeom_new = os.path.join(para.pathcxi, 'coffset_'+str(idx).zfill(2)+'.geom')
     print "new geom: ", fgeom_new
     f = open(fgeom_new, 'w')
     for i, val in enumerate(content):
-        if val[:6] == 'clen =':
-            content[i] = 'clen = ' + str( (clen + stepSize*idx)/1000. ) + '\n'
-            break
+        if 'coffset =' in val:
+            content[i] = val.split('=')[0]+"= "+str( (para.coffset + stepSize*idx/1000.) )+'\n'    #'coffset = ' + str( (para.coffset + stepSize*idx)/1000. ) + '\n'
     f.writelines(content)
     f.close()
+
 print 'new geom files created ... '
 
 for idx in np.arange(start, end):
-	newclen = (clen+stepSize*idx)/1000.
-	print '### new clen = ', newclen
-	para.geom = os.path.join(para.newgeom, 'clen_'+str(idx).zfill(2)+'.geom')
-	para.outDir = para.path
-	cmd = cmdline(para)
-        cmd += " --tag "+str(idx)
+	#newclen = (clen+stepSize*idx)/1000.
+	#print '### new clen = ', newclen
+	fgeom_new = os.path.join(para.pathcxi, 'coffset_'+str(idx).zfill(2)+'.geom')
+	cmd = cmdline(para, fgeom_new)
+        cmd += " --tag "+str(idx).zfill(2)
 	print "Launch indexing job: ", cmd
 	p = subprocess.Popen(shlex.split(cmd))
 

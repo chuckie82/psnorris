@@ -105,7 +105,7 @@ def getCorr(A,B):
 ############################
 
 experimentName = args.exprun.split(':')[0].split('=')[-1]
-runNumber = args.exprun.split('=')[-1]
+runNumber = int(args.exprun.split('=')[-1])
 detInfo = args.areaDetName
 
 ds = psana.DataSource(args.exprun+':idx')
@@ -120,7 +120,7 @@ while evt is None:
 cx, cy   = det.point_indexes(evt, pxy_um=(0, 0))
 pixelSize = det.pixel_size(evt)
 print "cx,cy: ", cx, cy
-powderImg = np.load(args.outDir+'/max_img_'+experimentName+'_'+runNumber+'_assem.npy')
+powderImg = np.load(args.outDir+'/'+experimentName+'_'+str(runNumber).zfill(4)+"_"+str(args.areaDetName)+'_max_assem.npy')
 
 import time
 tic = time.time()
@@ -129,11 +129,11 @@ toc = time.time()
 print "time: ", toc-tic
 print("Current centre along row,centre along column: ", cx, cy)
 print("Optimum centre along row,centre along column: ", centreRow, centreCol)
-np.save(args.outDir+'/newCenter_'+experimentName+'_'+runNumber+'.npy', np.array([centreRow, centreCol]))
+np.save(args.outDir+'/newCenter_'+experimentName+'_'+str(runNumber).zfill(4)+'.npy', np.array([centreRow, centreCol]))
 
 # Calculate detector translation in x and y
-dx = pixelSize * 1e6 * (cx - centreRow)  # microns
-dy = pixelSize * 1e6 * (cy - centreCol)  # microns
+dx = pixelSize * (cx - centreRow)  # microns
+dy = pixelSize  * (cy - centreCol)  # microns
 geo = det.geometry(evt)
 if 'cspad' in detInfo.lower() and 'cxi' in experimentName:
     geo.move_geo('CSPAD:V1', 0, dx=dx, dy=dy, dz=0)
@@ -155,8 +155,7 @@ print "Deploying psana detector geometry: ", fname
 print "#################################################"
 cmts = {'exp': experimentName, 'app': 'psocake', 'comment': 'auto recentred geometry'}
 calibDir = '/reg/d/psdm/' + experimentName[:3] + '/' + experimentName +  '/calib'
-print "calib: ", calibDir, str(det.name), runNumber, fname
-deploy_calib_file(cdir=calibDir, src=str(det.name), type='geometry', run_start=runNumber, run_end=None, ifname=fname, dcmts=cmts, pbits=0)
+deploy_calib_file(cdir=calibDir, src=str(det.name), type='geometry', run_start=int(runNumber), run_end=None, ifname=fname, dcmts=cmts, pbits=0)
 
 
 

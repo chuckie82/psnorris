@@ -4,9 +4,9 @@ if [ ! -d "$DIRECTORY" ]; then
   mkdir -p $DIRECTORY
 fi
 
-python generousBadPixel.py \
+python indexcrystfel/generousBadPixel.py \
 exp=cxic0415:run=100 \
 -d DscCsPad \
--n 10 \
+-b 10 \
 -o $DIRECTORY
 

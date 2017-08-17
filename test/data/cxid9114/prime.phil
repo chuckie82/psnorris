@@ -21,6 +21,6 @@ target_space_group = P 43 21 2
 target_anomalous_flag = False
 n_residues = 129
 pixel_size_mm = 0.11
-flag_apply_b_by_frame = False
+flag_apply_b_by_frame = True
 n_processors = 12
 n_bins = 10
